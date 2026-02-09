@@ -1,0 +1,19 @@
+{
+  "name": "failure_task_flat_bbh_format",
+  "purpose": "制造扁平化 Prompt 优化的典型失败：输出格式漂移导致 BBH 判分失败与方差爆炸。",
+  "baseline": "flat",
+  "bbh_cache_dir": "data/bbh",
+  "bbh_tasks": ["boolean_expressions"],
+  "bbh_n_shot": 3,
+  "budget": 120,
+  "gens": 6,
+  "mu": 4,
+  "lambda_": 6,
+  "n_init": 2,
+  "n_init_offspring": 2,
+  "schedule_multiplier": 2,
+  "beta": 0.4,
+  "seed": 0,
+  "init_prompt": "You are a helpful assistant. Always answer with a long paragraph and never output a bare yes/no or single letter choice."
+}
+
