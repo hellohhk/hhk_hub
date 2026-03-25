@@ -152,6 +152,17 @@ class BBHEvaluator:
             "task": task.examples[q_idx].task_source,  # 记录这道题原始所属的任务
             "response_len": len(response_text),
         }
+
+        # ==========================================
+        # 【新增逻辑】：如果做错了，把错题详情装箱返回
+        # ==========================================
+        if not correct:
+            out["failures"] = [{
+                "question": task.examples[q_idx].input,  # 具体的题干
+                "wrong_ans": response_text,  # 模型的错误解答过程
+                "correct_ans": gold  # 标准答案
+            }]
+
         if embedder:
             out["response_emb"] = embedder.embed(response_text)
         return out

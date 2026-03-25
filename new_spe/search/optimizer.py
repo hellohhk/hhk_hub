@@ -51,7 +51,6 @@ class SPEOptimizer:
         self.embedder = embedder or HashingNgramEmbedder()
         self.elite_pool: List[StructuredGenome] = []
 
-        # 【新增】多线程锁，防止并发扣预算时账目错乱
         self._lock = threading.Lock()
 
         ops = list(operators) if operators is not None else [IntraLocusRewrite(), IntraLocusRefine(), LocusCrossover(),
@@ -73,21 +72,18 @@ class SPEOptimizer:
             self.elite_pool = [unique_list[i] for i in front_idxs]
 
     def _op_cost(self, op: KernelOperator) -> int:
-        return 1 if op.name in {"K_rew", "K_ref", "K_mix"} else 0
+        return 1 if op.name in {"K_rew", "K_ref", "K_mix", "K_err_diag"} else 0
 
     def _evaluate_once(self, genome: StructuredGenome, eval_fn: EvalFn, log_fn: Optional[LogFn],
                        meta: Dict[str, object]) -> bool:
-        # 预检预算 (不加锁，提升效率)
         if self.used_budget >= self.cfg.budget:
             return False
 
-        # 🚀 耗时操作：网络 IO 请求 (并发执行，不阻塞其他线程)
         out = eval_fn(genome.prompt_text())
         y = out.get("y")
         if y is None:
             return False
 
-        # 🔒 临界区：更新账本与基因状态，必须排队进入
         with self._lock:
             if self.used_budget >= self.cfg.budget:
                 return False
@@ -102,6 +98,9 @@ class SPEOptimizer:
                     genome.update_output_length(int(out["response_len"]))
                 except Exception:
                     pass
+
+            if "failures" in out and out["failures"]:
+                genome.failure_cases.extend(out["failures"])
 
             genome.update(np.asarray(y, dtype=float), keep_history=self.cfg.keep_history)
             self.used_budget += 1
@@ -118,12 +117,10 @@ class SPEOptimizer:
 
     def _evaluate_n(self, genome: StructuredGenome, eval_fn: EvalFn, log_fn: Optional[LogFn], n: int,
                     meta: Dict[str, object]) -> None:
-        """🚀 多线程并发版做题"""
         remaining = self.cfg.budget - self.used_budget
         actual_n = min(n, remaining)
         if actual_n <= 0: return
 
-        # 使用最大 20 个并发线程同时做题 (可根据 API 并发限额调整)
         max_workers = min(actual_n, 20)
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
             futures = [executor.submit(self._evaluate_once, genome, eval_fn, log_fn, meta) for _ in range(actual_n)]
@@ -147,21 +144,39 @@ class SPEOptimizer:
         return child
 
     def evolve(self, *, init_population: Sequence[StructuredGenome], eval_fn: EvalFn, log_fn: Optional[LogFn] = None) -> \
-    List[StructuredGenome]:
+            List[StructuredGenome]:
         pop: List[StructuredGenome] = list(init_population)
 
         print("\n🌱 [初始化阶段] 开始评估初始种子 (多线程火力全开)...")
         for i, g in enumerate(pop):
+            # ==========================================
+            # 【新增】：在这里打印种子 Prompt 的详细结构
+            # ==========================================
+            print(f"\n   -------------------------------------------------")
+            print(f"   🔍 预览 种子 {i + 1} ({g.uid}) 的 Prompt 结构:")
+            print(f"   [Role]:       {g.loci.get('L_role', '')}")
+            print(f"   [Instruct]:   {g.loci.get('L_instruct', '')}")
+            print(f"   [Constraint]: {g.loci.get('L_const', '')}")
+            print(f"   [Style]:      {g.loci.get('L_style', '')}")
+            print(f"   -------------------------------------------------")
+
             self._evaluate_n(g, eval_fn, log_fn, self.cfg.batch_size, meta={"phase": "init"})
-            print(f"   👉 种子 {i + 1} ({g.uid}) | 测试 {g.n} 题 | 平均得分: {g.mu()[0]:.2%}")
+
+            # 【重构为清爽输出】：不再打印几百行，只有一行结果
+            failures_count = len(getattr(g, 'failure_cases', []))
+            print(
+                f"   👉 种子 {i + 1} ({g.uid}) 评估完成 | 测验 {g.n} 题 | 平均准确率: {g.mu()[0]:.2%} | 收集到错题: {failures_count} 道")
 
         self._update_elite_pool(pop)
 
         print("\n🚀 [进化阶段] 开始跨代繁殖与优胜劣汰...")
         for gen in range(self.cfg.gens):
             if self.used_budget >= self.cfg.budget:
-                print(f"   ⚠️ 预算已达上限 ({self.used_budget}/{self.cfg.budget})，提前终止进化。")
+                print(f"\n   ⚠️ 预算已达上限 ({self.used_budget}/{self.cfg.budget})，提前终止进化。")
                 break
+
+            # 【重构为清爽输出】：添加明显的代数分割线
+            print(f"\n--- [ 第 {gen + 1} 代进化 | 当前消耗预算: {self.used_budget} / {self.cfg.budget} ] ---")
 
             sel = nsga2_select(pop, mu=len(pop))
             offspring: List[StructuredGenome] = []
@@ -183,12 +198,18 @@ class SPEOptimizer:
                 self._evaluate_n(child, eval_fn, log_fn, self.cfg.batch_size, meta={"phase": "offspring", "gen": gen})
                 offspring.append(child)
 
+                # 【重构为清爽输出】：打印本次触发的算子和繁育结果
+                failures_count = len(getattr(child, 'failure_cases', []))
+                print(f"   ⚡ [触发算子] {op.name}")
+                print(
+                    f"      📊 子代评估完成 | 准确率: {child.mu()[0]:.2%} | 当前长度: {len(child.prompt_text())} 字符 | 收集错题: {failures_count} 道")
+
             pool = pop + offspring + self.elite_pool
             pop = nsga2_select(pool, mu=self.cfg.mu).selected
             self._update_elite_pool(pop)
             best_score = max(g.mu()[0] for g in self.elite_pool)
             print(
-                f"   🔄 第 {gen + 1} 代结束 | 消耗预算: {self.used_budget}/{self.cfg.budget} | 全局最高得分: {best_score:.2%}")
+                f"\n🏆 第 {gen + 1} 代结束 | 全局精英池最高得分: {best_score:.2%} | 当前预算: {self.used_budget}/{self.cfg.budget}")
 
             if log_fn is not None:
                 log_fn({"phase": "gen_end", "gen": gen, "budget_used": self.used_budget,

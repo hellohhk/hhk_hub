@@ -13,6 +13,15 @@ from new_spe.search.embedding import HashingNgramEmbedder
 from new_spe.search.optimizer import SPEOptimizer, SPEOptimizerConfig
 from new_spe.core.genome import StructuredGenome
 
+# 导入所有的进化算子，包括新增的 ErrorDrivenRefine
+from new_spe.operators.spe_operators import (
+    IntraLocusRewrite,
+    IntraLocusRefine,
+    LocusCrossover,
+    SemanticInterpolation,
+    ErrorDrivenRefine
+)
+
 
 # ==========================================
 # 工具函数
@@ -79,7 +88,7 @@ def main():
 
     args = parse_args()
     print("\n" + "=" * 60)
-    print("🚀 SPE 主实验: FULL-SCALE CROSS-TASK EVOLUTION (弱种子启动)")
+    print("🚀 SPE 主实验: FULL-SCALE CROSS-TASK EVOLUTION (引入错题诊断机制)")
     print("=" * 60 + "\n")
 
     cfg = load_deepseek_config("config/apikey.txt")
@@ -95,28 +104,18 @@ def main():
     print(f"✅ 加载完成 | 训练样本: {train_total} | 测试样本 (全量大考): {test_total}")
 
     # ==========================================
-    # 【核心修改 2】：添加探针，但保留 MOO 紧凑度目标！
+    # 【核心修改 2】：保留 MOO 紧凑度目标，但取消刷屏的 DEBUG 打印
     # ==========================================
     def train_eval_fn(prompt: str):
         res = train_evaluator.evaluate_once(kernel=kernel, prompt=prompt, embedder=embedder)
-
-        prompt_len = len(prompt)
-        est_tokens = prompt_len / 4.0
-
-        if 'y' in res and res['y'] is not None and len(res['y']) > 1:
-            acc = res['y'][0]
-            compactness = res['y'][1]
-            # 实时打印：观察准确率和紧凑度是如何在帕累托前沿上博弈的
-            print(
-                f"   [DEBUG] 长度: {prompt_len} 字符 (约 {est_tokens:.0f} Tokens) | 准确率: {acc:.2%} | 紧凑度: {compactness:.4f}")
-            # ⚠️ 注意：这里绝对不能把 compactness 设为 0，我们要让 MOO 发挥作用！
-
+        # 移除了 print("[DEBUG]...")，让底层并发评估保持静默，交给 optimizer 集中打印结果
         return res
 
     run_id = time.strftime("%Y%m%d_%H%M%S")
     log_path = Path(args.log_dir) / f"spe_full_mix_{run_id}.jsonl"
     log_fn = _jsonl_logger(log_path)
 
+    # 解除 invariant_loci 对 L_const 的锁定
     optimizer_cfg = SPEOptimizerConfig(
         budget=args.budget,
         mu=args.mu,
@@ -124,8 +123,27 @@ def main():
         gens=args.gens,
         batch_size=args.batch_size,
         seed=args.seed,
+        invariant_loci=()  # <--- 解锁！允许错题诊断算子对 L_const 写入规则
     )
-    optimizer = SPEOptimizer(kernel=kernel, cfg=optimizer_cfg, embedder=embedder)
+
+    # 注册新算子并分配触发概率
+    custom_operators = [
+        IntraLocusRewrite(),
+        IntraLocusRefine(),
+        LocusCrossover(),
+        SemanticInterpolation(),
+        ErrorDrivenRefine()  # 错题诊断算子
+    ]
+    # 概率分布：将 40% 的算力倾斜给错题诊断，帮助弱种子快速起步
+    custom_probs = [0.2, 0.15, 0.15, 0.1, 0.4]
+
+    optimizer = SPEOptimizer(
+        kernel=kernel,
+        cfg=optimizer_cfg,
+        embedder=embedder,
+        operators=custom_operators,
+        operator_probs=custom_probs
+    )
 
     init_pop = []
     for i in range(args.mu):
@@ -196,7 +214,7 @@ def main():
     # 6. 实验收尾与总结
     # ---------------------------------------------------------
     print(f"\n" + "🎉" * 20)
-    print(f"   主实验总结报告: SPE Baseline (弱种子启动)")
+    print(f"   主实验总结报告: SPE Baseline (弱种子 + 错题诊断驱动)")
     print(f"   - 训练准确率 (Batch Avg): {best_train_ind.mu()[0]:.2%}")
     print(f"   - 测试准确率 (全量大考): {final_test_accuracy:.2%}")
     print(f"   - 最终字符数: {len(best_prompt_text)} (预估 {len(best_prompt_text) / 4:.0f} Tokens)")

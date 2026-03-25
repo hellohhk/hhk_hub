@@ -1,3 +1,4 @@
+# new_spe/core/genome.py
 from __future__ import annotations
 
 from dataclasses import dataclass, field
@@ -5,8 +6,6 @@ from typing import Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 LocusKey = str
-
-
 @dataclass
 class StructuredGenome:
     """
@@ -20,6 +19,9 @@ class StructuredGenome:
     operator: str = "init"
     # 记录该个体与其父代之间的各类距离（例如 embedding L2 displacement）
     radius: Dict[str, float] = field(default_factory=dict)
+
+    # 【新增】：错题本记录。用于存储评估过程中收集到的错题，为 Error-Driven 变异算子提供燃料。
+    failure_cases: List[Dict] = field(default_factory=list)
 
     # --- 目标得分 (y) 的在线均值/方差追踪 (Welford 算法) ---
     n: int = 0
@@ -40,7 +42,14 @@ class StructuredGenome:
     def clone_with(self, *, loci: Dict[LocusKey, str], uid: str, parents: Sequence[str],
                    operator: str) -> "StructuredGenome":
         """创建子代副本"""
-        return StructuredGenome(loci=dict(loci), uid=uid, parents=tuple(parents), operator=operator)
+        # 【修改】：显式传入 failure_cases=[]，确保新生成的子代个体拥有干净的错题本，不继承父代的错题
+        return StructuredGenome(
+            loci=dict(loci),
+            uid=uid,
+            parents=tuple(parents),
+            operator=operator,
+            failure_cases=[]
+        )
 
     def prompt_text(self) -> str:
         """渲染为最终喂给 LLM 的字符串"""
