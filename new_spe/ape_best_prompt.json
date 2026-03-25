@@ -1,0 +1,7 @@
+{
+    "method": "APE (Flat Context)",
+    "budget": 1695,
+    "best_prompt": "Proceed step by step.",
+    "train_score": 85.0,
+    "final_test_acc": 0.6066496163682864
+}

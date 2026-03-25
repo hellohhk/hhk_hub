@@ -1,0 +1,22 @@
+{"phase": "experiment_start", "args": {"train_json": "data/bbh/merged_train.json", "test_json": "data/bbh/merged_test.json", "bbh_n_shot": 3, "budget": 100, "batch_size": 10, "gens": 20, "mu": 6, "lambda_": 8, "seed": 42, "log_dir": "logs", "role": "You are a brilliant mathematician and logician.", "instruct": "Solve the problem step by step, using clear logical deduction.", "const": "Put your final answer in the format required by the problem. Do not add conversational filler.", "style": "Rigorous and analytical"}, "config": {"budget": 100, "mu": 6, "lambd": 8, "gens": 20, "batch_size": 10, "invariant_loci": ["L_const"], "seed": 42, "keep_history": false}}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 1, "mu": [1.0, 0.13676644819615016], "budget_used": 1}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 2, "mu": [0.5, 0.13992461203472556], "budget_used": 2}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 3, "mu": [0.6666666666666666, 0.13639943129394239], "budget_used": 3}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 4, "mu": [0.5, 0.13265817502688523], "budget_used": 4}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 5, "mu": [0.6, 0.1308970510944695], "budget_used": 5}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 6, "mu": [0.6666666666666666, 0.12916659787871448], "budget_used": 6}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 7, "mu": [0.7142857142857143, 0.12725576024135132], "budget_used": 7}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 8, "mu": [0.75, 0.1254228944414471], "budget_used": 8}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 9, "mu": [0.7777777777777778, 0.12404678453866437], "budget_used": 9}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 10, "mu": [0.8, 0.12228808717120579], "budget_used": 10}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 1, "mu": [0.0, 0.14612311092937816], "budget_used": 11}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 2, "mu": [0.5, 0.14415410064780765], "budget_used": 12}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 3, "mu": [0.33333333333333337, 0.14242190576376396], "budget_used": 13}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 4, "mu": [0.25, 0.14249833034966342], "budget_used": 14}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 5, "mu": [0.2, 0.14063947972073315], "budget_used": 15}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 6, "mu": [0.33333333333333337, 0.13844502046768117], "budget_used": 16}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 7, "mu": [0.4285714285714286, 0.13661539388099492], "budget_used": 17}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 8, "mu": [0.375, 0.13470717656070727], "budget_used": 18}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 9, "mu": [0.4444444444444444, 0.13259176569180142], "budget_used": 19}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 10, "mu": [0.5, 0.13050426666867004], "budget_used": 20}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 1, "mu": [1.0, 0.1570851033117767], "budget_used": 21}

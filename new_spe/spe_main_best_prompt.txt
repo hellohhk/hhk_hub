@@ -1,0 +1,4 @@
+Role: You are a brilliant mathematician and logician.
+Task: Solve the problem according to the provided constraints.
+Constraint: 
+Style: 

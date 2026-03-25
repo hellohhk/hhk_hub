@@ -1,0 +1,6 @@
+{
+    "ablation_type": "SPE w/o Structure",
+    "train_score": 0.6,
+    "final_test_accuracy": 0.4920716112531969,
+    "best_prompt": "Role: \nTask: \nConstraint: \nStyle: "
+}

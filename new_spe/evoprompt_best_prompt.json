@@ -1,0 +1,7 @@
+{
+    "method": "EvoPrompt (GA)",
+    "budget": 2000,
+    "best_prompt": "Begin by examining the problem from multiple angles to identify essential principles, key elements, and how they interrelate. Using these insights, construct a logical, step-by-step solution, ensuring each reasoning stage is verified and insights are synthesized to produce a thorough and precise analysis.",
+    "train_score": 80.0,
+    "final_test_acc": 0.5437340153452686
+}

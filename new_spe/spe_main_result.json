@@ -1,0 +1,13 @@
+{
+    "phase": "experiment_end",
+    "best_prompt": "Role: You are a brilliant mathematician and logician.\nTask: Solve the problem according to the provided constraints.\nConstraint: \nStyle: ",
+    "best_prompt_length": 137,
+    "estimated_tokens": 34.25,
+    "best_train_acc": 0.7999999999999999,
+    "final_test_acc": 0.4424552429667519,
+    "total_budget_used": 2500,
+    "detailed_results": [
+        {
+            "idx": 2,
+            "task": "boolean_expressions",
+            "correct": 

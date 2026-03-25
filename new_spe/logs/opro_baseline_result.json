@@ -1,0 +1,7 @@
+{
+    "method": "OPRO (Flat Natural Language)",
+    "prompt": "Thoroughly understand the problem by identifying all given information, constraints, and the objective. Determine the appropriate reasoning type (logical, mathematical, common sense, or a blend). Break the problem into explicit, manageable steps, applying precise reasoning at each step and verifying correctness. After deriving a solution, critically review the entire process to ensure all conditions are met and no errors remain. Finally, state the final answer directly and concisely.",
+    "test_total": 1955,
+    "final_test_accuracy": 0.5053708439897698,
+    "test_time_seconds": 1433.4656510353088
+}

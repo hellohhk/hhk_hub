@@ -1,0 +1,172 @@
+{"phase": "experiment_start", "args": {"train_json": "data/bbh/merged_train.json", "test_json": "data/bbh/merged_test.json", "bbh_n_shot": 3, "budget": 2000, "batch_size": 20, "gens": 20, "mu": 6, "lambda_": 8, "seed": 42, "log_dir": "logs", "role": "You are a brilliant mathematician and logician.", "instruct": "Solve the problem step by step, using clear logical deduction.", "const": "Put your final answer in the format required by the problem. Do not add conversational filler.", "style": "Rigorous and analytical"}, "config": {"budget": 2000, "mu": 6, "lambd": 8, "gens": 20, "batch_size": 20, "invariant_loci": ["L_const"], "seed": 42, "keep_history": false}}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 1, "mu": [1.0, 0.13600576693020325], "budget_used": 1}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 2, "mu": [1.0, 0.128980885152539], "budget_used": 2}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 3, "mu": [1.0, 0.12440943022416531], "budget_used": 3}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 4, "mu": [1.0, 0.12210833319047738], "budget_used": 4}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 5, "mu": [1.0, 0.1214737502994814], "budget_used": 5}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 6, "mu": [1.0, 0.12363151510926881], "budget_used": 6}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 7, "mu": [0.8571428571428572, 0.1261152515863215], "budget_used": 7}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 8, "mu": [0.875, 0.12509557683511421], "budget_used": 8}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 9, "mu": [0.8888888888888888, 0.12358535829930639], "budget_used": 9}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 10, "mu": [0.8999999999999999, 0.12205135688865225], "budget_used": 10}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 11, "mu": [0.9090909090909091, 0.12122111174731037], "budget_used": 11}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 12, "mu": [0.9166666666666666, 0.12302592318271321], "budget_used": 12}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 13, "mu": [0.8461538461538461, 0.1226769751843726], "budget_used": 13}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 14, "mu": [0.8571428571428571, 0.12176689961888117], "budget_used": 14}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 15, "mu": [0.8666666666666666, 0.12204620093971574], "budget_used": 15}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 16, "mu": [0.8749999999999999, 0.12341028779588581], "budget_used": 16}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 17, "mu": [0.8235294117647057, 0.12423057491869385], "budget_used": 17}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 18, "mu": [0.7777777777777777, 0.12492137394389104], "budget_used": 18}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 19, "mu": [0.7894736842105262, 0.12507975620686929], "budget_used": 19}
+{"phase": "init", "uid": "init_0", "operator": "init", "parents": [], "n": 20, "mu": [0.7499999999999999, 0.12568300297018423], "budget_used": 20}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 1, "mu": [1.0, 0.1166031541250374], "budget_used": 21}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 2, "mu": [1.0, 0.11294531520835711], "budget_used": 22}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 3, "mu": [1.0, 0.11482100687946044], "budget_used": 23}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 4, "mu": [1.0, 0.1139819896613331], "budget_used": 24}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 5, "mu": [1.0, 0.11282785855127049], "budget_used": 25}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 6, "mu": [1.0, 0.1122667833352965], "budget_used": 26}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 7, "mu": [0.8571428571428572, 0.11227821975918906], "budget_used": 27}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 8, "mu": [0.875, 0.11167495509560489], "budget_used": 28}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 9, "mu": [0.8888888888888888, 0.11192121395651712], "budget_used": 29}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 10, "mu": [0.8999999999999999, 0.11252487791853173], "budget_used": 30}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 11, "mu": [0.8181818181818181, 0.11516508524092504], "budget_used": 31}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 12, "mu": [0.75, 0.1147532946725301], "budget_used": 32}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 13, "mu": [0.7692307692307693, 0.1146125490588633], "budget_used": 33}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 14, "mu": [0.7142857142857143, 0.11463626775843896], "budget_used": 34}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 15, "mu": [0.7333333333333334, 0.11416728418706455], "budget_used": 35}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 16, "mu": [0.75, 0.11520008520428557], "budget_used": 36}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 17, "mu": [0.7058823529411765, 0.114796475121983], "budget_used": 37}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 18, "mu": [0.6666666666666667, 0.11648018505524765], "budget_used": 38}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 19, "mu": [0.6842105263157895, 0.11739754700386688], "budget_used": 39}
+{"phase": "init", "uid": "init_1", "operator": "init", "parents": [], "n": 20, "mu": [0.7000000000000001, 0.11779914455459896], "budget_used": 40}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 1, "mu": [0.0, 0.14916951792223604], "budget_used": 41}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 2, "mu": [0.5, 0.13280333790447005], "budget_used": 42}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 3, "mu": [0.33333333333333337, 0.13381740028098055], "budget_used": 43}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 4, "mu": [0.25, 0.12729770160289766], "budget_used": 44}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 5, "mu": [0.4, 0.12549682765712517], "budget_used": 45}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 6, "mu": [0.33333333333333337, 0.12588757553468183], "budget_used": 46}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 7, "mu": [0.4285714285714286, 0.12484136244588584], "budget_used": 47}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 8, "mu": [0.5, 0.124061901676763], "budget_used": 48}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 9, "mu": [0.5555555555555556, 0.12346401572181723], "budget_used": 49}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 10, "mu": [0.5, 0.12229193279437099], "budget_used": 50}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 11, "mu": [0.45454545454545453, 0.12103576972878095], "budget_used": 51}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 12, "mu": [0.5, 0.1215507657051347], "budget_used": 52}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 13, "mu": [0.46153846153846156, 0.1208155558644352], "budget_used": 53}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 14, "mu": [0.4285714285714286, 0.12049841253997028], "budget_used": 54}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 15, "mu": [0.4666666666666667, 0.12039135887028103], "budget_used": 55}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 16, "mu": [0.5, 0.12076257650031694], "budget_used": 56}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 17, "mu": [0.47058823529411764, 0.12062259352975203], "budget_used": 57}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 18, "mu": [0.5, 0.12007918500281763], "budget_used": 58}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 19, "mu": [0.5263157894736842, 0.11956266915218022], "budget_used": 59}
+{"phase": "init", "uid": "init_2", "operator": "init", "parents": [], "n": 20, "mu": [0.5499999999999999, 0.11898699229154618], "budget_used": 60}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 1, "mu": [1.0, 0.11314337589034534], "budget_used": 61}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 2, "mu": [1.0, 0.11777606760569478], "budget_used": 62}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 3, "mu": [1.0, 0.1172978687434682], "budget_used": 63}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 4, "mu": [1.0, 0.11949728592775886], "budget_used": 64}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 5, "mu": [1.0, 0.12066024688078947], "budget_used": 65}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 6, "mu": [0.8333333333333334, 0.11866503961359433], "budget_used": 66}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 7, "mu": [0.8571428571428572, 0.11906674964485127], "budget_used": 67}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 8, "mu": [0.875, 0.11907630260990702], "budget_used": 68}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 9, "mu": [0.7777777777777778, 0.1226379485369861], "budget_used": 69}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 10, "mu": [0.8, 0.12230962995478817], "budget_used": 70}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 11, "mu": [0.8181818181818182, 0.1217959405592103], "budget_used": 71}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 12, "mu": [0.8333333333333334, 0.12151903827921111], "budget_used": 72}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 13, "mu": [0.7692307692307693, 0.1207309397558336], "budget_used": 73}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 14, "mu": [0.7857142857142858, 0.12035215982924446], "budget_used": 74}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 15, "mu": [0.7333333333333334, 0.12008887505942115], "budget_used": 75}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 16, "mu": [0.75, 0.11958034970043549], "budget_used": 76}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 17, "mu": [0.7647058823529411, 0.11875702369160444], "budget_used": 77}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 18, "mu": [0.7222222222222222, 0.1203867282480638], "budget_used": 78}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 19, "mu": [0.6842105263157895, 0.12020850419854544], "budget_used": 79}
+{"phase": "init", "uid": "init_3", "operator": "init", "parents": [], "n": 20, "mu": [0.7000000000000001, 0.12006945653941407], "budget_used": 80}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 1, "mu": [0.0, 0.10304847733695795], "budget_used": 81}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 2, "mu": [0.5, 0.11279239710677158], "budget_used": 82}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 3, "mu": [0.33333333333333337, 0.11545924759210434], "budget_used": 83}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 4, "mu": [0.5, 0.11286876491827778], "budget_used": 84}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 5, "mu": [0.4, 0.1202190955787436], "budget_used": 85}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 6, "mu": [0.5, 0.11932215279214489], "budget_used": 86}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 7, "mu": [0.4285714285714286, 0.12114541524339441], "budget_used": 87}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 8, "mu": [0.375, 0.12010416716674924], "budget_used": 88}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 9, "mu": [0.4444444444444444, 0.11967031377227137], "budget_used": 89}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 10, "mu": [0.39999999999999997, 0.11931720186655563], "budget_used": 90}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 11, "mu": [0.45454545454545453, 0.118963639949922], "budget_used": 91}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 12, "mu": [0.41666666666666663, 0.11848283471216381], "budget_used": 92}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 13, "mu": [0.4615384615384615, 0.11858338413207639], "budget_used": 93}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 14, "mu": [0.5, 0.11942801529875517], "budget_used": 94}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 15, "mu": [0.5333333333333333, 0.11907609197294064], "budget_used": 95}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 16, "mu": [0.5625, 0.11889253589432648], "budget_used": 96}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 17, "mu": [0.5882352941176471, 0.11909194786155829], "budget_used": 97}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 18, "mu": [0.6111111111111112, 0.11897897368901161], "budget_used": 98}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 19, "mu": [0.5789473684210527, 0.11864868742797771], "budget_used": 99}
+{"phase": "init", "uid": "init_4", "operator": "init", "parents": [], "n": 20, "mu": [0.55, 0.11879010354819847], "budget_used": 100}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 1, "mu": [1.0, 0.11858902107361494], "budget_used": 101}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 2, "mu": [1.0, 0.11664845503121164], "budget_used": 102}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 3, "mu": [0.6666666666666667, 0.1177986289308176], "budget_used": 103}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 4, "mu": [0.75, 0.11895693453838642], "budget_used": 104}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 5, "mu": [0.8, 0.11815088250899386], "budget_used": 105}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 6, "mu": [0.8333333333333334, 0.11561601375367855], "budget_used": 106}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 7, "mu": [0.7142857142857143, 0.11594383074690456], "budget_used": 107}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 8, "mu": [0.75, 0.11558183994083772], "budget_used": 108}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 9, "mu": [0.7777777777777778, 0.11471102252061542], "budget_used": 109}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 10, "mu": [0.8, 0.15089045607260432], "budget_used": 110}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 11, "mu": [0.8181818181818182, 0.14903434222823192], "budget_used": 111}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 12, "mu": [0.8333333333333334, 0.14594568703507055], "budget_used": 112}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 13, "mu": [0.8461538461538461, 0.14333882381767724], "budget_used": 113}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 14, "mu": [0.8571428571428571, 0.14196380768104389], "budget_used": 114}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 15, "mu": [0.8666666666666666, 0.14020950718719322], "budget_used": 115}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 16, "mu": [0.8749999999999999, 0.13918719769829405], "budget_used": 116}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 17, "mu": [0.8235294117647057, 0.13770304087368235], "budget_used": 117}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 18, "mu": [0.8333333333333331, 0.13623148344495906], "budget_used": 118}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 19, "mu": [0.8421052631578946, 0.1364554571053545], "budget_used": 119}
+{"phase": "init", "uid": "init_5", "operator": "init", "parents": [], "n": 20, "mu": [0.7999999999999998, 0.1357986254111435], "budget_used": 120}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 1, "mu": [0.0, 0.11888406446843357], "budget_used": 121}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 2, "mu": [0.0, 0.13093227495243465], "budget_used": 122}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 3, "mu": [0.3333333333333333, 0.12599235147753404], "budget_used": 123}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 4, "mu": [0.5, 0.12293342236343188], "budget_used": 124}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 5, "mu": [0.6, 0.1247104967271294], "budget_used": 125}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 6, "mu": [0.5, 0.12245082004845381], "budget_used": 126}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 7, "mu": [0.5714285714285714, 0.12018076309081287], "budget_used": 127}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 8, "mu": [0.625, 0.12011926540142794], "budget_used": 128}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 9, "mu": [0.5555555555555556, 0.1201708323205085], "budget_used": 129}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 10, "mu": [0.6, 0.16721536000342177], "budget_used": 130}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 11, "mu": [0.6363636363636364, 0.16407616490271099], "budget_used": 131}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 12, "mu": [0.5833333333333334, 0.15941742571809422], "budget_used": 132}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 13, "mu": [0.6153846153846154, 0.15513578002649128], "budget_used": 133}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 14, "mu": [0.5714285714285715, 0.1518277153166923], "budget_used": 134}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 15, "mu": [0.5333333333333334, 0.15162121273956045], "budget_used": 135}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 16, "mu": [0.5625000000000001, 0.14963176051652713], "budget_used": 136}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 17, "mu": [0.5294117647058825, 0.14736925015100955], "budget_used": 137}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 18, "mu": [0.5555555555555557, 0.14620486136052005], "budget_used": 138}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 19, "mu": [0.5789473684210528, 0.14473498069683263], "budget_used": 139}
+{"phase": "offspring", "gen": 0, "uid": "g_9780601164729", "operator": "K_swp", "parents": ["init_2", "init_0"], "n": 20, "mu": [0.5500000000000002, 0.14371334536091318], "budget_used": 140}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 1, "mu": [0.0, 0.1140276729717888], "budget_used": 141}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 2, "mu": [0.0, 0.11363879796127416], "budget_used": 142}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 3, "mu": [0.3333333333333333, 0.11810268302554028], "budget_used": 143}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 4, "mu": [0.5, 0.12361278081951317], "budget_used": 144}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 5, "mu": [0.4, 0.1210114487333198], "budget_used": 145}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 6, "mu": [0.33333333333333337, 0.12033095186634522], "budget_used": 146}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 7, "mu": [0.4285714285714286, 0.12224709793700593], "budget_used": 147}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 8, "mu": [0.5, 0.12148528122683397], "budget_used": 148}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 9, "mu": [0.5555555555555556, 0.12082342966025582], "budget_used": 149}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 10, "mu": [0.6, 0.12004088720066655], "budget_used": 150}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 11, "mu": [0.6363636363636364, 0.11960966030031062], "budget_used": 151}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 12, "mu": [0.6666666666666666, 0.1201170001575885], "budget_used": 152}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 13, "mu": [0.6153846153846153, 0.12189948855214772], "budget_used": 153}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 14, "mu": [0.5714285714285714, 0.12235231005995414], "budget_used": 154}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 15, "mu": [0.5333333333333333, 0.12281610261993534], "budget_used": 155}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 16, "mu": [0.5625, 0.12219597049888593], "budget_used": 156}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 17, "mu": [0.5882352941176471, 0.12155423054613933], "budget_used": 157}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 18, "mu": [0.5555555555555556, 0.12096446654781491], "budget_used": 158}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 19, "mu": [0.5789473684210527, 0.12188500784370358], "budget_used": 159}
+{"phase": "offspring", "gen": 0, "uid": "g_4337182218092", "operator": "K_swp", "parents": ["init_0", "init_0"], "n": 20, "mu": [0.55, 0.12120722425397848], "budget_used": 160}
+{"phase": "offspring", "gen": 0, "uid": "g_3045148496062", "operator": "K_mix", "parents": ["init_3", "init_3"], "n": 1, "mu": [1.0, 0.12353206267337016], "budget_used": 162}
+{"phase": "offspring", "gen": 0, "uid": "g_3045148496062", "operator": "K_mix", "parents": ["init_3", "init_3"], "n": 2, "mu": [1.0, 0.12192568265054174], "budget_used": 163}
+{"phase": "offspring", "gen": 0, "uid": "g_3045148496062", "operator": "K_mix", "parents": ["init_3", "init_3"], "n": 3, "mu": [1.0, 0.12498978940195576], "budget_used": 164}
+{"phase": "offspring", "gen": 0, "uid": "g_3045148496062", "operator": "K_mix", "parents": ["init_3", "init_3"], "n": 4, "mu": [1.0, 0.12686273728595454], "budget_used": 165}
+{"phase": "offspring", "gen": 0, "uid": "g_3045148496062", "operator": "K_mix", "parents": ["init_3", "init_3"], "n": 5, "mu": [0.8, 0.1286720717930418], "budget_used": 166}
+{"phase": "offspring", "gen": 0, "uid": "g_3045148496062", "operator": "K_mix", "parents": ["init_3", "init_3"], "n": 6, "mu": [0.8333333333333334, 0.12593491541100962], "budget_used": 167}
+{"phase": "offspring", "gen": 0, "uid": "g_3045148496062", "operator": "K_mix", "parents": ["init_3", "init_3"], "n": 7, "mu": [0.8571428571428572, 0.12457907387281413], "budget_used": 168}
+{"phase": "offspring", "gen": 0, "uid": "g_3045148496062", "operator": "K_mix", "parents": ["init_3", "init_3"], "n": 8, "mu": [0.875, 0.12357426613124649], "budget_used": 169}
+{"phase": "offspring", "gen": 0, "uid": "g_3045148496062", "operator": "K_mix", "parents": ["init_3", "init_3"], "n": 9, "mu": [0.8888888888888888, 0.12233354654043342], "budget_used": 170}
+{"phase": "offspring", "gen": 0, "uid": "g_3045148496062", "operator": "K_mix", "parents": ["init_3", "init_3"], "n": 10, "mu": [0.7999999999999999, 0.12174459435075419], "budget_used": 171}
+{"phase": "offspring", "gen": 0, "uid": "g_3045148496062", "operator": "K_mix", "parents": ["init_3", "init_3"], "n": 11, "mu": [0.8181818181818181, 0.12367977199476014], "budget_used": 172}

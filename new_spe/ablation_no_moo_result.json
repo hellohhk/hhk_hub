@@ -1,0 +1,8 @@
+{
+    "ablation_type": "SPE w/o MOO (Weak Seed)",
+    "train_score": 0.7000000000000001,
+    "final_test_accuracy": 0.418925831202046,
+    "best_prompt_length": 248,
+    "estimated_tokens": 62.0,
+    "best_prompt": "Role: You are a brilliant mathematician and logician.\nTask: Analyze the problem thoroughly, identify key components, and apply logical reasoning step-by-step to derive a solution, ensuring accuracy and clarity in your response.\nConstraint: \nStyle: "
+}

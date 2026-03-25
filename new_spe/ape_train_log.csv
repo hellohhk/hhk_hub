@@ -1,0 +1,77 @@
+BudgetUsed,Source,Score,Prompt
+201,Eval,75.0,"Finally, synthesize the information to reach a conclusion."
+201,Eval,65.0,"Therefore, the answer follows logically from the reasoning above."
+201,Eval,65.0,Let's work through this step by step.
+201,Eval,65.0,Start by identifying the key constraints.
+201,Eval,65.0,Consider each possibility systematically.
+201,Eval,60.0,"First, break down the problem into smaller parts."
+201,Eval,55.0,"Next, evaluate the implications of each piece of information."
+201,Eval,50.0,Check for any contradictions or hidden assumptions.
+201,Eval,45.0,"Now, combine the results from the previous steps."
+201,Eval,40.0,We can approach this by analyzing the conditions.
+310,Eval,70.0,Let's proceed step by step.
+310,Eval,55.0,Synthesize the information to form a conclusion.
+310,Eval,50.0,Let's proceed systematically.
+310,Eval,40.0,"Thus, the answer follows logically."
+310,Eval,40.0,"Thus, the answer logically follows."
+399,Eval,85.0,Proceed step by step.
+399,Eval,75.0,Synthesize the information and draw a conclusion.
+399,Eval,65.0,Let's break this down step by step.
+399,Eval,60.0,Proceed systematically.
+488,Eval,60.0,Synthesize the information to draw a conclusion.
+488,Eval,60.0,Walk me through this step by step.
+488,Eval,50.0,Provide a step-by-step explanation.
+488,Eval,35.0,Execute sequentially.
+557,Eval,55.0,Guide me through each step.
+557,Eval,55.0,Explain step by step.
+557,Eval,55.0,Guide me through this process step by step.
+666,Eval,60.0,Outline the process step by step.
+666,Eval,55.0,Walk me through the process step by step.
+666,Eval,55.0,Provide a step-by-step guide.
+666,Eval,55.0,Walk me through each step sequentially.
+666,Eval,50.0,Walk me through each step.
+755,Eval,60.0,"Create a clear, step-by-step guide."
+755,Eval,55.0,Guide me through each step sequentially.
+755,Eval,45.0,Create a step-by-step guide.
+755,Eval,45.0,Provide a step-by-step outline of the process.
+824,Eval,65.0,"Provide a clear, step-by-step guide."
+824,Eval,60.0,"Develop a clear, sequential guide."
+824,Eval,50.0,Create a comprehensive step-by-step guide.
+873,Eval,65.0,"Outline a clear, step-by-step process."
+873,Eval,40.0,Create a detailed step-by-step guide.
+959,Eval,80.0,"Provide a clear, step-by-step outline."
+959,Eval,60.0,"Develop a comprehensive, sequential guide."
+959,Eval,50.0,Provide a step-by-step outline.
+959,Eval,35.0,"Provide a comprehensive, sequential guide."
+1028,Eval,50.0,Outline the steps clearly.
+1028,Eval,50.0,Outline the steps sequentially.
+1028,Eval,35.0,Outline the steps clearly and sequentially.
+1057,Eval,60.0,Provide a sequential outline.
+1080,Eval,60.0,Outline the steps in sequence.
+1123,Eval,60.0,Provide a sequential outline of the steps.
+1123,Eval,55.0,List the steps in order.
+1189,Eval,80.0,Outline the process sequentially.
+1189,Eval,55.0,Provide the steps in sequential order.
+1189,Eval,50.0,Outline the sequence of steps.
+1238,Eval,70.0,List the steps sequentially.
+1238,Eval,55.0,Detail the step-by-step process.
+1344,Eval,65.0,Outline the sequential steps involved.
+1344,Eval,55.0,Outline the steps in sequential order.
+1344,Eval,50.0,Outline the sequential steps.
+1344,Eval,50.0,Outline the steps in chronological order.
+1344,Eval,50.0,Outline the process in sequential order.
+1433,Eval,65.0,Detail the process step by step.
+1433,Eval,65.0,Detail the sequential steps.
+1433,Eval,50.0,Detail the process in sequential order.
+1433,Eval,40.0,Detail the process in sequential steps.
+1502,Eval,65.0,"Provide a detailed, step-by-step breakdown of the process."
+1502,Eval,45.0,Outline the step-by-step process.
+1502,Eval,35.0,Outline the procedure in sequential steps.
+1551,Eval,75.0,Outline the process in sequential steps.
+1551,Eval,55.0,Provide a step-by-step outline of the procedure.
+1577,Eval,50.0,Outline the procedure step by step.
+1620,Eval,70.0,Provide a step-by-step procedure.
+1620,Eval,40.0,"Provide a clear, step-by-step outline of the procedure."
+1646,Eval,80.0,Outline a step-by-step process.
+1689,Eval,65.0,"Outline a clear, sequential process."
+1689,Eval,45.0,"Provide a clear, sequential outline of the process."

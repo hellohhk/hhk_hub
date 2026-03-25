@@ -1,0 +1,475 @@
+{"phase": "experiment_start", "args": {"train_json": "data/bbh/merged_train.json", "test_json": "data/bbh/merged_test.json", "bbh_n_shot": 3, "budget": 500, "batch_size": 10, "gens": 10, "mu": 4, "lambda_": 6, "seed": 42, "log_dir": "logs", "role": "You are a brilliant mathematician and logician.", "instruct": "Solve the problem step by step, using clear logical deduction.", "const": "Put your final answer in the format required by the problem. Do not add conversational filler.", "style": "Rigorous and analytical"}, "config": {"budget": 500, "mu": 4, "lambd": 6, "gens": 10, "batch_size": 10, "invariant_loci": [], "seed": 42, "keep_history": false}}
+{"phase": "init", "uid": "init_flat_0", "operator": "init", "parents": [], "n": 1, "mu": [0.0, 0.13260787983968042], "budget_used": 1}
+{"phase": "init", "uid": "init_flat_0", "operator": "init", "parents": [], "n": 2, "mu": [0.0, 0.1288013270581773], "budget_used": 2}
+{"phase": "init", "uid": "init_flat_0", "operator": "init", "parents": [], "n": 3, "mu": [0.3333333333333333, 0.12670134948069417], "budget_used": 3}
+{"phase": "init", "uid": "init_flat_0", "operator": "init", "parents": [], "n": 4, "mu": [0.25, 0.1262534151058735], "budget_used": 4}
+{"phase": "init", "uid": "init_flat_0", "operator": "init", "parents": [], "n": 5, "mu": [0.4, 0.12480185712149336], "budget_used": 5}
+{"phase": "init", "uid": "init_flat_0", "operator": "init", "parents": [], "n": 6, "mu": [0.5, 0.12480104070621964], "budget_used": 6}
+{"phase": "init", "uid": "init_flat_0", "operator": "init", "parents": [], "n": 7, "mu": [0.5714285714285714, 0.12334584146472523], "budget_used": 7}
+{"phase": "init", "uid": "init_flat_0", "operator": "init", "parents": [], "n": 8, "mu": [0.5, 0.12216063842157877], "budget_used": 8}
+{"phase": "init", "uid": "init_flat_0", "operator": "init", "parents": [], "n": 9, "mu": [0.5555555555555556, 0.12107698857628434], "budget_used": 9}
+{"phase": "init", "uid": "init_flat_0", "operator": "init", "parents": [], "n": 10, "mu": [0.6, 0.1199185941757523], "budget_used": 10}
+{"phase": "init", "uid": "init_flat_1", "operator": "init", "parents": [], "n": 1, "mu": [1.0, 0.17686717593839146], "budget_used": 11}
+{"phase": "init", "uid": "init_flat_1", "operator": "init", "parents": [], "n": 2, "mu": [0.5, 0.16161985861459027], "budget_used": 12}
+{"phase": "init", "uid": "init_flat_1", "operator": "init", "parents": [], "n": 3, "mu": [0.33333333333333337, 0.15407887024569178], "budget_used": 13}
+{"phase": "init", "uid": "init_flat_1", "operator": "init", "parents": [], "n": 4, "mu": [0.5, 0.14841929719697655], "budget_used": 14}
+{"phase": "init", "uid": "init_flat_1", "operator": "init", "parents": [], "n": 5, "mu": [0.6, 0.14474880569405246], "budget_used": 15}
+{"phase": "init", "uid": "init_flat_1", "operator": "init", "parents": [], "n": 6, "mu": [0.5, 0.14090968801609552], "budget_used": 16}
+{"phase": "init", "uid": "init_flat_1", "operator": "init", "parents": [], "n": 7, "mu": [0.5714285714285714, 0.13776561214472052], "budget_used": 17}
+{"phase": "init", "uid": "init_flat_1", "operator": "init", "parents": [], "n": 8, "mu": [0.625, 0.13533157711088487], "budget_used": 18}
+{"phase": "init", "uid": "init_flat_1", "operator": "init", "parents": [], "n": 9, "mu": [0.5555555555555556, 0.1331784815777844], "budget_used": 19}
+{"phase": "init", "uid": "init_flat_1", "operator": "init", "parents": [], "n": 10, "mu": [0.6, 0.1310376000159713], "budget_used": 20}
+{"phase": "init", "uid": "init_flat_2", "operator": "init", "parents": [], "n": 1, "mu": [1.0, 0.253521478030654], "budget_used": 21}
+{"phase": "init", "uid": "init_flat_2", "operator": "init", "parents": [], "n": 2, "mu": [0.5, 0.2518942479116267], "budget_used": 22}
+{"phase": "init", "uid": "init_flat_2", "operator": "init", "parents": [], "n": 3, "mu": [0.6666666666666666, 0.2503454917109961], "budget_used": 23}
+{"phase": "init", "uid": "init_flat_2", "operator": "init", "parents": [], "n": 4, "mu": [0.5, 0.22116088014226695], "budget_used": 24}
+{"phase": "init", "uid": "init_flat_2", "operator": "init", "parents": [], "n": 5, "mu": [0.4, 0.20034620356966945], "budget_used": 25}
+{"phase": "init", "uid": "init_flat_2", "operator": "init", "parents": [], "n": 6, "mu": [0.5, 0.18698276836028166], "budget_used": 26}
+{"phase": "init", "uid": "init_flat_2", "operator": "init", "parents": [], "n": 7, "mu": [0.5714285714285714, 0.17707990212658314], "budget_used": 27}
+{"phase": "init", "uid": "init_flat_2", "operator": "init", "parents": [], "n": 8, "mu": [0.625, 0.16964796947554348], "budget_used": 28}
+{"phase": "init", "uid": "init_flat_2", "operator": "init", "parents": [], "n": 9, "mu": [0.6666666666666666, 0.16335796234675], "budget_used": 29}
+{"phase": "init", "uid": "init_flat_2", "operator": "init", "parents": [], "n": 10, "mu": [0.6, 0.15826624207767187], "budget_used": 30}
+{"phase": "init", "uid": "init_flat_3", "operator": "init", "parents": [], "n": 1, "mu": [1.0, 0.41905978419640516], "budget_used": 31}
+{"phase": "init", "uid": "init_flat_3", "operator": "init", "parents": [], "n": 2, "mu": [0.5, 0.32494457273611616], "budget_used": 32}
+{"phase": "init", "uid": "init_flat_3", "operator": "init", "parents": [], "n": 3, "mu": [0.6666666666666666, 0.2873474911065536], "budget_used": 33}
+{"phase": "init", "uid": "init_flat_3", "operator": "init", "parents": [], "n": 4, "mu": [0.75, 0.24883155607041552], "budget_used": 34}
+{"phase": "init", "uid": "init_flat_3", "operator": "init", "parents": [], "n": 5, "mu": [0.6, 0.22577577370694446], "budget_used": 35}
+{"phase": "init", "uid": "init_flat_3", "operator": "init", "parents": [], "n": 6, "mu": [0.6666666666666666, 0.2091086903303337], "budget_used": 36}
+{"phase": "init", "uid": "init_flat_3", "operator": "init", "parents": [], "n": 7, "mu": [0.5714285714285714, 0.19653145161168054], "budget_used": 37}
+{"phase": "init", "uid": "init_flat_3", "operator": "init", "parents": [], "n": 8, "mu": [0.625, 0.18701707145446622], "budget_used": 38}
+{"phase": "init", "uid": "init_flat_3", "operator": "init", "parents": [], "n": 9, "mu": [0.6666666666666666, 0.17890409177151753], "budget_used": 39}
+{"phase": "init", "uid": "init_flat_3", "operator": "init", "parents": [], "n": 10, "mu": [0.6, 0.1717127121532941], "budget_used": 40}
+{"phase": "offspring", "gen": 0, "uid": "g_1847596130988", "operator": "K_swp", "parents": ["init_flat_1", "init_flat_0"], "n": 1, "mu": [0.0, 0.2747964402379244], "budget_used": 41}
+{"phase": "offspring", "gen": 0, "uid": "g_1847596130988", "operator": "K_swp", "parents": ["init_flat_1", "init_flat_0"], "n": 2, "mu": [0.0, 0.2747964402379244], "budget_used": 42}
+{"phase": "offspring", "gen": 0, "uid": "g_1847596130988", "operator": "K_swp", "parents": ["init_flat_1", "init_flat_0"], "n": 3, "mu": [0.3333333333333333, 0.25548981238322893], "budget_used": 43}
+{"phase": "offspring", "gen": 0, "uid": "g_1847596130988", "operator": "K_swp", "parents": ["init_flat_1", "init_flat_0"], "n": 4, "mu": [0.5, 0.2441251291616528], "budget_used": 44}
+{"phase": "offspring", "gen": 0, "uid": "g_1847596130988", "operator": "K_swp", "parents": ["init_flat_1", "init_flat_0"], "n": 5, "mu": [0.4, 0.22193034571670572], "budget_used": 45}
+{"phase": "offspring", "gen": 0, "uid": "g_1847596130988", "operator": "K_swp", "parents": ["init_flat_1", "init_flat_0"], "n": 6, "mu": [0.33333333333333337, 0.2062877610326003], "budget_used": 46}
+{"phase": "offspring", "gen": 0, "uid": "g_1847596130988", "operator": "K_swp", "parents": ["init_flat_1", "init_flat_0"], "n": 7, "mu": [0.4285714285714286, 0.1943552052711365], "budget_used": 47}
+{"phase": "offspring", "gen": 0, "uid": "g_1847596130988", "operator": "K_swp", "parents": ["init_flat_1", "init_flat_0"], "n": 8, "mu": [0.5, 0.18525345501803286], "budget_used": 48}
+{"phase": "offspring", "gen": 0, "uid": "g_1847596130988", "operator": "K_swp", "parents": ["init_flat_1", "init_flat_0"], "n": 9, "mu": [0.5555555555555556, 0.1780979069399008], "budget_used": 49}
+{"phase": "offspring", "gen": 0, "uid": "g_1847596130988", "operator": "K_swp", "parents": ["init_flat_1", "init_flat_0"], "n": 10, "mu": [0.5, 0.17190203571742213], "budget_used": 50}
+{"phase": "offspring", "gen": 0, "uid": "g_5053473441059", "operator": "K_mix", "parents": ["init_flat_2", "init_flat_2"], "n": 1, "mu": [0.0, 0.15206930350503198], "budget_used": 52}
+{"phase": "offspring", "gen": 0, "uid": "g_5053473441059", "operator": "K_mix", "parents": ["init_flat_2", "init_flat_2"], "n": 2, "mu": [0.0, 0.15299125540847813], "budget_used": 53}
+{"phase": "offspring", "gen": 0, "uid": "g_5053473441059", "operator": "K_mix", "parents": ["init_flat_2", "init_flat_2"], "n": 3, "mu": [0.0, 0.15186764301252106], "budget_used": 54}
+{"phase": "offspring", "gen": 0, "uid": "g_5053473441059", "operator": "K_mix", "parents": ["init_flat_2", "init_flat_2"], "n": 4, "mu": [0.0, 0.15026473500898893], "budget_used": 55}
+{"phase": "offspring", "gen": 0, "uid": "g_5053473441059", "operator": "K_mix", "parents": ["init_flat_2", "init_flat_2"], "n": 5, "mu": [0.0, 0.14850663209986026], "budget_used": 56}
+{"phase": "offspring", "gen": 0, "uid": "g_5053473441059", "operator": "K_mix", "parents": ["init_flat_2", "init_flat_2"], "n": 6, "mu": [0.0, 0.1477794253991716], "budget_used": 57}
+{"phase": "offspring", "gen": 0, "uid": "g_5053473441059", "operator": "K_mix", "parents": ["init_flat_2", "init_flat_2"], "n": 7, "mu": [0.0, 0.14710847546690436], "budget_used": 58}
+{"phase": "offspring", "gen": 0, "uid": "g_5053473441059", "operator": "K_mix", "parents": ["init_flat_2", "init_flat_2"], "n": 8, "mu": [0.0, 0.14621141348530783], "budget_used": 59}
+{"phase": "offspring", "gen": 0, "uid": "g_5053473441059", "operator": "K_mix", "parents": ["init_flat_2", "init_flat_2"], "n": 9, "mu": [0.0, 0.14566458862556306], "budget_used": 60}
+{"phase": "offspring", "gen": 0, "uid": "g_5053473441059", "operator": "K_mix", "parents": ["init_flat_2", "init_flat_2"], "n": 10, "mu": [0.0, 0.14508714053572125], "budget_used": 61}
+{"phase": "offspring", "gen": 0, "uid": "g_8404854519436", "operator": "K_ref", "parents": ["init_flat_0"], "n": 1, "mu": [0.0, 0.21817298312218497], "budget_used": 63}
+{"phase": "offspring", "gen": 0, "uid": "g_8404854519436", "operator": "K_ref", "parents": ["init_flat_0"], "n": 2, "mu": [0.0, 0.21817298312218497], "budget_used": 64}
+{"phase": "offspring", "gen": 0, "uid": "g_8404854519436", "operator": "K_ref", "parents": ["init_flat_0"], "n": 3, "mu": [0.0, 0.20168605489847558], "budget_used": 65}
+{"phase": "offspring", "gen": 0, "uid": "g_8404854519436", "operator": "K_ref", "parents": ["init_flat_0"], "n": 4, "mu": [0.0, 0.19349440696772804], "budget_used": 66}
+{"phase": "offspring", "gen": 0, "uid": "g_8404854519436", "operator": "K_ref", "parents": ["init_flat_0"], "n": 5, "mu": [0.0, 0.18726803804301936], "budget_used": 67}
+{"phase": "offspring", "gen": 0, "uid": "g_8404854519436", "operator": "K_ref", "parents": ["init_flat_0"], "n": 6, "mu": [0.0, 0.1760558750534982], "budget_used": 68}
+{"phase": "offspring", "gen": 0, "uid": "g_8404854519436", "operator": "K_ref", "parents": ["init_flat_0"], "n": 7, "mu": [0.0, 0.1678872540214476], "budget_used": 69}
+{"phase": "offspring", "gen": 0, "uid": "g_8404854519436", "operator": "K_ref", "parents": ["init_flat_0"], "n": 8, "mu": [0.0, 0.16116375920784312], "budget_used": 70}
+{"phase": "offspring", "gen": 0, "uid": "g_8404854519436", "operator": "K_ref", "parents": ["init_flat_0"], "n": 9, "mu": [0.0, 0.15468272216260015], "budget_used": 71}
+{"phase": "offspring", "gen": 0, "uid": "g_8404854519436", "operator": "K_ref", "parents": ["init_flat_0"], "n": 10, "mu": [0.1, 0.1486583503132811], "budget_used": 72}
+{"phase": "offspring", "gen": 0, "uid": "g_5991263083141", "operator": "K_ref", "parents": ["init_flat_1"], "n": 1, "mu": [0.0, 0.21817298312218497], "budget_used": 74}
+{"phase": "offspring", "gen": 0, "uid": "g_5991263083141", "operator": "K_ref", "parents": ["init_flat_1"], "n": 2, "mu": [0.0, 0.21217613770376054], "budget_used": 75}
+{"phase": "offspring", "gen": 0, "uid": "g_5991263083141", "operator": "K_ref", "parents": ["init_flat_1"], "n": 3, "mu": [0.0, 0.2073211442513348], "budget_used": 76}
+{"phase": "offspring", "gen": 0, "uid": "g_5991263083141", "operator": "K_ref", "parents": ["init_flat_1"], "n": 4, "mu": [0.0, 0.18494124463101186], "budget_used": 77}
+{"phase": "offspring", "gen": 0, "uid": "g_5991263083141", "operator": "K_ref", "parents": ["init_flat_1"], "n": 5, "mu": [0.0, 0.17256265328517262], "budget_used": 78}
+{"phase": "offspring", "gen": 0, "uid": "g_5991263083141", "operator": "K_ref", "parents": ["init_flat_1"], "n": 6, "mu": [0.0, 0.16315429515893265], "budget_used": 79}
+{"phase": "offspring", "gen": 0, "uid": "g_5991263083141", "operator": "K_ref", "parents": ["init_flat_1"], "n": 7, "mu": [0.0, 0.15647161718221747], "budget_used": 80}
+{"phase": "offspring", "gen": 0, "uid": "g_5991263083141", "operator": "K_ref", "parents": ["init_flat_1"], "n": 8, "mu": [0.0, 0.1511626968229313], "budget_used": 81}
+{"phase": "offspring", "gen": 0, "uid": "g_5991263083141", "operator": "K_ref", "parents": ["init_flat_1"], "n": 9, "mu": [0.0, 0.14719426512813105], "budget_used": 82}
+{"phase": "offspring", "gen": 0, "uid": "g_5991263083141", "operator": "K_ref", "parents": ["init_flat_1"], "n": 10, "mu": [0.0, 0.14366649290403913], "budget_used": 83}
+{"phase": "offspring", "gen": 0, "uid": "g_7822789660767", "operator": "K_rew", "parents": ["init_flat_2"], "n": 1, "mu": [0.0, 0.13137081045989485], "budget_used": 85}
+{"phase": "offspring", "gen": 0, "uid": "g_7822789660767", "operator": "K_rew", "parents": ["init_flat_2"], "n": 2, "mu": [0.0, 0.13105355922868708], "budget_used": 86}
+{"phase": "offspring", "gen": 0, "uid": "g_7822789660767", "operator": "K_rew", "parents": ["init_flat_2"], "n": 3, "mu": [0.0, 0.12847531389283615], "budget_used": 87}
+{"phase": "offspring", "gen": 0, "uid": "g_7822789660767", "operator": "K_rew", "parents": ["init_flat_2"], "n": 4, "mu": [0.0, 0.12742868803564364], "budget_used": 88}
+{"phase": "offspring", "gen": 0, "uid": "g_7822789660767", "operator": "K_rew", "parents": ["init_flat_2"], "n": 5, "mu": [0.0, 0.12638807081021686], "budget_used": 89}
+{"phase": "offspring", "gen": 0, "uid": "g_7822789660767", "operator": "K_rew", "parents": ["init_flat_2"], "n": 6, "mu": [0.0, 0.1251574343486806], "budget_used": 90}
+{"phase": "offspring", "gen": 0, "uid": "g_7822789660767", "operator": "K_rew", "parents": ["init_flat_2"], "n": 7, "mu": [0.0, 0.12359677320776333], "budget_used": 91}
+{"phase": "offspring", "gen": 0, "uid": "g_7822789660767", "operator": "K_rew", "parents": ["init_flat_2"], "n": 8, "mu": [0.0, 0.12231816112638567], "budget_used": 92}
+{"phase": "offspring", "gen": 0, "uid": "g_7822789660767", "operator": "K_rew", "parents": ["init_flat_2"], "n": 9, "mu": [0.0, 0.1205803510185566], "budget_used": 93}
+{"phase": "offspring", "gen": 0, "uid": "g_7822789660767", "operator": "K_rew", "parents": ["init_flat_2"], "n": 10, "mu": [0.0, 0.11869726962960564], "budget_used": 94}
+{"phase": "offspring", "gen": 0, "uid": "g_9038090091898", "operator": "K_ref", "parents": ["init_flat_0"], "n": 1, "mu": [0.0, 0.1720523539614952], "budget_used": 96}
+{"phase": "offspring", "gen": 0, "uid": "g_9038090091898", "operator": "K_ref", "parents": ["init_flat_0"], "n": 2, "mu": [0.0, 0.16288621051450947], "budget_used": 97}
+{"phase": "offspring", "gen": 0, "uid": "g_9038090091898", "operator": "K_ref", "parents": ["init_flat_0"], "n": 3, "mu": [0.0, 0.16054344372633156], "budget_used": 98}
+{"phase": "offspring", "gen": 0, "uid": "g_9038090091898", "operator": "K_ref", "parents": ["init_flat_0"], "n": 4, "mu": [0.0, 0.14958462925654983], "budget_used": 99}
+{"phase": "offspring", "gen": 0, "uid": "g_9038090091898", "operator": "K_ref", "parents": ["init_flat_0"], "n": 5, "mu": [0.0, 0.14279884127215348], "budget_used": 100}
+{"phase": "offspring", "gen": 0, "uid": "g_9038090091898", "operator": "K_ref", "parents": ["init_flat_0"], "n": 6, "mu": [0.0, 0.1377725042816287], "budget_used": 101}
+{"phase": "offspring", "gen": 0, "uid": "g_9038090091898", "operator": "K_ref", "parents": ["init_flat_0"], "n": 7, "mu": [0.0, 0.13411970815397486], "budget_used": 102}
+{"phase": "offspring", "gen": 0, "uid": "g_9038090091898", "operator": "K_ref", "parents": ["init_flat_0"], "n": 8, "mu": [0.0, 0.13102606696029284], "budget_used": 103}
+{"phase": "offspring", "gen": 0, "uid": "g_9038090091898", "operator": "K_ref", "parents": ["init_flat_0"], "n": 9, "mu": [0.0, 0.12863507489102557], "budget_used": 104}
+{"phase": "offspring", "gen": 0, "uid": "g_9038090091898", "operator": "K_ref", "parents": ["init_flat_0"], "n": 10, "mu": [0.0, 0.12635048677750657], "budget_used": 105}
+{"phase": "gen_end", "gen": 0, "budget_used": 105, "population": ["init_flat_3", "g_1847596130988", "init_flat_2", "init_flat_1"], "elite_pool": ["init_flat_0"], "population_mu": [[0.6, 0.1717127121532941], [0.5, 0.17190203571742213], [0.6, 0.15826624207767187], [0.6, 0.1310376000159713]]}
+{"phase": "offspring", "gen": 1, "uid": "g_2388605428607", "operator": "K_swp", "parents": ["init_flat_3", "g_1847596130988"], "n": 1, "mu": [1.0, 0.4765053580405043], "budget_used": 106}
+{"phase": "offspring", "gen": 1, "uid": "g_2388605428607", "operator": "K_swp", "parents": ["init_flat_3", "g_1847596130988"], "n": 2, "mu": [0.5, 0.4765053580405043], "budget_used": 107}
+{"phase": "offspring", "gen": 1, "uid": "g_2388605428607", "operator": "K_swp", "parents": ["init_flat_3", "g_1847596130988"], "n": 3, "mu": [0.6666666666666666, 0.39461335911894524], "budget_used": 108}
+{"phase": "offspring", "gen": 1, "uid": "g_2388605428607", "operator": "K_swp", "parents": ["init_flat_3", "g_1847596130988"], "n": 4, "mu": [0.75, 0.3593403888468724], "budget_used": 109}
+{"phase": "offspring", "gen": 1, "uid": "g_2388605428607", "operator": "K_swp", "parents": ["init_flat_3", "g_1847596130988"], "n": 5, "mu": [0.8, 0.3268614839215207], "budget_used": 110}
+{"phase": "offspring", "gen": 1, "uid": "g_2388605428607", "operator": "K_swp", "parents": ["init_flat_3", "g_1847596130988"], "n": 6, "mu": [0.6666666666666667, 0.2928865463555051], "budget_used": 111}
+{"phase": "offspring", "gen": 1, "uid": "g_2388605428607", "operator": "K_swp", "parents": ["init_flat_3", "g_1847596130988"], "n": 7, "mu": [0.7142857142857143, 0.26827039408375264], "budget_used": 112}
+{"phase": "offspring", "gen": 1, "uid": "g_2388605428607", "operator": "K_swp", "parents": ["init_flat_3", "g_1847596130988"], "n": 8, "mu": [0.75, 0.24969654804045863], "budget_used": 113}
+{"phase": "offspring", "gen": 1, "uid": "g_2388605428607", "operator": "K_swp", "parents": ["init_flat_3", "g_1847596130988"], "n": 9, "mu": [0.7777777777777778, 0.2349279056150556], "budget_used": 114}
+{"phase": "offspring", "gen": 1, "uid": "g_2388605428607", "operator": "K_swp", "parents": ["init_flat_3", "g_1847596130988"], "n": 10, "mu": [0.7, 0.22207827787731482], "budget_used": 115}
+{"phase": "offspring", "gen": 1, "uid": "g_4334137354313", "operator": "K_swp", "parents": ["init_flat_2", "g_1847596130988"], "n": 1, "mu": [1.0, 0.26968351175578803], "budget_used": 116}
+{"phase": "offspring", "gen": 1, "uid": "g_4334137354313", "operator": "K_swp", "parents": ["init_flat_2", "g_1847596130988"], "n": 2, "mu": [1.0, 0.20355475531676548], "budget_used": 117}
+{"phase": "offspring", "gen": 1, "uid": "g_4334137354313", "operator": "K_swp", "parents": ["init_flat_2", "g_1847596130988"], "n": 3, "mu": [0.6666666666666667, 0.17713726153732492], "budget_used": 118}
+{"phase": "offspring", "gen": 1, "uid": "g_4334137354313", "operator": "K_swp", "parents": ["init_flat_2", "g_1847596130988"], "n": 4, "mu": [0.75, 0.1629015108964288], "budget_used": 119}
+{"phase": "offspring", "gen": 1, "uid": "g_4334137354313", "operator": "K_swp", "parents": ["init_flat_2", "g_1847596130988"], "n": 5, "mu": [0.6, 0.15417090484658028], "budget_used": 120}
+{"phase": "offspring", "gen": 1, "uid": "g_4334137354313", "operator": "K_swp", "parents": ["init_flat_2", "g_1847596130988"], "n": 6, "mu": [0.6666666666666666, 0.1480098544680094], "budget_used": 121}
+{"phase": "offspring", "gen": 1, "uid": "g_4334137354313", "operator": "K_swp", "parents": ["init_flat_2", "g_1847596130988"], "n": 7, "mu": [0.7142857142857143, 0.143618592410097], "budget_used": 122}
+{"phase": "offspring", "gen": 1, "uid": "g_4334137354313", "operator": "K_swp", "parents": ["init_flat_2", "g_1847596130988"], "n": 8, "mu": [0.625, 0.14023992150348868], "budget_used": 123}
+{"phase": "offspring", "gen": 1, "uid": "g_4334137354313", "operator": "K_swp", "parents": ["init_flat_2", "g_1847596130988"], "n": 9, "mu": [0.6666666666666666, 0.13704939224794033], "budget_used": 124}
+{"phase": "offspring", "gen": 1, "uid": "g_4334137354313", "operator": "K_swp", "parents": ["init_flat_2", "g_1847596130988"], "n": 10, "mu": [0.7, 0.13415576039438246], "budget_used": 125}
+{"phase": "offspring", "gen": 1, "uid": "g_5281344336032", "operator": "K_ref", "parents": ["init_flat_3"], "n": 1, "mu": [0.0, 0.21687655667383804], "budget_used": 127}
+{"phase": "offspring", "gen": 1, "uid": "g_5281344336032", "operator": "K_ref", "parents": ["init_flat_3"], "n": 2, "mu": [0.0, 0.19495658869937776], "budget_used": 128}
+{"phase": "offspring", "gen": 1, "uid": "g_5281344336032", "operator": "K_ref", "parents": ["init_flat_3"], "n": 3, "mu": [0.0, 0.18627754685808032], "budget_used": 129}
+{"phase": "offspring", "gen": 1, "uid": "g_5281344336032", "operator": "K_ref", "parents": ["init_flat_3"], "n": 4, "mu": [0.0, 0.1707502336333664], "budget_used": 130}
+{"phase": "offspring", "gen": 1, "uid": "g_5281344336032", "operator": "K_ref", "parents": ["init_flat_3"], "n": 5, "mu": [0.0, 0.1606237810802098], "budget_used": 131}
+{"phase": "offspring", "gen": 1, "uid": "g_5281344336032", "operator": "K_ref", "parents": ["init_flat_3"], "n": 6, "mu": [0.0, 0.153866486493941], "budget_used": 132}
+{"phase": "offspring", "gen": 1, "uid": "g_5281344336032", "operator": "K_ref", "parents": ["init_flat_3"], "n": 7, "mu": [0.0, 0.14909488393558573], "budget_used": 133}
+{"phase": "offspring", "gen": 1, "uid": "g_5281344336032", "operator": "K_ref", "parents": ["init_flat_3"], "n": 8, "mu": [0.0, 0.14490463886059488], "budget_used": 134}
+{"phase": "offspring", "gen": 1, "uid": "g_5281344336032", "operator": "K_ref", "parents": ["init_flat_3"], "n": 9, "mu": [0.0, 0.14133483157615695], "budget_used": 135}
+{"phase": "offspring", "gen": 1, "uid": "g_5281344336032", "operator": "K_ref", "parents": ["init_flat_3"], "n": 10, "mu": [0.0, 0.1383992981282742], "budget_used": 136}
+{"phase": "offspring", "gen": 1, "uid": "g_4934367269850", "operator": "K_rew", "parents": ["init_flat_3"], "n": 1, "mu": [0.0, 0.13620041715057604], "budget_used": 138}
+{"phase": "offspring", "gen": 1, "uid": "g_4934367269850", "operator": "K_rew", "parents": ["init_flat_3"], "n": 2, "mu": [0.0, 0.13542677925054428], "budget_used": 139}
+{"phase": "offspring", "gen": 1, "uid": "g_4934367269850", "operator": "K_rew", "parents": ["init_flat_3"], "n": 3, "mu": [0.0, 0.1350339198063008], "budget_used": 140}
+{"phase": "offspring", "gen": 1, "uid": "g_4934367269850", "operator": "K_rew", "parents": ["init_flat_3"], "n": 4, "mu": [0.0, 0.13455007623740434], "budget_used": 141}
+{"phase": "offspring", "gen": 1, "uid": "g_4934367269850", "operator": "K_rew", "parents": ["init_flat_3"], "n": 5, "mu": [0.0, 0.13404730232980447], "budget_used": 142}
+{"phase": "offspring", "gen": 1, "uid": "g_4934367269850", "operator": "K_rew", "parents": ["init_flat_3"], "n": 6, "mu": [0.0, 0.13369191834884872], "budget_used": 143}
+{"phase": "offspring", "gen": 1, "uid": "g_4934367269850", "operator": "K_rew", "parents": ["init_flat_3"], "n": 7, "mu": [0.0, 0.1335847480185993], "budget_used": 144}
+{"phase": "offspring", "gen": 1, "uid": "g_4934367269850", "operator": "K_rew", "parents": ["init_flat_3"], "n": 8, "mu": [0.0, 0.13301096312974817], "budget_used": 145}
+{"phase": "offspring", "gen": 1, "uid": "g_4934367269850", "operator": "K_rew", "parents": ["init_flat_3"], "n": 9, "mu": [0.0, 0.13256901207661706], "budget_used": 146}
+{"phase": "offspring", "gen": 1, "uid": "g_4934367269850", "operator": "K_rew", "parents": ["init_flat_3"], "n": 10, "mu": [0.0, 0.13243764256341886], "budget_used": 147}
+{"phase": "offspring", "gen": 1, "uid": "g_8242879217470", "operator": "K_mix", "parents": ["g_1847596130988", "init_flat_3"], "n": 1, "mu": [0.0, 0.15088370062891887], "budget_used": 149}
+{"phase": "offspring", "gen": 1, "uid": "g_8242879217470", "operator": "K_mix", "parents": ["g_1847596130988", "init_flat_3"], "n": 2, "mu": [0.0, 0.15156453232568695], "budget_used": 150}
+{"phase": "offspring", "gen": 1, "uid": "g_8242879217470", "operator": "K_mix", "parents": ["g_1847596130988", "init_flat_3"], "n": 3, "mu": [0.0, 0.15136494974916434], "budget_used": 151}
+{"phase": "offspring", "gen": 1, "uid": "g_8242879217470", "operator": "K_mix", "parents": ["g_1847596130988", "init_flat_3"], "n": 4, "mu": [0.0, 0.150342779538738], "budget_used": 152}
+{"phase": "offspring", "gen": 1, "uid": "g_8242879217470", "operator": "K_mix", "parents": ["g_1847596130988", "init_flat_3"], "n": 5, "mu": [0.0, 0.1504509637567742], "budget_used": 153}
+{"phase": "offspring", "gen": 1, "uid": "g_8242879217470", "operator": "K_mix", "parents": ["g_1847596130988", "init_flat_3"], "n": 6, "mu": [0.0, 0.14979224966519214], "budget_used": 154}
+{"phase": "offspring", "gen": 1, "uid": "g_8242879217470", "operator": "K_mix", "parents": ["g_1847596130988", "init_flat_3"], "n": 7, "mu": [0.0, 0.1490487890662105], "budget_used": 155}
+{"phase": "offspring", "gen": 1, "uid": "g_8242879217470", "operator": "K_mix", "parents": ["g_1847596130988", "init_flat_3"], "n": 8, "mu": [0.0, 0.14862210046784047], "budget_used": 156}
+{"phase": "offspring", "gen": 1, "uid": "g_8242879217470", "operator": "K_mix", "parents": ["g_1847596130988", "init_flat_3"], "n": 9, "mu": [0.0, 0.14763799773730793], "budget_used": 157}
+{"phase": "offspring", "gen": 1, "uid": "g_8242879217470", "operator": "K_mix", "parents": ["g_1847596130988", "init_flat_3"], "n": 10, "mu": [0.0, 0.1468017422610028], "budget_used": 158}
+{"phase": "offspring", "gen": 1, "uid": "g_2257772352483", "operator": "K_ref", "parents": ["g_1847596130988"], "n": 1, "mu": [0.0, 0.22092804904991536], "budget_used": 160}
+{"phase": "offspring", "gen": 1, "uid": "g_2257772352483", "operator": "K_ref", "parents": ["g_1847596130988"], "n": 2, "mu": [0.0, 0.21955051608605017], "budget_used": 161}
+{"phase": "offspring", "gen": 1, "uid": "g_2257772352483", "operator": "K_ref", "parents": ["g_1847596130988"], "n": 3, "mu": [0.0, 0.2115874294218935], "budget_used": 162}
+{"phase": "offspring", "gen": 1, "uid": "g_2257772352483", "operator": "K_ref", "parents": ["g_1847596130988"], "n": 4, "mu": [0.0, 0.2100126175825433], "budget_used": 163}
+{"phase": "offspring", "gen": 1, "uid": "g_2257772352483", "operator": "K_ref", "parents": ["g_1847596130988"], "n": 5, "mu": [0.0, 0.20237269280728803], "budget_used": 164}
+{"phase": "offspring", "gen": 1, "uid": "g_2257772352483", "operator": "K_ref", "parents": ["g_1847596130988"], "n": 6, "mu": [0.0, 0.19218462243851206], "budget_used": 165}
+{"phase": "offspring", "gen": 1, "uid": "g_2257772352483", "operator": "K_ref", "parents": ["g_1847596130988"], "n": 7, "mu": [0.0, 0.18227530412469484], "budget_used": 166}
+{"phase": "offspring", "gen": 1, "uid": "g_2257772352483", "operator": "K_ref", "parents": ["g_1847596130988"], "n": 8, "mu": [0.0, 0.17400829044849722], "budget_used": 167}
+{"phase": "offspring", "gen": 1, "uid": "g_2257772352483", "operator": "K_ref", "parents": ["g_1847596130988"], "n": 9, "mu": [0.0, 0.16812603809863771], "budget_used": 168}
+{"phase": "offspring", "gen": 1, "uid": "g_2257772352483", "operator": "K_ref", "parents": ["g_1847596130988"], "n": 10, "mu": [0.0, 0.16190824520647956], "budget_used": 169}
+{"phase": "gen_end", "gen": 1, "budget_used": 169, "population": ["g_2388605428607", "init_flat_3", "g_1847596130988", "g_4334137354313"], "elite_pool": ["init_flat_0"], "population_mu": [[0.7, 0.22207827787731482], [0.6, 0.1717127121532941], [0.5, 0.17190203571742213], [0.7, 0.13415576039438246]]}
+{"phase": "offspring", "gen": 2, "uid": "g_8082319397518", "operator": "K_rew", "parents": ["g_4334137354313"], "n": 1, "mu": [0.0, 0.13989010772714497], "budget_used": 171}
+{"phase": "offspring", "gen": 2, "uid": "g_8082319397518", "operator": "K_rew", "parents": ["g_4334137354313"], "n": 2, "mu": [0.0, 0.1333196927337176], "budget_used": 172}
+{"phase": "offspring", "gen": 2, "uid": "g_8082319397518", "operator": "K_rew", "parents": ["g_4334137354313"], "n": 3, "mu": [0.0, 0.1300698225849516], "budget_used": 173}
+{"phase": "offspring", "gen": 2, "uid": "g_8082319397518", "operator": "K_rew", "parents": ["g_4334137354313"], "n": 4, "mu": [0.0, 0.12758423683347028], "budget_used": 174}
+{"phase": "offspring", "gen": 2, "uid": "g_8082319397518", "operator": "K_rew", "parents": ["g_4334137354313"], "n": 5, "mu": [0.0, 0.12618802290291728], "budget_used": 175}
+{"phase": "offspring", "gen": 2, "uid": "g_8082319397518", "operator": "K_rew", "parents": ["g_4334137354313"], "n": 6, "mu": [0.0, 0.1251418063615081], "budget_used": 176}
+{"phase": "offspring", "gen": 2, "uid": "g_8082319397518", "operator": "K_rew", "parents": ["g_4334137354313"], "n": 7, "mu": [0.0, 0.12391504538957666], "budget_used": 177}
+{"phase": "offspring", "gen": 2, "uid": "g_8082319397518", "operator": "K_rew", "parents": ["g_4334137354313"], "n": 8, "mu": [0.0, 0.12313254490366349], "budget_used": 178}
+{"phase": "offspring", "gen": 2, "uid": "g_8082319397518", "operator": "K_rew", "parents": ["g_4334137354313"], "n": 9, "mu": [0.0, 0.12180095980587007], "budget_used": 179}
+{"phase": "offspring", "gen": 2, "uid": "g_8082319397518", "operator": "K_rew", "parents": ["g_4334137354313"], "n": 10, "mu": [0.0, 0.12038217433656019], "budget_used": 180}
+{"phase": "offspring", "gen": 2, "uid": "g_6118670763575", "operator": "K_swp", "parents": ["g_1847596130988", "g_4334137354313"], "n": 1, "mu": [1.0, 0.5906161091496412], "budget_used": 181}
+{"phase": "offspring", "gen": 2, "uid": "g_6118670763575", "operator": "K_swp", "parents": ["g_1847596130988", "g_4334137354313"], "n": 2, "mu": [0.5, 0.38097903619831963], "budget_used": 182}
+{"phase": "offspring", "gen": 2, "uid": "g_6118670763575", "operator": "K_swp", "parents": ["g_1847596130988", "g_4334137354313"], "n": 3, "mu": [0.6666666666666666, 0.2976920251004744], "budget_used": 183}
+{"phase": "offspring", "gen": 2, "uid": "g_6118670763575", "operator": "K_swp", "parents": ["g_1847596130988", "g_4334137354313"], "n": 4, "mu": [0.75, 0.25489958491666076], "budget_used": 184}
+{"phase": "offspring", "gen": 2, "uid": "g_6118670763575", "operator": "K_swp", "parents": ["g_1847596130988", "g_4334137354313"], "n": 5, "mu": [0.6, 0.22900262033107416], "budget_used": 185}
+{"phase": "offspring", "gen": 2, "uid": "g_6118670763575", "operator": "K_swp", "parents": ["g_1847596130988", "g_4334137354313"], "n": 6, "mu": [0.5, 0.21153245474131432], "budget_used": 186}
+{"phase": "offspring", "gen": 2, "uid": "g_6118670763575", "operator": "K_swp", "parents": ["g_1847596130988", "g_4334137354313"], "n": 7, "mu": [0.5714285714285714, 0.19834777092613198], "budget_used": 187}
+{"phase": "offspring", "gen": 2, "uid": "g_6118670763575", "operator": "K_swp", "parents": ["g_1847596130988", "g_4334137354313"], "n": 8, "mu": [0.625, 0.18762900235935256], "budget_used": 188}
+{"phase": "offspring", "gen": 2, "uid": "g_6118670763575", "operator": "K_swp", "parents": ["g_1847596130988", "g_4334137354313"], "n": 9, "mu": [0.6666666666666666, 0.17934388218375197], "budget_used": 189}
+{"phase": "offspring", "gen": 2, "uid": "g_6118670763575", "operator": "K_swp", "parents": ["g_1847596130988", "g_4334137354313"], "n": 10, "mu": [0.7, 0.17237334109259023], "budget_used": 190}
+{"phase": "offspring", "gen": 2, "uid": "g_5239865855287", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 1, "mu": [0.0, 0.12891694162323403], "budget_used": 192}
+{"phase": "offspring", "gen": 2, "uid": "g_5239865855287", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 2, "mu": [0.0, 0.12635236265511807], "budget_used": 193}
+{"phase": "offspring", "gen": 2, "uid": "g_5239865855287", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 3, "mu": [0.0, 0.12556261884222505], "budget_used": 194}
+{"phase": "offspring", "gen": 2, "uid": "g_5239865855287", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 4, "mu": [0.0, 0.12474259896598555], "budget_used": 195}
+{"phase": "offspring", "gen": 2, "uid": "g_5239865855287", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 5, "mu": [0.0, 0.12314276310732501], "budget_used": 196}
+{"phase": "offspring", "gen": 2, "uid": "g_5239865855287", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 6, "mu": [0.0, 0.12211543942870182], "budget_used": 197}
+{"phase": "offspring", "gen": 2, "uid": "g_5239865855287", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 7, "mu": [0.0, 0.12184783295037586], "budget_used": 198}
+{"phase": "offspring", "gen": 2, "uid": "g_5239865855287", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 8, "mu": [0.0, 0.1211045159831261], "budget_used": 199}
+{"phase": "offspring", "gen": 2, "uid": "g_5239865855287", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 9, "mu": [0.0, 0.1203885881942887], "budget_used": 200}
+{"phase": "offspring", "gen": 2, "uid": "g_5239865855287", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 10, "mu": [0.0, 0.11969688294242505], "budget_used": 201}
+{"phase": "offspring", "gen": 2, "uid": "g_6712464880004", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 1, "mu": [0.0, 0.22092804904991536], "budget_used": 203}
+{"phase": "offspring", "gen": 2, "uid": "g_6712464880004", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 2, "mu": [0.0, 0.1944154212267581], "budget_used": 204}
+{"phase": "offspring", "gen": 2, "uid": "g_6712464880004", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 3, "mu": [0.0, 0.1857792584036052], "budget_used": 205}
+{"phase": "offspring", "gen": 2, "uid": "g_6712464880004", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 4, "mu": [0.0, 0.17317823482616013], "budget_used": 206}
+{"phase": "offspring", "gen": 2, "uid": "g_6712464880004", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 5, "mu": [0.0, 0.16505403233354396], "budget_used": 207}
+{"phase": "offspring", "gen": 2, "uid": "g_6712464880004", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 6, "mu": [0.0, 0.15733921507543722], "budget_used": 208}
+{"phase": "offspring", "gen": 2, "uid": "g_6712464880004", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 7, "mu": [0.0, 0.15177752831034053], "budget_used": 209}
+{"phase": "offspring", "gen": 2, "uid": "g_6712464880004", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 8, "mu": [0.0, 0.14701824386865497], "budget_used": 210}
+{"phase": "offspring", "gen": 2, "uid": "g_6712464880004", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 9, "mu": [0.0, 0.14321250920429296], "budget_used": 211}
+{"phase": "offspring", "gen": 2, "uid": "g_6712464880004", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 10, "mu": [0.0, 0.13988044086022045], "budget_used": 212}
+{"phase": "offspring", "gen": 2, "uid": "g_1277360511111", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 1, "mu": [0.0, 0.21817298312218497], "budget_used": 214}
+{"phase": "offspring", "gen": 2, "uid": "g_1277360511111", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 2, "mu": [0.0, 0.21173058259333882], "budget_used": 215}
+{"phase": "offspring", "gen": 2, "uid": "g_1277360511111", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 3, "mu": [0.0, 0.19172783670119936], "budget_used": 216}
+{"phase": "offspring", "gen": 2, "uid": "g_1277360511111", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 4, "mu": [0.0, 0.1790166979994355], "budget_used": 217}
+{"phase": "offspring", "gen": 2, "uid": "g_1277360511111", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 5, "mu": [0.0, 0.16669886860273203], "budget_used": 218}
+{"phase": "offspring", "gen": 2, "uid": "g_1277360511111", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 6, "mu": [0.0, 0.1586218442010107], "budget_used": 219}
+{"phase": "offspring", "gen": 2, "uid": "g_1277360511111", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 7, "mu": [0.0, 0.1524957365655527], "budget_used": 220}
+{"phase": "offspring", "gen": 2, "uid": "g_1277360511111", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 8, "mu": [0.0, 0.14703498599950343], "budget_used": 221}
+{"phase": "offspring", "gen": 2, "uid": "g_1277360511111", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 9, "mu": [0.0, 0.14282295957578306], "budget_used": 222}
+{"phase": "offspring", "gen": 2, "uid": "g_1277360511111", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 10, "mu": [0.0, 0.13940697321641768], "budget_used": 223}
+{"phase": "offspring", "gen": 2, "uid": "g_4676757793521", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 1, "mu": [0.0, 0.20709759078963702], "budget_used": 225}
+{"phase": "offspring", "gen": 2, "uid": "g_4676757793521", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 2, "mu": [0.0, 0.20962545931853274], "budget_used": 226}
+{"phase": "offspring", "gen": 2, "uid": "g_4676757793521", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 3, "mu": [0.0, 0.19565203667867523], "budget_used": 227}
+{"phase": "offspring", "gen": 2, "uid": "g_4676757793521", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 4, "mu": [0.0, 0.17615853923545133], "budget_used": 228}
+{"phase": "offspring", "gen": 2, "uid": "g_4676757793521", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 5, "mu": [0.0, 0.164935267342429], "budget_used": 229}
+{"phase": "offspring", "gen": 2, "uid": "g_4676757793521", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 6, "mu": [0.0, 0.15684084365163425], "budget_used": 230}
+{"phase": "offspring", "gen": 2, "uid": "g_4676757793521", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 7, "mu": [0.0, 0.1511911870637642], "budget_used": 231}
+{"phase": "offspring", "gen": 2, "uid": "g_4676757793521", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 8, "mu": [0.0, 0.1468896344572726], "budget_used": 232}
+{"phase": "offspring", "gen": 2, "uid": "g_4676757793521", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 9, "mu": [0.0, 0.14333952270689496], "budget_used": 233}
+{"phase": "offspring", "gen": 2, "uid": "g_4676757793521", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 10, "mu": [0.0, 0.14049644721981303], "budget_used": 234}
+{"phase": "gen_end", "gen": 2, "budget_used": 234, "population": ["g_2388605428607", "g_6118670763575", "g_1847596130988", "g_4334137354313"], "elite_pool": ["init_flat_0"], "population_mu": [[0.7, 0.22207827787731482], [0.7, 0.17237334109259023], [0.5, 0.17190203571742213], [0.7, 0.13415576039438246]]}
+{"phase": "offspring", "gen": 3, "uid": "g_3642343819899", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 1, "mu": [0.0, 0.1592834878429197], "budget_used": 236}
+{"phase": "offspring", "gen": 3, "uid": "g_3642343819899", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 2, "mu": [0.0, 0.15512463621951944], "budget_used": 237}
+{"phase": "offspring", "gen": 3, "uid": "g_3642343819899", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 3, "mu": [0.0, 0.15390526604345686], "budget_used": 238}
+{"phase": "offspring", "gen": 3, "uid": "g_3642343819899", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 4, "mu": [0.0, 0.1522480167594574], "budget_used": 239}
+{"phase": "offspring", "gen": 3, "uid": "g_3642343819899", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 5, "mu": [0.0, 0.15084241261038972], "budget_used": 240}
+{"phase": "offspring", "gen": 3, "uid": "g_3642343819899", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 6, "mu": [0.0, 0.1500558623302211], "budget_used": 241}
+{"phase": "offspring", "gen": 3, "uid": "g_3642343819899", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 7, "mu": [0.0, 0.14895934172387568], "budget_used": 242}
+{"phase": "offspring", "gen": 3, "uid": "g_3642343819899", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 8, "mu": [0.0, 0.14790573864550566], "budget_used": 243}
+{"phase": "offspring", "gen": 3, "uid": "g_3642343819899", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 9, "mu": [0.0, 0.14697834572004595], "budget_used": 244}
+{"phase": "offspring", "gen": 3, "uid": "g_3642343819899", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 10, "mu": [0.0, 0.14608472098628206], "budget_used": 245}
+{"phase": "offspring", "gen": 3, "uid": "g_4657481752960", "operator": "K_swp", "parents": ["g_2388605428607", "g_1847596130988"], "n": 1, "mu": [1.0, 0.41905978419640516], "budget_used": 246}
+{"phase": "offspring", "gen": 3, "uid": "g_4657481752960", "operator": "K_swp", "parents": ["g_2388605428607", "g_1847596130988"], "n": 2, "mu": [1.0, 0.3179681704351216], "budget_used": 247}
+{"phase": "offspring", "gen": 3, "uid": "g_4657481752960", "operator": "K_swp", "parents": ["g_2388605428607", "g_1847596130988"], "n": 3, "mu": [1.0, 0.2823368593015323], "budget_used": 248}
+{"phase": "offspring", "gen": 3, "uid": "g_4657481752960", "operator": "K_swp", "parents": ["g_2388605428607", "g_1847596130988"], "n": 4, "mu": [0.75, 0.24618083235658128], "budget_used": 249}
+{"phase": "offspring", "gen": 3, "uid": "g_4657481752960", "operator": "K_swp", "parents": ["g_2388605428607", "g_1847596130988"], "n": 5, "mu": [0.8, 0.2230005030541417], "budget_used": 250}
+{"phase": "offspring", "gen": 3, "uid": "g_4657481752960", "operator": "K_swp", "parents": ["g_2388605428607", "g_1847596130988"], "n": 6, "mu": [0.6666666666666667, 0.2069750549664566], "budget_used": 251}
+{"phase": "offspring", "gen": 3, "uid": "g_4657481752960", "operator": "K_swp", "parents": ["g_2388605428607", "g_1847596130988"], "n": 7, "mu": [0.5714285714285715, 0.1943073959919296], "budget_used": 252}
+{"phase": "offspring", "gen": 3, "uid": "g_4657481752960", "operator": "K_swp", "parents": ["g_2388605428607", "g_1847596130988"], "n": 8, "mu": [0.6250000000000001, 0.1848741521138158], "budget_used": 253}
+{"phase": "offspring", "gen": 3, "uid": "g_4657481752960", "operator": "K_swp", "parents": ["g_2388605428607", "g_1847596130988"], "n": 9, "mu": [0.6666666666666667, 0.17693590732138662], "budget_used": 254}
+{"phase": "offspring", "gen": 3, "uid": "g_4657481752960", "operator": "K_swp", "parents": ["g_2388605428607", "g_1847596130988"], "n": 10, "mu": [0.7000000000000001, 0.17004389736933218], "budget_used": 255}
+{"phase": "offspring", "gen": 3, "uid": "g_7501234155367", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 1, "mu": [0.0, 0.1546058598992096], "budget_used": 257}
+{"phase": "offspring", "gen": 3, "uid": "g_7501234155367", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 2, "mu": [0.0, 0.15291011492414294], "budget_used": 258}
+{"phase": "offspring", "gen": 3, "uid": "g_7501234155367", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 3, "mu": [0.0, 0.1509226956024762], "budget_used": 259}
+{"phase": "offspring", "gen": 3, "uid": "g_7501234155367", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 4, "mu": [0.0, 0.14917341793680639], "budget_used": 260}
+{"phase": "offspring", "gen": 3, "uid": "g_7501234155367", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 5, "mu": [0.0, 0.14707567688731596], "budget_used": 261}
+{"phase": "offspring", "gen": 3, "uid": "g_7501234155367", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 6, "mu": [0.0, 0.14602878624125948], "budget_used": 262}
+{"phase": "offspring", "gen": 3, "uid": "g_7501234155367", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 7, "mu": [0.0, 0.14514586680474076], "budget_used": 263}
+{"phase": "offspring", "gen": 3, "uid": "g_7501234155367", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 8, "mu": [0.0, 0.14480016071487353], "budget_used": 264}
+{"phase": "offspring", "gen": 3, "uid": "g_7501234155367", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 9, "mu": [0.0, 0.1441641381385951], "budget_used": 265}
+{"phase": "offspring", "gen": 3, "uid": "g_7501234155367", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 10, "mu": [0.0, 0.14372424191404035], "budget_used": 266}
+{"phase": "offspring", "gen": 3, "uid": "g_2370808924418", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 1, "mu": [0.0, 0.21952219380422947], "budget_used": 268}
+{"phase": "offspring", "gen": 3, "uid": "g_2370808924418", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 2, "mu": [0.0, 0.20925662095107056], "budget_used": 269}
+{"phase": "offspring", "gen": 3, "uid": "g_2370808924418", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 3, "mu": [0.0, 0.19142116753559765], "budget_used": 270}
+{"phase": "offspring", "gen": 3, "uid": "g_2370808924418", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 4, "mu": [0.0, 0.18097098020684996], "budget_used": 271}
+{"phase": "offspring", "gen": 3, "uid": "g_2370808924418", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 5, "mu": [0.0, 0.16828492775916973], "budget_used": 272}
+{"phase": "offspring", "gen": 3, "uid": "g_2370808924418", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 6, "mu": [0.0, 0.16050326712253646], "budget_used": 273}
+{"phase": "offspring", "gen": 3, "uid": "g_2370808924418", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 7, "mu": [0.0, 0.15416554249290468], "budget_used": 274}
+{"phase": "offspring", "gen": 3, "uid": "g_2370808924418", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 8, "mu": [0.0, 0.14877084072809565], "budget_used": 275}
+{"phase": "offspring", "gen": 3, "uid": "g_2370808924418", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 9, "mu": [0.0, 0.14451942876322282], "budget_used": 276}
+{"phase": "offspring", "gen": 3, "uid": "g_2370808924418", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 10, "mu": [0.0, 0.1411132415280436], "budget_used": 277}
+{"phase": "offspring", "gen": 3, "uid": "g_6672543338069", "operator": "K_swp", "parents": ["g_6118670763575", "g_2388605428607"], "n": 1, "mu": [0.0, 0.28695173228265203], "budget_used": 278}
+{"phase": "offspring", "gen": 3, "uid": "g_6672543338069", "operator": "K_swp", "parents": ["g_6118670763575", "g_2388605428607"], "n": 2, "mu": [0.0, 0.24297139019028186], "budget_used": 279}
+{"phase": "offspring", "gen": 3, "uid": "g_6672543338069", "operator": "K_swp", "parents": ["g_6118670763575", "g_2388605428607"], "n": 3, "mu": [0.3333333333333333, 0.20735934153657462], "budget_used": 280}
+{"phase": "offspring", "gen": 3, "uid": "g_6672543338069", "operator": "K_swp", "parents": ["g_6118670763575", "g_2388605428607"], "n": 4, "mu": [0.5, 0.1886461933964514], "budget_used": 281}
+{"phase": "offspring", "gen": 3, "uid": "g_6672543338069", "operator": "K_swp", "parents": ["g_6118670763575", "g_2388605428607"], "n": 5, "mu": [0.6, 0.17849591925146324], "budget_used": 282}
+{"phase": "offspring", "gen": 3, "uid": "g_6672543338069", "operator": "K_swp", "parents": ["g_6118670763575", "g_2388605428607"], "n": 6, "mu": [0.6666666666666666, 0.1694794211779964], "budget_used": 283}
+{"phase": "offspring", "gen": 3, "uid": "g_6672543338069", "operator": "K_swp", "parents": ["g_6118670763575", "g_2388605428607"], "n": 7, "mu": [0.5714285714285714, 0.16275999158260132], "budget_used": 284}
+{"phase": "offspring", "gen": 3, "uid": "g_6672543338069", "operator": "K_swp", "parents": ["g_6118670763575", "g_2388605428607"], "n": 8, "mu": [0.5, 0.15724383075396395], "budget_used": 285}
+{"phase": "offspring", "gen": 3, "uid": "g_6672543338069", "operator": "K_swp", "parents": ["g_6118670763575", "g_2388605428607"], "n": 9, "mu": [0.4444444444444444, 0.15265604037163247], "budget_used": 286}
+{"phase": "offspring", "gen": 3, "uid": "g_6672543338069", "operator": "K_swp", "parents": ["g_6118670763575", "g_2388605428607"], "n": 10, "mu": [0.39999999999999997, 0.14828796603848526], "budget_used": 287}
+{"phase": "offspring", "gen": 3, "uid": "g_2062053119084", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 1, "mu": [0.0, 0.21003107949692437], "budget_used": 289}
+{"phase": "offspring", "gen": 3, "uid": "g_2062053119084", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 2, "mu": [0.0, 0.21283024825826585], "budget_used": 290}
+{"phase": "offspring", "gen": 3, "uid": "g_2062053119084", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 3, "mu": [0.0, 0.19812423165586282], "budget_used": 291}
+{"phase": "offspring", "gen": 3, "uid": "g_2062053119084", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 4, "mu": [0.0, 0.19166675980803613], "budget_used": 292}
+{"phase": "offspring", "gen": 3, "uid": "g_2062053119084", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 5, "mu": [0.0, 0.1788175905148454], "budget_used": 293}
+{"phase": "offspring", "gen": 3, "uid": "g_2062053119084", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 6, "mu": [0.0, 0.16940270615696307], "budget_used": 294}
+{"phase": "offspring", "gen": 3, "uid": "g_2062053119084", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 7, "mu": [0.0, 0.16184406418300187], "budget_used": 295}
+{"phase": "offspring", "gen": 3, "uid": "g_2062053119084", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 8, "mu": [0.0, 0.15594838905311997], "budget_used": 296}
+{"phase": "offspring", "gen": 3, "uid": "g_2062053119084", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 9, "mu": [0.0, 0.15094142261556304], "budget_used": 297}
+{"phase": "offspring", "gen": 3, "uid": "g_2062053119084", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 10, "mu": [0.0, 0.14645727223252325], "budget_used": 298}
+{"phase": "gen_end", "gen": 3, "budget_used": 298, "population": ["g_2388605428607", "g_4657481752960", "g_6118670763575", "g_1847596130988"], "elite_pool": ["init_flat_0"], "population_mu": [[0.7, 0.22207827787731482], [0.7000000000000001, 0.17004389736933218], [0.7, 0.17237334109259023], [0.5, 0.17190203571742213]]}
+{"phase": "offspring", "gen": 4, "uid": "g_9722587396128", "operator": "K_mix", "parents": ["g_4657481752960", "g_4657481752960"], "n": 1, "mu": [0.0, 0.16637176455910016], "budget_used": 300}
+{"phase": "offspring", "gen": 4, "uid": "g_9722587396128", "operator": "K_mix", "parents": ["g_4657481752960", "g_4657481752960"], "n": 2, "mu": [0.0, 0.15842536695248027], "budget_used": 301}
+{"phase": "offspring", "gen": 4, "uid": "g_9722587396128", "operator": "K_mix", "parents": ["g_4657481752960", "g_4657481752960"], "n": 3, "mu": [0.0, 0.15567085281447895], "budget_used": 302}
+{"phase": "offspring", "gen": 4, "uid": "g_9722587396128", "operator": "K_mix", "parents": ["g_4657481752960", "g_4657481752960"], "n": 4, "mu": [0.0, 0.15386400088574664], "budget_used": 303}
+{"phase": "offspring", "gen": 4, "uid": "g_9722587396128", "operator": "K_mix", "parents": ["g_4657481752960", "g_4657481752960"], "n": 5, "mu": [0.0, 0.15172834628981685], "budget_used": 304}
+{"phase": "offspring", "gen": 4, "uid": "g_9722587396128", "operator": "K_mix", "parents": ["g_4657481752960", "g_4657481752960"], "n": 6, "mu": [0.0, 0.14990601074334356], "budget_used": 305}
+{"phase": "offspring", "gen": 4, "uid": "g_9722587396128", "operator": "K_mix", "parents": ["g_4657481752960", "g_4657481752960"], "n": 7, "mu": [0.0, 0.14878233998637663], "budget_used": 306}
+{"phase": "offspring", "gen": 4, "uid": "g_9722587396128", "operator": "K_mix", "parents": ["g_4657481752960", "g_4657481752960"], "n": 8, "mu": [0.0, 0.1482370290337027], "budget_used": 307}
+{"phase": "offspring", "gen": 4, "uid": "g_9722587396128", "operator": "K_mix", "parents": ["g_4657481752960", "g_4657481752960"], "n": 9, "mu": [0.0, 0.1476360562112819], "budget_used": 308}
+{"phase": "offspring", "gen": 4, "uid": "g_9722587396128", "operator": "K_mix", "parents": ["g_4657481752960", "g_4657481752960"], "n": 10, "mu": [0.1, 0.14705264565074055], "budget_used": 309}
+{"phase": "offspring", "gen": 4, "uid": "g_1867518659381", "operator": "K_swp", "parents": ["g_2388605428607", "g_4657481752960"], "n": 1, "mu": [0.0, 0.41905978419640516], "budget_used": 310}
+{"phase": "offspring", "gen": 4, "uid": "g_1867518659381", "operator": "K_swp", "parents": ["g_2388605428607", "g_4657481752960"], "n": 2, "mu": [0.5, 0.3497843388979829], "budget_used": 311}
+{"phase": "offspring", "gen": 4, "uid": "g_1867518659381", "operator": "K_swp", "parents": ["g_2388605428607", "g_4657481752960"], "n": 3, "mu": [0.6666666666666666, 0.3230840631839179], "budget_used": 312}
+{"phase": "offspring", "gen": 4, "uid": "g_1867518659381", "operator": "K_swp", "parents": ["g_2388605428607", "g_4657481752960"], "n": 4, "mu": [0.5, 0.2731645917386347], "budget_used": 313}
+{"phase": "offspring", "gen": 4, "uid": "g_1867518659381", "operator": "K_swp", "parents": ["g_2388605428607", "g_4657481752960"], "n": 5, "mu": [0.6, 0.242905167422785], "budget_used": 314}
+{"phase": "offspring", "gen": 4, "uid": "g_1867518659381", "operator": "K_swp", "parents": ["g_2388605428607", "g_4657481752960"], "n": 6, "mu": [0.5, 0.22269399754622884], "budget_used": 315}
+{"phase": "offspring", "gen": 4, "uid": "g_1867518659381", "operator": "K_swp", "parents": ["g_2388605428607", "g_4657481752960"], "n": 7, "mu": [0.5714285714285714, 0.20809971430149748], "budget_used": 316}
+{"phase": "offspring", "gen": 4, "uid": "g_1867518659381", "operator": "K_swp", "parents": ["g_2388605428607", "g_4657481752960"], "n": 8, "mu": [0.625, 0.19719900986757777], "budget_used": 317}
+{"phase": "offspring", "gen": 4, "uid": "g_1867518659381", "operator": "K_swp", "parents": ["g_2388605428607", "g_4657481752960"], "n": 9, "mu": [0.5555555555555556, 0.1883650543393834], "budget_used": 318}
+{"phase": "offspring", "gen": 4, "uid": "g_1867518659381", "operator": "K_swp", "parents": ["g_2388605428607", "g_4657481752960"], "n": 10, "mu": [0.6, 0.18025736652994578], "budget_used": 319}
+{"phase": "offspring", "gen": 4, "uid": "g_6212976120476", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 1, "mu": [0.0, 0.1562948688008173], "budget_used": 321}
+{"phase": "offspring", "gen": 4, "uid": "g_6212976120476", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 2, "mu": [0.0, 0.15405165874791155], "budget_used": 322}
+{"phase": "offspring", "gen": 4, "uid": "g_6212976120476", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 3, "mu": [0.0, 0.1519729339693781], "budget_used": 323}
+{"phase": "offspring", "gen": 4, "uid": "g_6212976120476", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 4, "mu": [0.0, 0.15074931264520844], "budget_used": 324}
+{"phase": "offspring", "gen": 4, "uid": "g_6212976120476", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 5, "mu": [0.0, 0.14928866084964446], "budget_used": 325}
+{"phase": "offspring", "gen": 4, "uid": "g_6212976120476", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 6, "mu": [0.0, 0.14817018221696307], "budget_used": 326}
+{"phase": "offspring", "gen": 4, "uid": "g_6212976120476", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 7, "mu": [0.0, 0.14740705241909915], "budget_used": 327}
+{"phase": "offspring", "gen": 4, "uid": "g_6212976120476", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 8, "mu": [0.0, 0.14631675995288104], "budget_used": 328}
+{"phase": "offspring", "gen": 4, "uid": "g_6212976120476", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 9, "mu": [0.0, 0.14540559603684358], "budget_used": 329}
+{"phase": "offspring", "gen": 4, "uid": "g_6212976120476", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 10, "mu": [0.0, 0.14450149993528372], "budget_used": 330}
+{"phase": "offspring", "gen": 4, "uid": "g_7475166603557", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 1, "mu": [0.0, 0.14088328189414398], "budget_used": 332}
+{"phase": "offspring", "gen": 4, "uid": "g_7475166603557", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 2, "mu": [0.0, 0.13817565095504497], "budget_used": 333}
+{"phase": "offspring", "gen": 4, "uid": "g_7475166603557", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 3, "mu": [0.0, 0.13312914484797123], "budget_used": 334}
+{"phase": "offspring", "gen": 4, "uid": "g_7475166603557", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 4, "mu": [0.0, 0.1303358594796971], "budget_used": 335}
+{"phase": "offspring", "gen": 4, "uid": "g_7475166603557", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 5, "mu": [0.0, 0.12836566142085734], "budget_used": 336}
+{"phase": "offspring", "gen": 4, "uid": "g_7475166603557", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 6, "mu": [0.0, 0.12672791807735953], "budget_used": 337}
+{"phase": "offspring", "gen": 4, "uid": "g_7475166603557", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 7, "mu": [0.0, 0.1251047325558866], "budget_used": 338}
+{"phase": "offspring", "gen": 4, "uid": "g_7475166603557", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 8, "mu": [0.0, 0.12414696272221412], "budget_used": 339}
+{"phase": "offspring", "gen": 4, "uid": "g_7475166603557", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 9, "mu": [0.0, 0.12319147612455168], "budget_used": 340}
+{"phase": "offspring", "gen": 4, "uid": "g_7475166603557", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 10, "mu": [0.0, 0.12198882049409773], "budget_used": 341}
+{"phase": "offspring", "gen": 4, "uid": "g_6256881720214", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 1, "mu": [0.0, 0.16891946317548542], "budget_used": 343}
+{"phase": "offspring", "gen": 4, "uid": "g_6256881720214", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 2, "mu": [0.0, 0.16978669523385392], "budget_used": 344}
+{"phase": "offspring", "gen": 4, "uid": "g_6256881720214", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 3, "mu": [0.0, 0.16104159122374756], "budget_used": 345}
+{"phase": "offspring", "gen": 4, "uid": "g_6256881720214", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 4, "mu": [0.0, 0.15064221534246638], "budget_used": 346}
+{"phase": "offspring", "gen": 4, "uid": "g_6256881720214", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 5, "mu": [0.0, 0.14382744520473428], "budget_used": 347}
+{"phase": "offspring", "gen": 4, "uid": "g_6256881720214", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 6, "mu": [0.0, 0.1386644921238329], "budget_used": 348}
+{"phase": "offspring", "gen": 4, "uid": "g_6256881720214", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 7, "mu": [0.0, 0.13485945524356083], "budget_used": 349}
+{"phase": "offspring", "gen": 4, "uid": "g_6256881720214", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 8, "mu": [0.0, 0.1317041551793824], "budget_used": 350}
+{"phase": "offspring", "gen": 4, "uid": "g_6256881720214", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 9, "mu": [0.0, 0.12945202251688567], "budget_used": 351}
+{"phase": "offspring", "gen": 4, "uid": "g_6256881720214", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 10, "mu": [0.0, 0.12754792990456587], "budget_used": 352}
+{"phase": "offspring", "gen": 4, "uid": "g_5445917373200", "operator": "K_swp", "parents": ["g_4657481752960", "g_4657481752960"], "n": 1, "mu": [0.0, 0.23934588700996243], "budget_used": 353}
+{"phase": "offspring", "gen": 4, "uid": "g_5445917373200", "operator": "K_swp", "parents": ["g_4657481752960", "g_4657481752960"], "n": 2, "mu": [0.5, 0.2760585798297767], "budget_used": 354}
+{"phase": "offspring", "gen": 4, "uid": "g_5445917373200", "operator": "K_swp", "parents": ["g_4657481752960", "g_4657481752960"], "n": 3, "mu": [0.6666666666666666, 0.2503694025858217], "budget_used": 355}
+{"phase": "offspring", "gen": 4, "uid": "g_5445917373200", "operator": "K_swp", "parents": ["g_4657481752960", "g_4657481752960"], "n": 4, "mu": [0.75, 0.22119246632060896], "budget_used": 356}
+{"phase": "offspring", "gen": 4, "uid": "g_5445917373200", "operator": "K_swp", "parents": ["g_4657481752960", "g_4657481752960"], "n": 5, "mu": [0.8, 0.20275675744803695], "budget_used": 357}
+{"phase": "offspring", "gen": 4, "uid": "g_5445917373200", "operator": "K_swp", "parents": ["g_4657481752960", "g_4657481752960"], "n": 6, "mu": [0.6666666666666667, 0.18916442866504368], "budget_used": 358}
+{"phase": "offspring", "gen": 4, "uid": "g_5445917373200", "operator": "K_swp", "parents": ["g_4657481752960", "g_4657481752960"], "n": 7, "mu": [0.5714285714285715, 0.1795759670010125], "budget_used": 359}
+{"phase": "offspring", "gen": 4, "uid": "g_5445917373200", "operator": "K_swp", "parents": ["g_4657481752960", "g_4657481752960"], "n": 8, "mu": [0.6250000000000001, 0.17204831646526178], "budget_used": 360}
+{"phase": "offspring", "gen": 4, "uid": "g_5445917373200", "operator": "K_swp", "parents": ["g_4657481752960", "g_4657481752960"], "n": 9, "mu": [0.6666666666666667, 0.1655643489368115], "budget_used": 361}
+{"phase": "offspring", "gen": 4, "uid": "g_5445917373200", "operator": "K_swp", "parents": ["g_4657481752960", "g_4657481752960"], "n": 10, "mu": [0.6000000000000001, 0.15943435428266647], "budget_used": 362}
+{"phase": "gen_end", "gen": 4, "budget_used": 362, "population": ["g_2388605428607", "g_4657481752960", "g_6118670763575", "g_1867518659381"], "elite_pool": ["init_flat_0"], "population_mu": [[0.7, 0.22207827787731482], [0.7000000000000001, 0.17004389736933218], [0.7, 0.17237334109259023], [0.6, 0.18025736652994578]]}
+{"phase": "offspring", "gen": 5, "uid": "g_6288801149598", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 1, "mu": [0.0, 0.21952219380422947], "budget_used": 364}
+{"phase": "offspring", "gen": 5, "uid": "g_6288801149598", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 2, "mu": [0.0, 0.21884758846320723], "budget_used": 365}
+{"phase": "offspring", "gen": 5, "uid": "g_6288801149598", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 3, "mu": [0.0, 0.19857536076425653], "budget_used": 366}
+{"phase": "offspring", "gen": 5, "uid": "g_6288801149598", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 4, "mu": [0.0, 0.17898966839068936], "budget_used": 367}
+{"phase": "offspring", "gen": 5, "uid": "g_6288801149598", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 5, "mu": [0.0, 0.1671368302360826], "budget_used": 368}
+{"phase": "offspring", "gen": 5, "uid": "g_6288801149598", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 6, "mu": [0.0, 0.15905526209296322], "budget_used": 369}
+{"phase": "offspring", "gen": 5, "uid": "g_6288801149598", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 7, "mu": [0.0, 0.15260481484868038], "budget_used": 370}
+{"phase": "offspring", "gen": 5, "uid": "g_6288801149598", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 8, "mu": [0.0, 0.14764157778420423], "budget_used": 371}
+{"phase": "offspring", "gen": 5, "uid": "g_6288801149598", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 9, "mu": [0.0, 0.14345986164741426], "budget_used": 372}
+{"phase": "offspring", "gen": 5, "uid": "g_6288801149598", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 10, "mu": [0.0, 0.13912656976386997], "budget_used": 373}
+{"phase": "offspring", "gen": 5, "uid": "g_6229550257302", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 1, "mu": [0.0, 0.1418968623472544], "budget_used": 375}
+{"phase": "offspring", "gen": 5, "uid": "g_6229550257302", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 2, "mu": [0.0, 0.1323224316963218], "budget_used": 376}
+{"phase": "offspring", "gen": 5, "uid": "g_6229550257302", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 3, "mu": [0.0, 0.1293212288712593], "budget_used": 377}
+{"phase": "offspring", "gen": 5, "uid": "g_6229550257302", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 4, "mu": [0.0, 0.1282826363802897], "budget_used": 378}
+{"phase": "offspring", "gen": 5, "uid": "g_6229550257302", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 5, "mu": [0.0, 0.12655837626299424], "budget_used": 379}
+{"phase": "offspring", "gen": 5, "uid": "g_6229550257302", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 6, "mu": [0.0, 0.12521083241903186], "budget_used": 380}
+{"phase": "offspring", "gen": 5, "uid": "g_6229550257302", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 7, "mu": [0.0, 0.12371208517513214], "budget_used": 381}
+{"phase": "offspring", "gen": 5, "uid": "g_6229550257302", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 8, "mu": [0.0, 0.12239732166534359], "budget_used": 382}
+{"phase": "offspring", "gen": 5, "uid": "g_6229550257302", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 9, "mu": [0.0, 0.1211632421560679], "budget_used": 383}
+{"phase": "offspring", "gen": 5, "uid": "g_6229550257302", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 10, "mu": [0.0, 0.11920059084937025], "budget_used": 384}
+{"phase": "offspring", "gen": 5, "uid": "g_9627032919172", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 1, "mu": [0.0, 0.14774712969752146], "budget_used": 386}
+{"phase": "offspring", "gen": 5, "uid": "g_9627032919172", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 2, "mu": [0.0, 0.14744562946867806], "budget_used": 387}
+{"phase": "offspring", "gen": 5, "uid": "g_9627032919172", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 3, "mu": [0.0, 0.14060172917991032], "budget_used": 388}
+{"phase": "offspring", "gen": 5, "uid": "g_9627032919172", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 4, "mu": [0.0, 0.13611172069092103], "budget_used": 389}
+{"phase": "offspring", "gen": 5, "uid": "g_9627032919172", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 5, "mu": [0.0, 0.13325187021830717], "budget_used": 390}
+{"phase": "offspring", "gen": 5, "uid": "g_9627032919172", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 6, "mu": [0.0, 0.13006438719067076], "budget_used": 391}
+{"phase": "offspring", "gen": 5, "uid": "g_9627032919172", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 7, "mu": [0.0, 0.12789844696548033], "budget_used": 392}
+{"phase": "offspring", "gen": 5, "uid": "g_9627032919172", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 8, "mu": [0.0, 0.12629728987471897], "budget_used": 393}
+{"phase": "offspring", "gen": 5, "uid": "g_9627032919172", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 9, "mu": [0.0, 0.1248867650057454], "budget_used": 394}
+{"phase": "offspring", "gen": 5, "uid": "g_9627032919172", "operator": "K_rew", "parents": ["g_4657481752960"], "n": 10, "mu": [0.0, 0.12323729123141453], "budget_used": 395}
+{"phase": "offspring", "gen": 5, "uid": "g_1744569999301", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 1, "mu": [0.0, 0.21107423703435377], "budget_used": 397}
+{"phase": "offspring", "gen": 5, "uid": "g_1744569999301", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 2, "mu": [0.0, 0.20133159344517776], "budget_used": 398}
+{"phase": "offspring", "gen": 5, "uid": "g_1744569999301", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 3, "mu": [0.0, 0.19125779442086296], "budget_used": 399}
+{"phase": "offspring", "gen": 5, "uid": "g_1744569999301", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 4, "mu": [0.0, 0.1743074398312769], "budget_used": 400}
+{"phase": "offspring", "gen": 5, "uid": "g_1744569999301", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 5, "mu": [0.0, 0.1624432677476591], "budget_used": 401}
+{"phase": "offspring", "gen": 5, "uid": "g_1744569999301", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 6, "mu": [0.0, 0.15401246147626607], "budget_used": 402}
+{"phase": "offspring", "gen": 5, "uid": "g_1744569999301", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 7, "mu": [0.0, 0.14827237086091294], "budget_used": 403}
+{"phase": "offspring", "gen": 5, "uid": "g_1744569999301", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 8, "mu": [0.0, 0.14334777707415414], "budget_used": 404}
+{"phase": "offspring", "gen": 5, "uid": "g_1744569999301", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 9, "mu": [0.0, 0.1394331495325568], "budget_used": 405}
+{"phase": "offspring", "gen": 5, "uid": "g_1744569999301", "operator": "K_ref", "parents": ["g_2388605428607"], "n": 10, "mu": [0.0, 0.13541406138876175], "budget_used": 406}
+{"phase": "offspring", "gen": 5, "uid": "g_6145552471384", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 1, "mu": [0.0, 0.1649458679909079], "budget_used": 408}
+{"phase": "offspring", "gen": 5, "uid": "g_6145552471384", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 2, "mu": [0.0, 0.1595763506680341], "budget_used": 409}
+{"phase": "offspring", "gen": 5, "uid": "g_6145552471384", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 3, "mu": [0.0, 0.14651978816811614], "budget_used": 410}
+{"phase": "offspring", "gen": 5, "uid": "g_6145552471384", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 4, "mu": [0.0, 0.1402805107155704], "budget_used": 411}
+{"phase": "offspring", "gen": 5, "uid": "g_6145552471384", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 5, "mu": [0.0, 0.13628633579956065], "budget_used": 412}
+{"phase": "offspring", "gen": 5, "uid": "g_6145552471384", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 6, "mu": [0.0, 0.1329781394807512], "budget_used": 413}
+{"phase": "offspring", "gen": 5, "uid": "g_6145552471384", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 7, "mu": [0.0, 0.12992767269475083], "budget_used": 414}
+{"phase": "offspring", "gen": 5, "uid": "g_6145552471384", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 8, "mu": [0.0, 0.12757196217610398], "budget_used": 415}
+{"phase": "offspring", "gen": 5, "uid": "g_6145552471384", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 9, "mu": [0.0, 0.12540275881648122], "budget_used": 416}
+{"phase": "offspring", "gen": 5, "uid": "g_6145552471384", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 10, "mu": [0.0, 0.12370420475358898], "budget_used": 417}
+{"phase": "offspring", "gen": 5, "uid": "g_3984120976082", "operator": "K_ref", "parents": ["g_1867518659381"], "n": 1, "mu": [0.0, 0.16891946317548542], "budget_used": 419}
+{"phase": "offspring", "gen": 5, "uid": "g_3984120976082", "operator": "K_ref", "parents": ["g_1867518659381"], "n": 2, "mu": [0.0, 0.17123253741724068], "budget_used": 420}
+{"phase": "offspring", "gen": 5, "uid": "g_3984120976082", "operator": "K_ref", "parents": ["g_1867518659381"], "n": 3, "mu": [0.0, 0.1578838539594206], "budget_used": 421}
+{"phase": "offspring", "gen": 5, "uid": "g_3984120976082", "operator": "K_ref", "parents": ["g_1867518659381"], "n": 4, "mu": [0.0, 0.14986759347510467], "budget_used": 422}
+{"phase": "offspring", "gen": 5, "uid": "g_3984120976082", "operator": "K_ref", "parents": ["g_1867518659381"], "n": 5, "mu": [0.0, 0.14440367082785033], "budget_used": 423}
+{"phase": "offspring", "gen": 5, "uid": "g_3984120976082", "operator": "K_ref", "parents": ["g_1867518659381"], "n": 6, "mu": [0.0, 0.13998036041992326], "budget_used": 424}
+{"phase": "offspring", "gen": 5, "uid": "g_3984120976082", "operator": "K_ref", "parents": ["g_1867518659381"], "n": 7, "mu": [0.0, 0.13581820506624845], "budget_used": 425}
+{"phase": "offspring", "gen": 5, "uid": "g_3984120976082", "operator": "K_ref", "parents": ["g_1867518659381"], "n": 8, "mu": [0.0, 0.13274019284310282], "budget_used": 426}
+{"phase": "offspring", "gen": 5, "uid": "g_3984120976082", "operator": "K_ref", "parents": ["g_1867518659381"], "n": 9, "mu": [0.0, 0.13075958623504558], "budget_used": 427}
+{"phase": "offspring", "gen": 5, "uid": "g_3984120976082", "operator": "K_ref", "parents": ["g_1867518659381"], "n": 10, "mu": [0.0, 0.1277766010408075], "budget_used": 428}
+{"phase": "gen_end", "gen": 5, "budget_used": 428, "population": ["g_2388605428607", "g_4657481752960", "g_6118670763575", "g_1867518659381"], "elite_pool": ["init_flat_0"], "population_mu": [[0.7, 0.22207827787731482], [0.7000000000000001, 0.17004389736933218], [0.7, 0.17237334109259023], [0.6, 0.18025736652994578]]}
+{"phase": "offspring", "gen": 6, "uid": "g_8436627317748", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 1, "mu": [0.0, 0.21952219380422947], "budget_used": 430}
+{"phase": "offspring", "gen": 6, "uid": "g_8436627317748", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 2, "mu": [0.0, 0.2202251214270724], "budget_used": 431}
+{"phase": "offspring", "gen": 6, "uid": "g_8436627317748", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 3, "mu": [0.0, 0.21413989959345459], "budget_used": 432}
+{"phase": "offspring", "gen": 6, "uid": "g_8436627317748", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 4, "mu": [0.0, 0.20553381688471714], "budget_used": 433}
+{"phase": "offspring", "gen": 6, "uid": "g_8436627317748", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 5, "mu": [0.0, 0.1978901469998723], "budget_used": 434}
+{"phase": "offspring", "gen": 6, "uid": "g_8436627317748", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 6, "mu": [0.0, 0.19289225473382707], "budget_used": 435}
+{"phase": "offspring", "gen": 6, "uid": "g_8436627317748", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 7, "mu": [0.0, 0.18246232508706683], "budget_used": 436}
+{"phase": "offspring", "gen": 6, "uid": "g_8436627317748", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 8, "mu": [0.0, 0.17403161665089692], "budget_used": 437}
+{"phase": "offspring", "gen": 6, "uid": "g_8436627317748", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 9, "mu": [0.0, 0.16740548180947207], "budget_used": 438}
+{"phase": "offspring", "gen": 6, "uid": "g_8436627317748", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 10, "mu": [0.0, 0.16210571151470765], "budget_used": 439}
+{"phase": "offspring", "gen": 6, "uid": "g_7050160837357", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 1, "mu": [0.0, 0.1556432341542172], "budget_used": 441}
+{"phase": "offspring", "gen": 6, "uid": "g_7050160837357", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 2, "mu": [0.0, 0.15416826407258316], "budget_used": 442}
+{"phase": "offspring", "gen": 6, "uid": "g_7050160837357", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 3, "mu": [0.0, 0.15401886507089668], "budget_used": 443}
+{"phase": "offspring", "gen": 6, "uid": "g_7050160837357", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 4, "mu": [0.0, 0.1525896169642983], "budget_used": 444}
+{"phase": "offspring", "gen": 6, "uid": "g_7050160837357", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 5, "mu": [0.0, 0.15228134462681098], "budget_used": 445}
+{"phase": "offspring", "gen": 6, "uid": "g_7050160837357", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 6, "mu": [0.0, 0.15214554147089776], "budget_used": 446}
+{"phase": "offspring", "gen": 6, "uid": "g_7050160837357", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 7, "mu": [0.0, 0.15235678771536829], "budget_used": 447}
+{"phase": "offspring", "gen": 6, "uid": "g_7050160837357", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 8, "mu": [0.0, 0.15228824533782298], "budget_used": 448}
+{"phase": "offspring", "gen": 6, "uid": "g_7050160837357", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 9, "mu": [0.0, 0.15171667688249094], "budget_used": 449}
+{"phase": "offspring", "gen": 6, "uid": "g_7050160837357", "operator": "K_mix", "parents": ["g_2388605428607", "g_2388605428607"], "n": 10, "mu": [0.0, 0.1510846779417558], "budget_used": 450}
+{"phase": "offspring", "gen": 6, "uid": "g_7542951528581", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 1, "mu": [0.0, 0.1490955061907636], "budget_used": 452}
+{"phase": "offspring", "gen": 6, "uid": "g_7542951528581", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 2, "mu": [0.0, 0.14027970970713954], "budget_used": 453}
+{"phase": "offspring", "gen": 6, "uid": "g_7542951528581", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 3, "mu": [0.0, 0.1337740659218404], "budget_used": 454}
+{"phase": "offspring", "gen": 6, "uid": "g_7542951528581", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 4, "mu": [0.0, 0.13020956193413188], "budget_used": 455}
+{"phase": "offspring", "gen": 6, "uid": "g_7542951528581", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 5, "mu": [0.0, 0.12809808988083446], "budget_used": 456}
+{"phase": "offspring", "gen": 6, "uid": "g_7542951528581", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 6, "mu": [0.0, 0.12647073181153923], "budget_used": 457}
+{"phase": "offspring", "gen": 6, "uid": "g_7542951528581", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 7, "mu": [0.0, 0.12483271529923358], "budget_used": 458}
+{"phase": "offspring", "gen": 6, "uid": "g_7542951528581", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 8, "mu": [0.0, 0.12340801817574237], "budget_used": 459}
+{"phase": "offspring", "gen": 6, "uid": "g_7542951528581", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 9, "mu": [0.0, 0.12162536444515193], "budget_used": 460}
+{"phase": "offspring", "gen": 6, "uid": "g_7542951528581", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 10, "mu": [0.0, 0.12035735668901208], "budget_used": 461}
+{"phase": "offspring", "gen": 6, "uid": "g_1336713005585", "operator": "K_swp", "parents": ["g_2388605428607", "g_1867518659381"], "n": 1, "mu": [1.0, 0.3247342047137871], "budget_used": 462}
+{"phase": "offspring", "gen": 6, "uid": "g_1336713005585", "operator": "K_swp", "parents": ["g_2388605428607", "g_1867518659381"], "n": 2, "mu": [0.5, 0.28204004586187476], "budget_used": 463}
+{"phase": "offspring", "gen": 6, "uid": "g_1336713005585", "operator": "K_swp", "parents": ["g_2388605428607", "g_1867518659381"], "n": 3, "mu": [0.6666666666666666, 0.22863085335053374], "budget_used": 464}
+{"phase": "offspring", "gen": 6, "uid": "g_1336713005585", "operator": "K_swp", "parents": ["g_2388605428607", "g_1867518659381"], "n": 4, "mu": [0.5, 0.20146485996390034], "budget_used": 465}
+{"phase": "offspring", "gen": 6, "uid": "g_1336713005585", "operator": "K_swp", "parents": ["g_2388605428607", "g_1867518659381"], "n": 5, "mu": [0.6, 0.18505175567917573], "budget_used": 466}
+{"phase": "offspring", "gen": 6, "uid": "g_1336713005585", "operator": "K_swp", "parents": ["g_2388605428607", "g_1867518659381"], "n": 6, "mu": [0.5, 0.17401245464225001], "budget_used": 467}
+{"phase": "offspring", "gen": 6, "uid": "g_1336713005585", "operator": "K_swp", "parents": ["g_2388605428607", "g_1867518659381"], "n": 7, "mu": [0.5714285714285714, 0.16579232321066023], "budget_used": 468}
+{"phase": "offspring", "gen": 6, "uid": "g_1336713005585", "operator": "K_swp", "parents": ["g_2388605428607", "g_1867518659381"], "n": 8, "mu": [0.625, 0.15944461221259904], "budget_used": 469}
+{"phase": "offspring", "gen": 6, "uid": "g_1336713005585", "operator": "K_swp", "parents": ["g_2388605428607", "g_1867518659381"], "n": 9, "mu": [0.5555555555555556, 0.15443610159690274], "budget_used": 470}
+{"phase": "offspring", "gen": 6, "uid": "g_1336713005585", "operator": "K_swp", "parents": ["g_2388605428607", "g_1867518659381"], "n": 10, "mu": [0.6, 0.1500178884790274], "budget_used": 471}
+{"phase": "offspring", "gen": 6, "uid": "g_8274263248577", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 1, "mu": [0.0, 0.22092804904991536], "budget_used": 473}
+{"phase": "offspring", "gen": 6, "uid": "g_8274263248577", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 2, "mu": [0.0, 0.2189023028618767], "budget_used": 474}
+{"phase": "offspring", "gen": 6, "uid": "g_8274263248577", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 3, "mu": [0.0, 0.18697944085606336], "budget_used": 475}
+{"phase": "offspring", "gen": 6, "uid": "g_8274263248577", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 4, "mu": [0.0, 0.16954678985492774], "budget_used": 476}
+{"phase": "offspring", "gen": 6, "uid": "g_8274263248577", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 5, "mu": [0.0, 0.15883343630261987], "budget_used": 477}
+{"phase": "offspring", "gen": 6, "uid": "g_8274263248577", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 6, "mu": [0.0, 0.1513731454270616], "budget_used": 478}
+{"phase": "offspring", "gen": 6, "uid": "g_8274263248577", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 7, "mu": [0.0, 0.14595194782592946], "budget_used": 479}
+{"phase": "offspring", "gen": 6, "uid": "g_8274263248577", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 8, "mu": [0.0, 0.14185024550150177], "budget_used": 480}
+{"phase": "offspring", "gen": 6, "uid": "g_8274263248577", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 9, "mu": [0.0, 0.13867016759483586], "budget_used": 481}
+{"phase": "offspring", "gen": 6, "uid": "g_8274263248577", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 10, "mu": [0.0, 0.13539432599553375], "budget_used": 482}
+{"phase": "offspring", "gen": 6, "uid": "g_3618260543260", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 1, "mu": [0.0, 0.14360430902771557], "budget_used": 484}
+{"phase": "offspring", "gen": 6, "uid": "g_3618260543260", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 2, "mu": [0.0, 0.1419163208129342], "budget_used": 485}
+{"phase": "offspring", "gen": 6, "uid": "g_3618260543260", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 3, "mu": [0.0, 0.13370862972080408], "budget_used": 486}
+{"phase": "offspring", "gen": 6, "uid": "g_3618260543260", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 4, "mu": [0.0, 0.1290537698504504], "budget_used": 487}
+{"phase": "offspring", "gen": 6, "uid": "g_3618260543260", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 5, "mu": [0.0, 0.1261951553696728], "budget_used": 488}
+{"phase": "offspring", "gen": 6, "uid": "g_3618260543260", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 6, "mu": [0.0, 0.1239304971654251], "budget_used": 489}
+{"phase": "offspring", "gen": 6, "uid": "g_3618260543260", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 7, "mu": [0.0, 0.12238803828599573], "budget_used": 490}
+{"phase": "offspring", "gen": 6, "uid": "g_3618260543260", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 8, "mu": [0.0, 0.12082784614164586], "budget_used": 491}
+{"phase": "offspring", "gen": 6, "uid": "g_3618260543260", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 9, "mu": [0.0, 0.11912322671238587], "budget_used": 492}
+{"phase": "offspring", "gen": 6, "uid": "g_3618260543260", "operator": "K_rew", "parents": ["g_2388605428607"], "n": 10, "mu": [0.0, 0.11690191960810248], "budget_used": 493}
+{"phase": "gen_end", "gen": 6, "budget_used": 493, "population": ["g_2388605428607", "g_4657481752960", "g_6118670763575", "g_1867518659381"], "elite_pool": ["init_flat_0"], "population_mu": [[0.7, 0.22207827787731482], [0.7000000000000001, 0.17004389736933218], [0.7, 0.17237334109259023], [0.6, 0.18025736652994578]]}
+{"phase": "offspring", "gen": 7, "uid": "g_2481470358237", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 1, "mu": [0.0, 0.1185226432206876], "budget_used": 495}
+{"phase": "offspring", "gen": 7, "uid": "g_2481470358237", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 2, "mu": [0.0, 0.11912865653684611], "budget_used": 496}
+{"phase": "offspring", "gen": 7, "uid": "g_2481470358237", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 3, "mu": [0.0, 0.11911316696443378], "budget_used": 497}
+{"phase": "offspring", "gen": 7, "uid": "g_2481470358237", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 4, "mu": [0.0, 0.11900301076162303], "budget_used": 498}
+{"phase": "offspring", "gen": 7, "uid": "g_2481470358237", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 5, "mu": [0.0, 0.11827180241013742], "budget_used": 499}
+{"phase": "offspring", "gen": 7, "uid": "g_2481470358237", "operator": "K_ref", "parents": ["g_4657481752960"], "n": 6, "mu": [0.0, 0.11754805143140948], "budget_used": 500}
+{"phase": "gen_end", "gen": 7, "budget_used": 500, "population": ["g_2388605428607", "g_4657481752960", "g_6118670763575", "g_1867518659381"], "elite_pool": ["init_flat_0"], "population_mu": [[0.7, 0.22207827787731482], [0.7000000000000001, 0.17004389736933218], [0.7, 0.17237334109259023], [0.6, 0.18025736652994578]]}

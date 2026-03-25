@@ -1,0 +1,1 @@
+{"phase": "run_start", "optimizer_cfg": {"budget": 150, "mu": 4, "lambd": 6, "gens": 10, "batch_size": 10, "invariant_loci": ["L_const"], "seed": 42, "keep_history": false}}

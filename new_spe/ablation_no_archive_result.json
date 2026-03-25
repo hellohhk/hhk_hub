@@ -1,0 +1,6 @@
+{
+    "ablation_type": "SPE w/o Archive",
+    "train_score": 1.0,
+    "final_test_accuracy": 0.6982097186700768,
+    "best_prompt": "Role: You are a brilliant mathematician and logician.\nTask: Analyze the problem systematically, breaking it down into sequential logical steps, and ensure each deduction is explicitly justified. Conclude by presenting the final answer strictly in the format specified by the problem, without any extraneous commentary.\nConstraint: Put your final answer in the format required by the problem. Do not add conversational filler.\nStyle: Rigorous and analytical"
+}
