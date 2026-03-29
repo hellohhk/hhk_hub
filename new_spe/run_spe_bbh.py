@@ -13,13 +13,14 @@ from new_spe.search.embedding import HashingNgramEmbedder
 from new_spe.search.optimizer import SPEOptimizer, SPEOptimizerConfig
 from new_spe.core.genome import StructuredGenome
 
-# 导入所有的进化算子，包括新增的 ErrorDrivenRefine
+# 导入所有的进化算子，包括新增的 ErrorDrivenRefine 和 CompactnessPruner
 from new_spe.operators.spe_operators import (
     IntraLocusRewrite,
     IntraLocusRefine,
     LocusCrossover,
     SemanticInterpolation,
-    ErrorDrivenRefine
+    ErrorDrivenRefine,
+    CompactnessPruner  # <--- 冗余修剪算子
 )
 
 
@@ -63,7 +64,7 @@ def parse_args():
 
     # 预算与进化参数
     p.add_argument("--budget", type=int, default=2500)  # 总 API 预算
-    p.add_argument("--batch_size", type=int, default=20)  # 保持与消融实验相同的 20 题难度
+    p.add_argument("--batch_size", type=int, default=40)  # 保持与消融实验相同的 20 题难度
     p.add_argument("--gens", type=int, default=30)
     p.add_argument("--mu", type=int, default=6)
     p.add_argument("--lambda_", type=int, default=8)
@@ -88,7 +89,7 @@ def main():
 
     args = parse_args()
     print("\n" + "=" * 60)
-    print("🚀 SPE 主实验: FULL-SCALE CROSS-TASK EVOLUTION (引入错题诊断机制)")
+    print("🚀 SPE 主实验: FULL-SCALE CROSS-TASK EVOLUTION (引入错题诊断与紧凑度修剪)")
     print("=" * 60 + "\n")
 
     cfg = load_deepseek_config("config/apikey.txt")
@@ -103,12 +104,8 @@ def main():
     test_total = len(test_evaluator.flat_dataset)
     print(f"✅ 加载完成 | 训练样本: {train_total} | 测试样本 (全量大考): {test_total}")
 
-    # ==========================================
-    # 【核心修改 2】：保留 MOO 紧凑度目标，但取消刷屏的 DEBUG 打印
-    # ==========================================
     def train_eval_fn(prompt: str):
         res = train_evaluator.evaluate_once(kernel=kernel, prompt=prompt, embedder=embedder)
-        # 移除了 print("[DEBUG]...")，让底层并发评估保持静默，交给 optimizer 集中打印结果
         return res
 
     run_id = time.strftime("%Y%m%d_%H%M%S")
@@ -123,19 +120,23 @@ def main():
         gens=args.gens,
         batch_size=args.batch_size,
         seed=args.seed,
-        invariant_loci=()  # <--- 解锁！允许错题诊断算子对 L_const 写入规则
+        invariant_loci=()
     )
 
-    # 注册新算子并分配触发概率
+    # ==========================================
+    # 注册修剪算子，并重分配概率分布
+    # ==========================================
     custom_operators = [
         IntraLocusRewrite(),
         IntraLocusRefine(),
         LocusCrossover(),
         SemanticInterpolation(),
-        ErrorDrivenRefine()  # 错题诊断算子
+        ErrorDrivenRefine(),  # 错题诊断凝练算子
+        CompactnessPruner()  # 冗余修剪算子
     ]
-    # 概率分布：将 40% 的算力倾斜给错题诊断，帮助弱种子快速起步
-    custom_probs = [0.2, 0.15, 0.15, 0.1, 0.4]
+
+    # 概率分布总和为 1.0 (分配 15% 算力专门用于“瘦身做减法”)
+    custom_probs = [0.15, 0.1, 0.15, 0.1, 0.35, 0.15]
 
     optimizer = SPEOptimizer(
         kernel=kernel,
@@ -145,10 +146,13 @@ def main():
         operator_probs=custom_probs
     )
 
+    # ==========================================
+    # 【核心修改】：单点起源冷启动 (Single Point Origin)
+    # 取消冗余复制，只投放 1 个唯一初始种子，省下大量冗余测试预算
+    # ==========================================
     init_pop = []
-    for i in range(args.mu):
-        loci = {"L_role": args.role, "L_instruct": args.instruct, "L_const": args.const, "L_style": args.style}
-        init_pop.append(StructuredGenome(loci=loci, uid=f"init_{i}", operator="init"))
+    loci = {"L_role": args.role, "L_instruct": args.instruct, "L_const": args.const, "L_style": args.style}
+    init_pop.append(StructuredGenome(loci=loci, uid="init_0", operator="init"))
 
     log_fn({"phase": "experiment_start", "args": vars(args), "config": _to_jsonable(optimizer_cfg)})
 
@@ -157,6 +161,7 @@ def main():
 
     final_pool = optimizer.evolve(init_population=init_pop, eval_fn=train_eval_fn, log_fn=log_fn)
 
+    # 恢复基础的最高分选取策略 (去除了老兵策略)
     best_train_ind = max(final_pool, key=lambda g: float(g.mu()[0]))
     best_prompt_text = best_train_ind.prompt_text()
 
@@ -233,7 +238,8 @@ def main():
     }
 
     with open("spe_main_result.json", "w", encoding="utf-8") as f:
-        json.dump(final_summary, f, ensure_ascii=False, indent=4)
+        # 【核心修复】：套用 _to_jsonable 解决 bool_ 报错
+        json.dump(_to_jsonable(final_summary), f, ensure_ascii=False, indent=4)
 
     log_fn(_to_jsonable(final_summary))
     print(f"📝 详细实验日志已保存至: {log_path} 和 spe_main_result.json")

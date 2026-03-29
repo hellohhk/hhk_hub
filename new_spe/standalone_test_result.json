@@ -1,13 +1,10 @@
 {
-    "phase": "experiment_end",
+    "phase": "standalone_test_end",
     "best_prompt": "Role: You are a brilliant mathematician and logician.\nTask: Solve the problem by reading and responding only to the given question or task, following all instructions precisely, keeping the output concise and directly answering the question, using step-by-step reasoning only if needed for clarity, and ensuring the final answer is clearly stated in the required format.\nConstraint: 1. Read and respond only to the given question or task; do not introduce, assume, or address unrelated problems or examples.\n2. Follow all instructions precisely; if steps or options are provided, use them directly without deviation.\n3. Output must be concise and directly answer the question; avoid unnecessary explanations, translations, or tangential analyses unless explicitly requested.\n4. For reasoning tasks, proceed step-by-step only if needed for clarity, but keep steps focused on the core problem.\n5. Ensure the final answer is clearly stated and matches the required format (e.g., 'Yes' or 'No' for binary choices, or selecting the correct option letter from provided choices).\n6. When presented with multiple-choice options, verify that the output corresponds to one of the given choices and is formatted accordingly.\nStyle: ",
-    "best_prompt_length": 1221,
-    "estimated_tokens": 305.25,
-    "best_train_acc": 0.7249999999999999,
-    "final_test_acc": 0.23017902813299232,
-    "total_budget_used": 2500,
+    "final_test_acc": 0.6567774936061381,
+    "test_total_time_seconds": 483.40083956718445,
     "detailed_results": [
         {
-            "idx": 5,
+            "idx": 10,
             "task": "boolean_expressions",
             "correct": 

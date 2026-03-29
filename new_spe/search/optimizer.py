@@ -72,7 +72,7 @@ class SPEOptimizer:
             self.elite_pool = [unique_list[i] for i in front_idxs]
 
     def _op_cost(self, op: KernelOperator) -> int:
-        return 1 if op.name in {"K_rew", "K_ref", "K_mix", "K_err_diag"} else 0
+        return 1 if op.name in {"K_rew", "K_ref", "K_mix", "K_err_diag", "K_prune"} else 0
 
     def _evaluate_once(self, genome: StructuredGenome, eval_fn: EvalFn, log_fn: Optional[LogFn],
                        meta: Dict[str, object]) -> bool:
@@ -149,9 +149,6 @@ class SPEOptimizer:
 
         print("\n🌱 [初始化阶段] 开始评估初始种子 (多线程火力全开)...")
         for i, g in enumerate(pop):
-            # ==========================================
-            # 【新增】：在这里打印种子 Prompt 的详细结构
-            # ==========================================
             print(f"\n   -------------------------------------------------")
             print(f"   🔍 预览 种子 {i + 1} ({g.uid}) 的 Prompt 结构:")
             print(f"   [Role]:       {g.loci.get('L_role', '')}")
@@ -162,12 +159,29 @@ class SPEOptimizer:
 
             self._evaluate_n(g, eval_fn, log_fn, self.cfg.batch_size, meta={"phase": "init"})
 
-            # 【重构为清爽输出】：不再打印几百行，只有一行结果
             failures_count = len(getattr(g, 'failure_cases', []))
             print(
                 f"   👉 种子 {i + 1} ({g.uid}) 评估完成 | 测验 {g.n} 题 | 平均准确率: {g.mu()[0]:.2%} | 收集到错题: {failures_count} 道")
 
         self._update_elite_pool(pop)
+
+        # ==========================================
+        # 【核心修复】：单点起源扩增逻辑
+        # 评估完唯一种子后，将其克隆多份填满种群大小(mu)，并继承其错题本和得分
+        # ==========================================
+        if len(pop) == 1 and self.cfg.mu > 1:
+            print(f"\n   🌱 [单点起源扩增] 将唯一种子克隆 {self.cfg.mu - 1} 份以填满初始种群...")
+            base_seed = pop[0]
+            for i in range(1, self.cfg.mu):
+                c = base_seed.clone_with(loci=base_seed.loci, uid=f"{base_seed.uid}_c{i}", parents=[base_seed.uid],
+                                         operator="init_clone")
+                # 完美继承评估得分和在线均值方差
+                c.n = base_seed.n
+                if base_seed.mean is not None: c.mean = np.copy(base_seed.mean)
+                if base_seed.m2 is not None: c.m2 = np.copy(base_seed.m2)
+                # 完美继承错题本！保证一代算子有题可反思
+                c.failure_cases = list(base_seed.failure_cases)
+                pop.append(c)
 
         print("\n🚀 [进化阶段] 开始跨代繁殖与优胜劣汰...")
         for gen in range(self.cfg.gens):
@@ -175,7 +189,6 @@ class SPEOptimizer:
                 print(f"\n   ⚠️ 预算已达上限 ({self.used_budget}/{self.cfg.budget})，提前终止进化。")
                 break
 
-            # 【重构为清爽输出】：添加明显的代数分割线
             print(f"\n--- [ 第 {gen + 1} 代进化 | 当前消耗预算: {self.used_budget} / {self.cfg.budget} ] ---")
 
             sel = nsga2_select(pop, mu=len(pop))
@@ -198,18 +211,32 @@ class SPEOptimizer:
                 self._evaluate_n(child, eval_fn, log_fn, self.cfg.batch_size, meta={"phase": "offspring", "gen": gen})
                 offspring.append(child)
 
-                # 【重构为清爽输出】：打印本次触发的算子和繁育结果
                 failures_count = len(getattr(child, 'failure_cases', []))
                 print(f"   ⚡ [触发算子] {op.name}")
+
+                print(f"      📝 繁育出的子代 Prompt 详情 ({child.uid}):")
+                print(f"         - [Role]:       {child.loci.get('L_role', '')}")
+                print(f"         - [Instruct]:   {child.loci.get('L_instruct', '')}")
+
+                const_lines = child.loci.get('L_const', '').strip().split('\n')
+                if const_lines and const_lines[0]:
+                    print(f"         - [Constraint]: {const_lines[0]}")
+                    for line in const_lines[1:]:
+                        print(f"                         {line}")
+                else:
+                    print(f"         - [Constraint]: ")
+
+                print(f"         - [Style]:      {child.loci.get('L_style', '')}")
+
                 print(
-                    f"      📊 子代评估完成 | 准确率: {child.mu()[0]:.2%} | 当前长度: {len(child.prompt_text())} 字符 | 收集错题: {failures_count} 道")
+                    f"      📊 子代评估完成 | 准确率: {child.mu()[0]:.2%} | 当前长度: {len(child.prompt_text())} 字符 | 收集错题: {failures_count} 道\n")
 
             pool = pop + offspring + self.elite_pool
             pop = nsga2_select(pool, mu=self.cfg.mu).selected
             self._update_elite_pool(pop)
             best_score = max(g.mu()[0] for g in self.elite_pool)
             print(
-                f"\n🏆 第 {gen + 1} 代结束 | 全局精英池最高得分: {best_score:.2%} | 当前预算: {self.used_budget}/{self.cfg.budget}")
+                f"🏆 第 {gen + 1} 代结束 | 全局精英池最高得分: {best_score:.2%} | 当前预算: {self.used_budget}/{self.cfg.budget}")
 
             if log_fn is not None:
                 log_fn({"phase": "gen_end", "gen": gen, "budget_used": self.used_budget,
