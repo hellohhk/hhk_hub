@@ -1,0 +1,10 @@
+{
+    "phase": "evoprompt_standalone_test_end",
+    "best_prompt": "Let's break this down step by step.",
+    "final_test_acc": 0.47468030690537083,
+    "test_total_time_seconds": 6305.580479860306,
+    "detailed_results": [
+        {
+            "idx": 6,
+            "task": "boolean_expressions",
+            "correct": 

@@ -1,1929 +1,523 @@
-=== FAIR APE BASELINE Started at 11:36:22 ===
+=== APE Evolution Log Started at 21:35:10 ===
 
-==================== Budget Used 201/2500 (Score: 75.0%) ====================
-PROMPT: Finally, synthesize the information to reach a conclusion.
-
-[✅ SUCCESS CASE]
-Q: I have a piano, an accordion, a trombone, two clarinets, two violins, a trumpet, a flute, and a drum...
-A: 10
-Model CoT:
-Let’s count the instruments step-by-step:  
-
-1. Piano → 1  
-2. Accordion → 1  
-3. Trombone → 1  
-4. Two clarinets → 2  
-5. Two violins → 2  
-6. Trumpet → 1  
-7. Flute → 1  
-8. Drum → 1  
-
-Now add them up:  
-1 + 1 = 2  
-2 + 1 = 3  
-3 + 2 = 5  
-5 + 2 = 7  
-7 + 1 = 8  
-8 + 1 = 9  
-9 + 1 = 10  
-
-**Total:** 10 musical instruments.  
-
-**Answer:** 10
-
-[❌ FAILURE CASE]
-Q: Question: Andree lies. Amberly says Andree tells the truth. Gwenn says Amberly tells the truth. Will...
-A: yes | Pred: Alright, let’s go step-by-step.
-
----
-
-**Step 1: Interpret the statements**
-
-We have:
-
-1. **Andree lies** (given as a fact, not a statement from someone).
-2. **Amberly says**: “Andree tells the truth.”
-3. **Gwenn says**: “Amberly tells the truth.”
-4. **Willian says**: “Gwenn lies.”
-5. **Alexis says**: “Willian tells the truth.”
-
-We need to determine: **Does Alexis tell the truth?**
-
----
-
-**Step 2: Start from the given fact**
-
-Andree lies ⇒ Andree’s statements (if any) are false, but here Andree isn’t making a statement in the list.  
-The given fact is: “Andree lies” means Andree is a **liar**.
-
----
-
-**Step 3: Evaluate Amberly’s statement**
-
-Amberly says: “Andree tells the truth.”  
-But we know Andree lies ⇒ Amberly’s statement is **false**.  
-So Amberly is a **liar**.
-
----
-
-**Step 4: Evaluate Gwenn’s statement**
-
-Gwenn says: “Amberly tells the truth.”  
-But Amberly is a liar ⇒ Gwenn’s statement is **false**.  
-So Gwenn is a **liar**.
-
----
-
-**Step 5: Evaluate Willian’s statement**
-
-Willian says: “Gwenn lies.”  
-We found Gwenn is a liar ⇒ Willian’s statement is **true**.  
-So Willian is a **truth-teller**.
-
----
-
-**Step 6: Evaluate Alexis’s statement**
-
-Alexis says: “Willian tells the truth.”  
-We found Willian is a truth-teller ⇒ Alexis’s statement is **true**.  
-So Alexis is a **truth-teller**.
-
----
-
-**Step 7: Conclusion**
-
-Alexis tells the truth.
-
----
-
-\[
-\boxed{\text{Yes}}
-\]
-Model CoT:
-Alright, let’s go step-by-step.
-
----
-
-**Step 1: Interpret the statements**
-
-We have:
-
-1. **Andree lies** (given as a fact, not a statement from someone).
-2. **Amberly says**: “Andree tells the truth.”
-3. **Gwenn says**: “Amberly tells the truth.”
-4. **Willian says**: “Gwenn lies.”
-5. **Alexis says**: “Willian tells the truth.”
-
-We need to determine: **Does Alexis tell the truth?**
-
----
-
-**Step 2: Start from the given fact**
-
-Andree lies ⇒ Andree’s statements (if any) are false, but here Andree isn’t making a statement in the list.  
-The given fact is: “Andree lies” means Andree is a **liar**.
-
----
-
-**Step 3: Evaluate Amberly’s statement**
-
-Amberly says: “Andree tells the truth.”  
-But we know Andree lies ⇒ Amberly’s statement is **false**.  
-So Amberly is a **liar**.
-
----
-
-**Step 4: Evaluate Gwenn’s statement**
-
-Gwenn says: “Amberly tells the truth.”  
-But Amberly is a liar ⇒ Gwenn’s statement is **false**.  
-So Gwenn is a **liar**.
-
----
-
-**Step 5: Evaluate Willian’s statement**
-
-Willian says: “Gwenn lies.”  
-We found Gwenn is a liar ⇒ Willian’s statement is **true**.  
-So Willian is a **truth-teller**.
-
----
-
-**Step 6: Evaluate Alexis’s statement**
-
-Alexis says: “Willian tells the truth.”  
-We found Willian is a truth-teller ⇒ Alexis’s statement is **true**.  
-So Alexis is a **truth-teller**.
-
----
-
-**Step 7: Conclusion**
-
-Alexis tells the truth.
-
----
-
-\[
-\boxed{\text{Yes}}
-\]
-
-==================== Budget Used 310/2500 (Score: 70.0%) ====================
-PROMPT: Let's proceed step by step.
+==================== Iteration 1 (Score: 80.0%) ====================
+PROMPT: Let's trace the logical sequence.
 
 [✅ SUCCESS CASE]
-Q: The following paragraphs each describe a set of three objects arranged in a fixed order. The stateme...
-A: (c)
-Model CoT:
-Let’s break it down:  
-
-1. We have three vehicles: bus, sedan, truck.  
-2. Statement: “The truck is older than the bus.”  
-   → Truck > Bus (in age, “>” means older).  
-3. Statement: “The bus is older than the sedan.”  
-   → Bus > Sedan.  
-
-From (2) and (3):  
-Truck > Bus > Sedan.  
-
-So the order from oldest to youngest is:  
-Truck (oldest), then Bus, then Sedan (youngest).  
-
-Thus, the truck is the oldest.  
-
-**Answer:** (C) The truck is the oldest.
-
-[❌ FAILURE CASE]
-Q: If you follow these instructions, do you return to the starting point? Always face forward. Take 2 s...
-A: no | Pred: Let’s break it down:  
-
-1. **Starting position**: You are at point 0, facing forward.  
-2. **First instruction**: Take 2 steps backward.  
-   - Moving backward while facing forward means you move in the negative direction along the line you’re facing.  
-   - Position after this: \( 0 - 2 = -2 \).  
-3. **Second instruction**: Take 8 steps backward.  
-   - Still facing forward, so moving backward again in the negative direction.  
-   - New position: \( -2 - 8 = -10 \).  
-
-You end at \(-10\), not at 0.  
-
-**Answer**: No.
-Model CoT:
-Let’s break it down:  
-
-1. **Starting position**: You are at point 0, facing forward.  
-2. **First instruction**: Take 2 steps backward.  
-   - Moving backward while facing forward means you move in the negative direction along the line you’re facing.  
-   - Position after this: \( 0 - 2 = -2 \).  
-3. **Second instruction**: Take 8 steps backward.  
-   - Still facing forward, so moving backward again in the negative direction.  
-   - New position: \( -2 - 8 = -10 \).  
-
-You end at \(-10\), not at 0.  
-
-**Answer**: No.
-
-==================== Budget Used 399/2500 (Score: 85.0%) ====================
-PROMPT: Proceed step by step.
-
-[✅ SUCCESS CASE]
-Q: On the table, I see one orange teddy bear, two orange envelopes, and three green envelopes. If I rem...
-A: (b)
-Model CoT:
-Let’s break this down:  
-
-1. **Initial items on the table**:  
-   - Orange teddy bear: 1  
-   - Orange envelopes: 2  
-   - Green envelopes: 3  
-
-2. **Removing all envelopes**:  
-   - Orange envelopes (2) are removed.  
-   - Green envelopes (3) are removed.  
-
-3. **What remains after removal**:  
-   - Only the orange teddy bear is left.  
-
-4. **Orange items remaining**:  
-   - The teddy bear is orange, so orange items remaining = 1.  
-
-**Answer:** (B) one
-
-[❌ FAILURE CASE]
-Q: In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to...
-A: (a) | Pred: C
-Model CoT:
-Let’s break this down step by step.  
-
-1. **Identify the pronouns in the sentence.**  
-   The sentence is:  
-   *The paralegal forgot to file paperwork for the client so he was fired.*  
-   The pronoun here is **“he.”**  
-
-2. **Identify possible antecedents for “he.”**  
-   - “The paralegal” (male, presumably)  
-   - “The client” (male, presumably)  
-
-3. **Consider grammatical and logical context.**  
-   - The main clause is “The paralegal forgot to file paperwork for the client.”  
-   - The result clause is “so he was fired.”  
-   - Typically, “so” introduces a consequence of the main clause’s action.  
-
-4. **Reason about likely meaning.**  
-   - If the paralegal forgot to file paperwork, it’s more logical that the paralegal (not the client) would face job consequences.  
-   - However, the sentence structure does not grammatically rule out “the client” as the antecedent of “he.”  
-   - In real-world logic, a client isn’t “fired” by the law firm; they might be dropped, but “fired” usually applies to employees.  
-   - Still, in purely grammatical terms, both are male in this sentence and either could be the antecedent.  
-
-5. **Check for ambiguity.**  
-   - Since “he” could grammatically refer to either the paralegal or the client, and no additional context is given to decide, this is a case of **ambiguous pronoun reference**.  
-
-**Final answer:**  
-(C) Ambiguous
-
-==================== Budget Used 488/2500 (Score: 60.0%) ====================
-PROMPT: Synthesize the information to draw a conclusion.
-
-[✅ SUCCESS CASE]
-Q: If you follow these instructions, do you return to the starting point? Take 1 step. Take 7 steps. Ta...
-A: no
-Model CoT:
-Let’s break this down step-by-step.  
-
-1. **Interpret the instructions**  
-   The instructions say:  
-   - Take 1 step.  
-   - Take 7 steps.  
-   - Take 1 step.  
-
-   This is a sequence of moves in the same direction unless otherwise stated.  
-
-2. **Assume movement in a straight line**  
-   If all steps are in the same direction, the total displacement from the starting point is:  
-   \( 1 + 7 + 1 = 9 \) steps away from the start.  
-
-3. **Check if there’s any implied turning**  
-   The problem doesn’t mention turning, changing direction, or any pattern (like a polygon path) that would return to the start. It’s just three forward motions.  
-
-4. **Conclusion**  
-   After following the instructions, you end up 9 steps away from the starting point, not back at the start.  
-
-**Answer:** No
-
-[❌ FAILURE CASE]
-Q: Question: Fletcher lies. Teressa says Fletcher lies. Vernell says Teressa lies. Dallas says Vernell ...
-A: yes | Pred: Alright, let’s go step-by-step.
-
----
-
-**Step 1: Understanding the statements**
-
-We have:
-
-1. **Fletcher lies** — This is a given fact, not someone’s statement.  
-   So Fletcher always tells lies.
-
-2. **Teressa says: “Fletcher lies.”**  
-   Since Fletcher does indeed lie, Teressa’s statement is **true**.  
-   Therefore, **Teressa tells the truth**.
-
----
-
-**Step 3: Vernell says: “Teressa lies.”**  
-We know Teressa tells the truth, so Vernell’s statement is **false**.  
-Therefore, **Vernell lies**.
-
----
-
-**Step 4: Dallas says: “Vernell lies.”**  
-We know Vernell lies, so Dallas’s statement is **true**.  
-Therefore, **Dallas tells the truth**.
-
----
-
-**Step 5: Millicent says: “Dallas tells the truth.”**  
-We know Dallas tells the truth, so Millicent’s statement is **true**.  
-Therefore, **Millicent tells the truth**.
-
----
-
-**Step 6: Conclusion**
-
-Millicent’s statement matches reality, so she is truthful.
-
----
-
-\[
-\boxed{\text{Yes}}
-\]
-Model CoT:
-Alright, let’s go step-by-step.
-
----
-
-**Step 1: Understanding the statements**
-
-We have:
-
-1. **Fletcher lies** — This is a given fact, not someone’s statement.  
-   So Fletcher always tells lies.
-
-2. **Teressa says: “Fletcher lies.”**  
-   Since Fletcher does indeed lie, Teressa’s statement is **true**.  
-   Therefore, **Teressa tells the truth**.
-
----
-
-**Step 3: Vernell says: “Teressa lies.”**  
-We know Teressa tells the truth, so Vernell’s statement is **false**.  
-Therefore, **Vernell lies**.
-
----
-
-**Step 4: Dallas says: “Vernell lies.”**  
-We know Vernell lies, so Dallas’s statement is **true**.  
-Therefore, **Dallas tells the truth**.
-
----
-
-**Step 5: Millicent says: “Dallas tells the truth.”**  
-We know Dallas tells the truth, so Millicent’s statement is **true**.  
-Therefore, **Millicent tells the truth**.
-
----
-
-**Step 6: Conclusion**
-
-Millicent’s statement matches reality, so she is truthful.
-
----
-
-\[
-\boxed{\text{Yes}}
-\]
-
-==================== Budget Used 557/2500 (Score: 55.0%) ====================
-PROMPT: Guide me through each step.
-
-[✅ SUCCESS CASE]
-Q: On the table, you see a silver pen, a teal pencil, a red booklet, a black puzzle, and an orange cat ...
+Q: Which sentence has the correct adjective order:
+Options:
+(A) enormous spherical Indian drinking sock...
 A: (a)
 Model CoT:
-Let’s go step-by-step.  
+Let’s recall the standard order of adjectives in English:  
+**Opinion → Size → Shape → Age → Color → Origin → Material → Purpose + Noun**
 
-1. The statement says:  
-   *On the table, you see a silver pen, a teal pencil, a red booklet, a black puzzle, and an orange cat toy.*  
+Here, the noun is **sock**.  
+Breaking down the adjectives in the options:
 
-2. The question asks:  
-   *Is the booklet red?*  
+1. **enormous** → size  
+2. **spherical** → shape  
+3. **Indian** → origin  
+4. **drinking** → purpose (modifies sock: a sock for drinking)  
 
-3. From the list, the booklet is explicitly described as “a red booklet.”  
+Correct order should be:  
+Size (enormous) → Shape (spherical) → Origin (Indian) → Purpose (drinking) → Noun (sock)  
 
-4. There is no contradictory information given later — the description is direct and clear.  
+That gives: **enormous spherical Indian drinking sock**  
 
-5. Therefore, the booklet is indeed red.  
-
-**Answer:** (A) yes
-
-[❌ FAILURE CASE]
-Q: Complete the rest of the sequence, making sure that the parentheses are closed properly. Input: ( < ...
-A: ) | Pred: Alright, let’s go step-by-step.
-
----
-
-**Step 1: Understand the problem**  
-We have an input sequence of brackets:  
-
-```
-( < < > ( [ < { { } } ( ) > ] ) [ ( ) ] [ ] [ { } ] >
-```
-
-We need to **complete the rest of the sequence** so that all parentheses, angle brackets, square brackets, and curly braces are properly closed.  
-That means at the end, we may need to add closing symbols for any still-open ones, in the correct order (last opened, first closed).
-
----
-
-**Step 2: Parse the sequence and track open brackets**  
-
-We’ll read left to right, using a stack to track currently open brackets.
-
-1. `(` → stack: `[ '(' ]`
-2. `<` → stack: `[ '(', '<' ]`
-3. `<` → stack: `[ '(', '<', '<' ]`
-4. `>` → closes the most recent `<` → stack: `[ '(', '<' ]`
-5. `(` → stack: `[ '(', '<', '(' ]`
-6. `[` → stack: `[ '(', '<', '(', '[' ]`
-7. `<` → stack: `[ '(', '<', '(', '[', '<' ]`
-8. `{` → stack: `[ '(', '<', '(', '[', '<', '{' ]`
-9. `{` → stack: `[ '(', '<', '(', '[', '<', '{', '{' ]`
-10. `}` → closes most recent `{` → stack: `[ '(', '<', '(', '[', '<', '{' ]`
-11. `}` → closes `{` → stack: `[ '(', '<', '(', '[', '<' ]`
-12. `(` → stack: `[ '(', '<', '(', '[', '<', '(' ]`
-13. `)` → closes `(` → stack: `[ '(', '<', '(', '[', '<' ]`
-14. `>` → closes `<` → stack: `[ '(', '<', '(', '[' ]`
-15. `]` → closes `[` → stack: `[ '(', '<', '(' ]`
-16. `)` → closes `(` → stack: `[ '(', '<' ]`
-17. `[` → stack: `[ '(', '<', '[' ]`
-18. `
-Model CoT:
-Alright, let’s go step-by-step.
-
----
-
-**Step 1: Understand the problem**  
-We have an input sequence of brackets:  
-
-```
-( < < > ( [ < { { } } ( ) > ] ) [ ( ) ] [ ] [ { } ] >
-```
-
-We need to **complete the rest of the sequence** so that all parentheses, angle brackets, square brackets, and curly braces are properly closed.  
-That means at the end, we may need to add closing symbols for any still-open ones, in the correct order (last opened, first closed).
-
----
-
-**Step 2: Parse the sequence and track open brackets**  
-
-We’ll read left to right, using a stack to track currently open brackets.
-
-1. `(` → stack: `[ '(' ]`
-2. `<` → stack: `[ '(', '<' ]`
-3. `<` → stack: `[ '(', '<', '<' ]`
-4. `>` → closes the most recent `<` → stack: `[ '(', '<' ]`
-5. `(` → stack: `[ '(', '<', '(' ]`
-6. `[` → stack: `[ '(', '<', '(', '[' ]`
-7. `<` → stack: `[ '(', '<', '(', '[', '<' ]`
-8. `{` → stack: `[ '(', '<', '(', '[', '<', '{' ]`
-9. `{` → stack: `[ '(', '<', '(', '[', '<', '{', '{' ]`
-10. `}` → closes most recent `{` → stack: `[ '(', '<', '(', '[', '<', '{' ]`
-11. `}` → closes `{` → stack: `[ '(', '<', '(', '[', '<' ]`
-12. `(` → stack: `[ '(', '<', '(', '[', '<', '(' ]`
-13. `)` → closes `(` → stack: `[ '(', '<', '(', '[', '<' ]`
-14. `>` → closes `<` → stack: `[ '(', '<', '(', '[' ]`
-15. `]` → closes `[` → stack: `[ '(', '<', '(' ]`
-16. `)` → closes `(` → stack: `[ '(', '<' ]`
-17. `[` → stack: `[ '(', '<', '[' ]`
-18. `
-
-==================== Budget Used 666/2500 (Score: 60.0%) ====================
-PROMPT: Outline the process step by step.
-
-[✅ SUCCESS CASE]
-Q: True and not ( True or False ) is...
-A: false
-Model CoT:
-Alright, let’s go step-by-step.  
-
-We are evaluating:  
-**True and not ( True or False )**
-
----
-
-**Step 1: Evaluate the expression inside parentheses**  
-\( \text{True or False} \)  
-In logic, “or” is true if at least one operand is true.  
-True or False = **True**.
-
-So now the expression becomes:  
-True and not (True)
-
----
-
-**Step 2: Apply the “not”**  
-not (True) = **False**.
-
-Now the expression is:  
-True and False
-
----
-
-**Step 3: Apply the “and”**  
-True and False = **False** (since “and” is true only if both operands are true).
-
----
-
-**Step 4: Conclusion**  
-The result is **False**.
-
----
-
-\[
-\boxed{\text{False}}
-\]
-
-[❌ FAILURE CASE]
-Q: Sort the following words alphabetically: List: testate orchestra permafrost leasehold shiva...
-A: leasehold orchestra permafrost shiva testate | Pred: Alright, let’s sort the given words alphabetically step-by-step.  
-
-**Step 1: List the words exactly as given**  
-Words: testate, orchestra, permafrost, leasehold, shiva  
-
-**Step 2: Compare the first letters of each word**  
-t (testate)  
-o (orchestra)  
-p (permafrost)  
-l (leasehold)  
-s (shiva)  
-
-Alphabetical order of first letters: l, o, p, s, t  
-
-So based on first letters alone:  
-1. leasehold (l)  
-2. orchestra (o)  
-3. permafrost (p)  
-4. shiva (s)  
-5. testate (t)  
-
-**Step 3: Check if any words share the same first letter**  
-None share the same first letter here, so no need for further comparison within first-letter groups.  
-
-**Step 4: Verify order by looking at full words**  
-- leasehold → starts with l  
-- orchestra → starts with o  
-- permafrost → starts with p  
-- shiva → starts with s  
-- testate → starts with t  
-
-That matches l < o < p < s < t in alphabet.  
-
-**Step 5: Final sorted list**  
-leasehold, orchestra, permafrost, shiva, testate  
-
-**Answer:** leasehold, orchestra, permafrost, shiva, testate
-Model CoT:
-Alright, let’s sort the given words alphabetically step-by-step.  
-
-**Step 1: List the words exactly as given**  
-Words: testate, orchestra, permafrost, leasehold, shiva  
-
-**Step 2: Compare the first letters of each word**  
-t (testate)  
-o (orchestra)  
-p (permafrost)  
-l (leasehold)  
-s (shiva)  
-
-Alphabetical order of first letters: l, o, p, s, t  
-
-So based on first letters alone:  
-1. leasehold (l)  
-2. orchestra (o)  
-3. permafrost (p)  
-4. shiva (s)  
-5. testate (t)  
-
-**Step 3: Check if any words share the same first letter**  
-None share the same first letter here, so no need for further comparison within first-letter groups.  
-
-**Step 4: Verify order by looking at full words**  
-- leasehold → starts with l  
-- orchestra → starts with o  
-- permafrost → starts with p  
-- shiva → starts with s  
-- testate → starts with t  
-
-That matches l < o < p < s < t in alphabet.  
-
-**Step 5: Final sorted list**  
-leasehold, orchestra, permafrost, shiva, testate  
-
-**Answer:** leasehold, orchestra, permafrost, shiva, testate
-
-==================== Budget Used 755/2500 (Score: 60.0%) ====================
-PROMPT: Create a clear, step-by-step guide.
-
-[✅ SUCCESS CASE]
-Q: On the floor, there is a silver booklet, a pink teddy bear, a brown scrunchiephone charger, and a re...
-A: (b)
-Model CoT:
-Let’s go step-by-step.  
-
-1. **List the items mentioned in the question:**  
-   - Silver booklet  
-   - Pink teddy bear  
-   - Brown scrunchie phone charger  
-   - Red bracelet  
-
-2. **Focus on the specific item asked about:**  
-   The question asks: *Is the teddy bear orange?*  
-
-3. **Check the description of the teddy bear in the list:**  
-   The list explicitly says: *a pink teddy bear*.  
-
-4. **Compare the color given with the color asked:**  
-   Pink (given) vs. Orange (asked).  
-   These are different colors.  
-
-5. **Conclusion:**  
-   The teddy bear is pink, not orange.  
-
-**Answer:** (B) no
-
-[❌ FAILURE CASE]
-Q: Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are playing a game. At the start of the game, they...
-A: (e) | Pred: Alright, let’s go step-by-step.
-
----
-
-**Step 1: Initial assignment of balls**
-
-- Alice → Green  
-- Bob → Pink  
-- Claire → Orange  
-- Dave → Yellow  
-- Eve → Blue  
-- Fred → Black  
-- Gertrude → Purple  
-
----
-
-**Step 2: Gertrude and Alice swap balls**
-
-After swap:  
-- Alice → Purple  
-- Gertrude → Green  
-Others unchanged:  
-Bob → Pink, Claire → Orange, Dave → Yellow, Eve → Blue, Fred → Black.
-
----
-
-**Step 3: Eve and Claire swap balls**
-
-Eve (Blue) ↔ Claire (Orange)  
-- Eve → Orange  
-- Claire → Blue  
-Others unchanged:  
-Alice → Purple, Bob → Pink, Dave → Yellow, Fred → Black, Gertrude → Green.
-
----
-
-**Step 4: Claire and Gertrude swap balls**
-
-Claire (Blue) ↔ Gertrude (Green)  
-- Claire → Green  
-- Gertrude → Blue  
-Others unchanged:  
-Alice → Purple, Bob → Pink, Dave → Yellow, Eve → Orange, Fred → Black.
-
----
-
-**Step 5: Bob and Alice swap balls**
-
-Bob (Pink) ↔ Alice (Purple)  
-- Bob → Purple  
-- Alice → Pink  
-Others unchanged:  
-Claire → Green, Dave → Yellow, Eve → Orange, Fred → Black, Gertrude → Blue.
-
----
-
-**Step 6: Eve and Alice swap balls**
-
-Eve (Orange) ↔ Alice (Pink)  
-- Eve → Pink  
-- Alice → Orange  
-Others unchanged:  
-Bob → Purple, Claire → Green, Dave → Yellow, Fred → Black, Gertrude → Blue.
-
----
-
-**Step 7: Dave and Alice swap balls**
-
-Dave (Yellow) ↔ Alice (Orange)  
-- Dave → Orange  
-- Alice → Yellow  
-Others unchanged:  
-Bob → Purple, Claire → Green, Eve → Pink, Fred → Black, Gertrude → Blue.
-
----
-
-**Step 8: Dave and Fred swap balls**
-
-Dave (Orange) ↔ Fred (Black)  
-- Dave → Black  
-- Fred → Orange  
-Others unchanged:  
-Alice → Yellow, Bob → Purple, Claire → Green, Eve → Pink, Gertrude → Blue.
-
----
-
-**Step 9: Final positions**
-
-- Alice → Yellow  
-- Bob → Purple  
-- Claire → Green  
-- Dave → Black  
-- Eve → Pink  
-- Fred → Orange  
-- **Gertrude → Blue**
-
----
-
-**Step 10
-Model CoT:
-Alright, let’s go step-by-step.
-
----
-
-**Step 1: Initial assignment of balls**
-
-- Alice → Green  
-- Bob → Pink  
-- Claire → Orange  
-- Dave → Yellow  
-- Eve → Blue  
-- Fred → Black  
-- Gertrude → Purple  
-
----
-
-**Step 2: Gertrude and Alice swap balls**
-
-After swap:  
-- Alice → Purple  
-- Gertrude → Green  
-Others unchanged:  
-Bob → Pink, Claire → Orange, Dave → Yellow, Eve → Blue, Fred → Black.
-
----
-
-**Step 3: Eve and Claire swap balls**
-
-Eve (Blue) ↔ Claire (Orange)  
-- Eve → Orange  
-- Claire → Blue  
-Others unchanged:  
-Alice → Purple, Bob → Pink, Dave → Yellow, Fred → Black, Gertrude → Green.
-
----
-
-**Step 4: Claire and Gertrude swap balls**
-
-Claire (Blue) ↔ Gertrude (Green)  
-- Claire → Green  
-- Gertrude → Blue  
-Others unchanged:  
-Alice → Purple, Bob → Pink, Dave → Yellow, Eve → Orange, Fred → Black.
-
----
-
-**Step 5: Bob and Alice swap balls**
-
-Bob (Pink) ↔ Alice (Purple)  
-- Bob → Purple  
-- Alice → Pink  
-Others unchanged:  
-Claire → Green, Dave → Yellow, Eve → Orange, Fred → Black, Gertrude → Blue.
-
----
-
-**Step 6: Eve and Alice swap balls**
-
-Eve (Orange) ↔ Alice (Pink)  
-- Eve → Pink  
-- Alice → Orange  
-Others unchanged:  
-Bob → Purple, Claire → Green, Dave → Yellow, Fred → Black, Gertrude → Blue.
-
----
-
-**Step 7: Dave and Alice swap balls**
-
-Dave (Yellow) ↔ Alice (Orange)  
-- Dave → Orange  
-- Alice → Yellow  
-Others unchanged:  
-Bob → Purple, Claire → Green, Eve → Pink, Fred → Black, Gertrude → Blue.
-
----
-
-**Step 8: Dave and Fred swap balls**
-
-Dave (Orange) ↔ Fred (Black)  
-- Dave → Black  
-- Fred → Orange  
-Others unchanged:  
-Alice → Yellow, Bob → Purple, Claire → Green, Eve → Pink, Gertrude → Blue.
-
----
-
-**Step 9: Final positions**
-
-- Alice → Yellow  
-- Bob → Purple  
-- Claire → Green  
-- Dave → Black  
-- Eve → Pink  
-- Fred → Orange  
-- **Gertrude → Blue**
-
----
-
-**Step 10
-
-==================== Budget Used 824/2500 (Score: 65.0%) ====================
-PROMPT: Provide a clear, step-by-step guide.
-
-[✅ SUCCESS CASE]
-Q: On the nightstand, you see a bunch of objects arranged in a row: a teal puzzle, a yellow cat toy, a ...
-A: (r)
-Model CoT:
-Let’s go step-by-step.  
-
-**Step 1: Recall the objects and their order from left to right.**  
-The problem says:  
-> a teal puzzle, a yellow cat toy, a blue fidget spinner, an orange notebook, and a pink envelope.  
-
-That’s 5 objects in a row.  
-Order:  
-1. teal puzzle  
-2. yellow cat toy  
-3. blue fidget spinner  
-4. orange notebook  
-5. pink envelope  
-
-**Step 2: Determine the right-most object.**  
-If they are arranged in a row as listed (presumably from left to right in the sentence), then the last one mentioned is the right-most.  
-So the right-most object is the pink envelope.  
-
-**Step 3: Identify the color of the right-most object.**  
-The pink envelope is **pink**.  
-
-**Step 4: Match to the options.**  
-From the list:  
-(A) red … (R) pink → pink is option (R).  
-
-**Final answer:**  
-\[
-\boxed{R}
-\]
-
-[❌ FAILURE CASE]
-Q: In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to...
-A: (a) | Pred: C
-Model CoT:
-Let’s go step-by-step.  
-
-**Step 1: Identify the pronoun in question.**  
-The pronoun is “she” in the clause: “… but she didn’t reply yet.”  
-
-**Step 2: Identify possible antecedents in the sentence.**  
-The sentence mentions two people:  
-1. The manager  
-2. The secretary  
-
-Both could be female, so grammatically “she” could refer to either.  
-
-**Step 3: Consider typical contextual or logical clues.**  
-- The manager sent a message **to** the secretary.  
-- Usually, the person who receives a message is the one expected to reply.  
-- However, it’s not grammatically impossible for “she” to refer to the manager (e.g., if the manager was supposed to reply to something else, but that’s not stated).  
-
-**Step 4: Check for structural bias in English.**  
-In English, when a pronoun follows two possible female antecedents, without additional context, the most recent plausible antecedent is often the secretary.  
-But “plausible” here depends on real-world expectation: the secretary is the recipient, so she’s the likely replier.  
-Still, the sentence doesn’t explicitly rule out the manager being “she.”  
-
-**Step 5: Determine if it’s truly ambiguous.**  
-Since both are grammatically possible and no extra context is given to decide, in formal pronoun-antecedent ambiguity analysis, this is considered ambiguous.  
-
-**Step 6: Match to given options.**  
-Option (A) assumes “she” = secretary.  
-Option (B) assumes “she” = manager.  
-Option (C) says it’s ambiguous.  
-
-Given the instructions (“explain the antecedent … or state that it is ambiguous”), and since we lack context to choose between (A) and (B), the correct answer is:  
-
-**(C) Ambiguous**  
-
-**Final reasoning:**  
-The pronoun “she” could refer to the manager or the secretary based on the sentence alone, so the antecedent is ambiguous.
-
-==================== Budget Used 873/2500 (Score: 65.0%) ====================
-PROMPT: Outline a clear, step-by-step process.
-
-[✅ SUCCESS CASE]
-Q: ((-5 - -1 - 6 * 0) + (-3 + 5 * 0 + 1)) =...
-A: -6
-Model CoT:
-Alright, let’s go step-by-step.  
-
-We have:  
-
-\[
-((-5 - -1 - 6 \times 0) + (-3 + 5 \times 0 + 1))
-\]
-
----
-
-**Step 1: Handle the first parentheses**  
-\[
-(-5 - -1 - 6 \times 0)
-\]  
-First, note that \(- -1\) means \(+1\).  
-Also, \(6 \times 0 = 0\).  
-
-So:  
-\[
--5 - (-1) = -5 + 1 = -4
-\]  
-Then:  
-\[
--4 - 0 = -4
-\]  
-
-So first parentheses = \(-4\).
-
----
-
-**Step 2: Handle the second parentheses**  
-\[
-(-3 + 5 \times 0 + 1)
-\]  
-First, \(5 \times 0 = 0\).  
-
-So:  
-\[
--3 + 0 + 1 = -3 + 1 = -2
-\]  
-
-So second parentheses = \(-2\).
-
----
-
-**Step 3: Add the results**  
-\[
-(-4) + (-2) = -6
-\]  
-
----
-
-**Final answer:**  
-\[
-\boxed{-6}
-\]
-
-[❌ FAILURE CASE]
-Q: "Here comes a perfectly valid argument: To start with, no devotee of FC Pyunik is a critic of AZ Alk...
-A: invalid | Pred: Alright, let’s break this down step-by-step.
-
----
-
-**Step 1: Restate the premises in logical form.**
-
-Let’s define predicates:
-
-- \( P(x) \): \( x \) is a devotee of FC Pyunik.  
-- \( C(x) \): \( x \) is a critic of AZ Alkmaar.  
-- \( F(x) \): \( x \) is a devotee of Fehérvár FC.  
-- \( A(x) \): \( x \) is an admirer of FC Augsburg.
-
----
-
-**Premise 1:**  
-“No devotee of FC Pyunik is a critic of AZ Alkmaar or a devotee of Fehérvár FC.”
-
-This means: If \( P(x) \) is true, then \( C(x) \) is false **and** \( F(x) \) is false.
-
-In logical form:  
-\[
-P(x) \rightarrow \neg C(x) \land \neg F(x)
-\]
-Equivalently:  
-\[
-P(x) \rightarrow (\neg C(x) \land \neg F(x))
-\]
-
----
-
-**Premise 2:**  
-“Whoever is a critic of AZ Alkmaar is not an admirer of FC Augsburg.”
-
-\[
-C(x) \rightarrow \neg A(x)
-\]
-
----
-
-**Premise 3:**  
-“Whoever is a devotee of Fehérvár FC is not an admirer of FC Augsburg.”
-
-\[
-F(x) \rightarrow \neg A(x)
-\]
-
----
-
-**Step 2: What is the conclusion?**
-
-Conclusion: “No devotee of FC Pyunik is an admirer of FC Augsburg.”
-
-\[
-P(x) \rightarrow \neg A(x)
-\]
-
----
-
-**Step 3: Check if the premises entail \( P(x) \rightarrow \neg A(x) \).**
-
-From Premise 1:  
-If \( P(x) \) is true, then \( \neg C(x) \) and \( \neg F(x) \) are both true.
-
-Now, from Premise 2: \( C(x) \rightarrow \neg A(x) \)  
-From Premise 3: \( F(x) \rightarrow \neg A(x) \)
-
-We want to show: If \( P(x) \) is true, then \( \neg A(x) \) is true.
-
----
-
-**Step 4: Try a direct proof.**
-
-Assume \( P(x) \) is
-Model CoT:
-Alright, let’s break this down step-by-step.
-
----
-
-**Step 1: Restate the premises in logical form.**
-
-Let’s define predicates:
-
-- \( P(x) \): \( x \) is a devotee of FC Pyunik.  
-- \( C(x) \): \( x \) is a critic of AZ Alkmaar.  
-- \( F(x) \): \( x \) is a devotee of Fehérvár FC.  
-- \( A(x) \): \( x \) is an admirer of FC Augsburg.
-
----
-
-**Premise 1:**  
-“No devotee of FC Pyunik is a critic of AZ Alkmaar or a devotee of Fehérvár FC.”
-
-This means: If \( P(x) \) is true, then \( C(x) \) is false **and** \( F(x) \) is false.
-
-In logical form:  
-\[
-P(x) \rightarrow \neg C(x) \land \neg F(x)
-\]
-Equivalently:  
-\[
-P(x) \rightarrow (\neg C(x) \land \neg F(x))
-\]
-
----
-
-**Premise 2:**  
-“Whoever is a critic of AZ Alkmaar is not an admirer of FC Augsburg.”
-
-\[
-C(x) \rightarrow \neg A(x)
-\]
-
----
-
-**Premise 3:**  
-“Whoever is a devotee of Fehérvár FC is not an admirer of FC Augsburg.”
-
-\[
-F(x) \rightarrow \neg A(x)
-\]
-
----
-
-**Step 2: What is the conclusion?**
-
-Conclusion: “No devotee of FC Pyunik is an admirer of FC Augsburg.”
-
-\[
-P(x) \rightarrow \neg A(x)
-\]
-
----
-
-**Step 3: Check if the premises entail \( P(x) \rightarrow \neg A(x) \).**
-
-From Premise 1:  
-If \( P(x) \) is true, then \( \neg C(x) \) and \( \neg F(x) \) are both true.
-
-Now, from Premise 2: \( C(x) \rightarrow \neg A(x) \)  
-From Premise 3: \( F(x) \rightarrow \neg A(x) \)
-
-We want to show: If \( P(x) \) is true, then \( \neg A(x) \) is true.
-
----
-
-**Step 4: Try a direct proof.**
-
-Assume \( P(x) \) is
-
-==================== Budget Used 959/2500 (Score: 80.0%) ====================
-PROMPT: Provide a clear, step-by-step outline.
-
-[✅ SUCCESS CASE]
-Q: I have an oven, a bed, a lamp, a chair, a fridge, a microwave, and a toaster. How many objects do I ...
-A: 7
-Model CoT:
-Alright, let’s go step-by-step.  
-
-**Step 1: List the objects mentioned**  
-The objects are:  
-1. Oven  
-2. Bed  
-3. Lamp  
-4. Chair  
-5. Fridge  
-6. Microwave  
-7. Toaster  
-
-**Step 2: Count the objects**  
-We count each item once:  
-Oven → 1  
-Bed → 2  
-Lamp → 3  
-Chair → 4  
-Fridge → 5  
-Microwave → 6  
-Toaster → 7  
-
-**Step 3: Verify no duplicates or exclusions**  
-All are distinct items, none are subsets of others (e.g., a microwave is not part of the oven here, they are separate).  
-
-**Step 4: Total**  
-Number of objects = 7  
-
-**Final Answer:** 7
-
-[❌ FAILURE CASE]
-Q: Complete the rest of the sequence, making sure that the parentheses are closed properly. Input: [ { ...
-A: ] | Pred: Alright, let’s break this down step-by-step.  
-
-**Step 1: Understand the given input**  
-The input is:  
-`[ { < ( ) > }`  
-
-We are told to “complete the rest of the sequence” and ensure parentheses are closed properly.  
-This means we need to close the brackets in the reverse order of opening.  
-
-**Step 2: Identify the opening brackets in order**  
-Reading left to right, the opening brackets are:  
-
-1. `[`  
-2. `{`  
-3. `<`  
-4. `(`  
-
-**Step 3: Identify already closed brackets**  
-We see `(` is immediately closed by `)`, so that pair is done.  
-Then `>` closes `<`, so that pair is done.  
-Then `}` closes `{`, so that pair is done.  
-
-**Step 4: Check what remains unclosed**  
-After `}` in the given input, we still have `[` unclosed.  
-So we need to close `[` with `]`.  
-
-**Step 5: Write the completed sequence**  
-Given: `[ { < ( ) > }`  
-Add the missing `]` at the end:  
-`[ { < ( ) > } ]`  
-
-**Step 6: Verify bracket matching**  
-- `[` matches with `]` (outermost)  
-- `{` matches with `}`  
-- `<` matches with `>`  
-- `(` matches with `)`  
-
-All brackets are properly nested and closed in reverse order of opening.  
-
-**Final answer:**  
-\[
-\boxed{[ { < ( ) > } ]}
-\]
-Model CoT:
-Alright, let’s break this down step-by-step.  
-
-**Step 1: Understand the given input**  
-The input is:  
-`[ { < ( ) > }`  
-
-We are told to “complete the rest of the sequence” and ensure parentheses are closed properly.  
-This means we need to close the brackets in the reverse order of opening.  
-
-**Step 2: Identify the opening brackets in order**  
-Reading left to right, the opening brackets are:  
-
-1. `[`  
-2. `{`  
-3. `<`  
-4. `(`  
-
-**Step 3: Identify already closed brackets**  
-We see `(` is immediately closed by `)`, so that pair is done.  
-Then `>` closes `<`, so that pair is done.  
-Then `}` closes `{`, so that pair is done.  
-
-**Step 4: Check what remains unclosed**  
-After `}` in the given input, we still have `[` unclosed.  
-So we need to close `[` with `]`.  
-
-**Step 5: Write the completed sequence**  
-Given: `[ { < ( ) > }`  
-Add the missing `]` at the end:  
-`[ { < ( ) > } ]`  
-
-**Step 6: Verify bracket matching**  
-- `[` matches with `]` (outermost)  
-- `{` matches with `}`  
-- `<` matches with `>`  
-- `(` matches with `)`  
-
-All brackets are properly nested and closed in reverse order of opening.  
-
-**Final answer:**  
-\[
-\boxed{[ { < ( ) > } ]}
-\]
-
-==================== Budget Used 1028/2500 (Score: 50.0%) ====================
-PROMPT: Outline the steps clearly.
-
-[✅ SUCCESS CASE]
-Q: I have a table, and three cars. How many objects do I have?...
-A: 4
-Model CoT:
-Alright, let’s go step-by-step.  
-
-**Step 1: Identify the objects mentioned.**  
-- The problem says: “I have a table, and three cars.”  
-- This means:  
-  1. One table.  
-  2. Three cars.  
-
-**Step 2: Count the total number of objects.**  
-- Table count: \( 1 \)  
-- Car count: \( 3 \)  
-
-**Step 3: Add them together.**  
-\[
-1 + 3 = 4
-\]
-
-**Step 4: State the answer.**  
-I have \( 4 \) objects in total.  
-
-\[
-\boxed{4}
-\]
-
-[❌ FAILURE CASE]
-Q: Sort the following words alphabetically: List: jacob sleight globule consonant musician...
-A: consonant globule jacob musician sleight | Pred: Alright, let’s sort the given words alphabetically step-by-step.  
-
-**Step 1: List the words exactly as given**  
-1. jacob  
-2. sleight  
-3. globule  
-4. consonant  
-5. musician  
-
-**Step 2: Compare the first letters**  
-- j (jacob)  
-- s (sleight)  
-- g (globule)  
-- c (consonant)  
-- m (musician)  
-
-Alphabetical order of first letters: c, g, j, m, s  
-
-So based on first letters alone, the order should start with:  
-consonant, globule, jacob, musician, sleight  
-
-**Step 3: Check if any words share the same first letter**  
-No two words here have the same first letter, so no need for deeper letter-by-letter comparison within same starting letter.  
-
-**Step 4: Write the sorted list**  
-consonant  
-globule  
-jacob  
-musician  
-sleight  
-
-**Step 5: Final answer**  
-\[
-\boxed{\text{consonant, globule, jacob, musician, sleight}}
-\]
-Model CoT:
-Alright, let’s sort the given words alphabetically step-by-step.  
-
-**Step 1: List the words exactly as given**  
-1. jacob  
-2. sleight  
-3. globule  
-4. consonant  
-5. musician  
-
-**Step 2: Compare the first letters**  
-- j (jacob)  
-- s (sleight)  
-- g (globule)  
-- c (consonant)  
-- m (musician)  
-
-Alphabetical order of first letters: c, g, j, m, s  
-
-So based on first letters alone, the order should start with:  
-consonant, globule, jacob, musician, sleight  
-
-**Step 3: Check if any words share the same first letter**  
-No two words here have the same first letter, so no need for deeper letter-by-letter comparison within same starting letter.  
-
-**Step 4: Write the sorted list**  
-consonant  
-globule  
-jacob  
-musician  
-sleight  
-
-**Step 5: Final answer**  
-\[
-\boxed{\text{consonant, globule, jacob, musician, sleight}}
-\]
-
-==================== Budget Used 1057/2500 (Score: 60.0%) ====================
-PROMPT: Provide a sequential outline.
-
-[✅ SUCCESS CASE]
-Q: Alice, Bob, and Claire are holding a white elephant gift exchange. At the start of the event, they a...
-A: (c)
-Model CoT:
-Alright, let’s go step-by-step.  
-
----
-
-**Step 1 – Initial setup**  
-- Alice: red present  
-- Bob: black ball  
-- Claire: white present  
-
----
-
-**Step 2 – First swap: Bob and Alice swap**  
-Before swap:  
-Alice → red  
-Bob → black  
-Claire → white  
-
-After swap:  
-Alice → black  
-Bob → red  
-Claire → white  
-
----
-
-**Step 3 – Second swap: Claire and Bob swap**  
-Before swap:  
-Alice → black  
-Bob → red  
-Claire → white  
-
-After swap:  
-Alice → black  
-Bob → white  
-Claire → red  
-
----
-
-**Step 4 – Third swap: Alice and Claire swap**  
-Before swap:  
-Alice → black  
-Bob → white  
-Claire → red  
-
-After swap:  
-Alice → red  
-Bob → white  
-Claire → black  
-
----
-
-**Step 5 – Final positions**  
-Alice → red  
-Bob → white  
-Claire → black  
-
----
-
-**Step 6 – Answer the question**  
-Bob has the **white present**.  
-
-That matches option **(C)**.  
-
----
-
-**Final answer:**  
-\[
-\boxed{C}
-\]
-
-[❌ FAILURE CASE]
-Q: On the floor, you see a burgundy scrunchiephone charger and a teal bracelet. What color is the scrun...
-A: (l) | Pred: directly
-Model CoT:
-Let’s break this down step-by-step.  
-
-1. The question says:  
-   *On the floor, you see a burgundy scrunchiephone charger and a teal bracelet.*  
-
-2. The question asks:  
-   *What color is the scrunchiephone charger?*  
-
-3. From the first sentence, the scrunchiephone charger is explicitly described as **burgundy**.  
-
-4. Looking at the options, burgundy is listed as option **(L)**.  
-
-5. No other reasoning is needed — the answer is directly stated in the problem.  
-
-**Answer:** (L) burgundy
-
-==================== Budget Used 1080/2500 (Score: 60.0%) ====================
-PROMPT: Outline the steps in sequence.
-
-[✅ SUCCESS CASE]
-Q: I have a table, a strawberry, and three nectarines. How many fruits do I have?...
-A: 4
-Model CoT:
-Alright, let’s break this down step-by-step.  
-
-**Step 1: Identify what counts as a fruit.**  
-- A strawberry is a fruit.  
-- A nectarine is a fruit.  
-- The table is not a fruit.  
-
-**Step 2: Count the fruits mentioned.**  
-- Strawberry: 1 fruit.  
-- Nectarines: 3 fruits.  
-
-**Step 3: Add them together.**  
-\[
-1 + 3 = 4
-\]
-
-**Step 4: Conclusion.**  
-Total fruits = 4.  
-
-**Answer:** 4
-
-[❌ FAILURE CASE]
-Q: Question: Kandi tells the truth. Crista says Kandi lies. Ryan says Crista tells the truth. Gwenn say...
-A: no | Pred: Alright, let’s go step-by-step.
-
----
-
-**Step 1: Define variables**  
-Let’s assign truth-teller = **T**, liar = **L**.  
-We know:  
-- Kandi tells the truth → \( K = T \).  
-
----
-
-**Step 2: Crista’s statement**  
-Crista says: “Kandi lies.”  
-But Kandi is \( T \), so Kandi does **not** lie.  
-Thus Crista’s statement is **false** → \( C = L \).  
-
----
-
-**Step 3: Ryan’s statement**  
-Ryan says: “Crista tells the truth.”  
-We know \( C = L \), so Crista does **not** tell the truth.  
-Thus Ryan’s statement is **false** → \( R = L \).  
-
----
-
-**Step 4: Gwenn’s statement**  
-Gwenn says: “Ryan tells the truth.”  
-We know \( R = L \), so Ryan does **not** tell the truth.  
-Thus Gwenn’s statement is **false** → \( G = L \).  
-
----
-
-**Step 5: Delfina’s statement**  
-Delfina says: “Gwenn tells the truth.”  
-We know \( G = L \), so Gwenn does **not** tell the truth.  
-Thus Delfina’s statement is **false** → \( D = L \).  
-
----
-
-**Step 6: Conclusion**  
-Delfina tells a lie.  
-
----
-
-\[
-\boxed{\text{No}}
-\]
-Model CoT:
-Alright, let’s go step-by-step.
-
----
-
-**Step 1: Define variables**  
-Let’s assign truth-teller = **T**, liar = **L**.  
-We know:  
-- Kandi tells the truth → \( K = T \).  
-
----
-
-**Step 2: Crista’s statement**  
-Crista says: “Kandi lies.”  
-But Kandi is \( T \), so Kandi does **not** lie.  
-Thus Crista’s statement is **false** → \( C = L \).  
-
----
-
-**Step 3: Ryan’s statement**  
-Ryan says: “Crista tells the truth.”  
-We know \( C = L \), so Crista does **not** tell the truth.  
-Thus Ryan’s statement is **false** → \( R = L \).  
-
----
-
-**Step 4: Gwenn’s statement**  
-Gwenn says: “Ryan tells the truth.”  
-We know \( R = L \), so Ryan does **not** tell the truth.  
-Thus Gwenn’s statement is **false** → \( G = L \).  
-
----
-
-**Step 5: Delfina’s statement**  
-Delfina says: “Gwenn tells the truth.”  
-We know \( G = L \), so Gwenn does **not** tell the truth.  
-Thus Delfina’s statement is **false** → \( D = L \).  
-
----
-
-**Step 6: Conclusion**  
-Delfina tells a lie.  
-
----
-
-\[
-\boxed{\text{No}}
-\]
-
-==================== Budget Used 1123/2500 (Score: 60.0%) ====================
-PROMPT: Provide a sequential outline of the steps.
-
-[✅ SUCCESS CASE]
-Q: On the floor, you see a set of things arranged in a row: a fuchsia cat toy, a silver cup, a pink pap...
-A: (o)
-Model CoT:
-Alright, let’s go step-by-step.  
-
-**Step 1: List the items in order as given**  
-The arrangement is:  
-
-1. fuchsia cat toy  
-2. silver cup  
-3. pink paperclip  
-4. black fidget spinner  
-5. purple booklet  
-6. teal dog leash  
-
-**Step 2: Identify the “pink thing”**  
-The pink thing is the “pink paperclip” (item 3).  
-
-**Step 3: Determine what is directly to the right of the pink thing**  
-In a row, “directly to the right” means the next item in the sequence.  
-So, after item 3 (pink paperclip) comes item 4: black fidget spinner.  
-
-**Step 4: Find the color of that item**  
-The black fidget spinner is **black**.  
-
-**Step 5: Match to the options**  
-Black is option (O).  
-
-**Final answer:**  
-\[
-\boxed{O}
-\]
-
-[❌ FAILURE CASE]
-Q: How would a typical person answer each of the following questions about causation?
-A sniper has been...
-A: yes | Pred: Let’s break this down step-by-step.  
-
-**Step 1: Identify the main action and intention.**  
-The sniper’s primary goal is to kill the enemy commander. He pulls the trigger to achieve that goal.  
-
-**Step 2: Identify the side effect.**  
-Firing the gun causes the barrel to heat up. The sniper knows this will happen, but he does not care about it — it is not part of his goal.  
-
-**Step 3: Apply common-sense reasoning about intentionality.**  
-In everyday reasoning, people usually say an action is intentional only if the outcome was part of the agent’s goal or purpose, not merely a foreseen but undesired or irrelevant side effect.  
-
-**Step 4: Compare to similar classic cases (like the Knobe Effect scenarios).**  
-In experimental philosophy, a well-known case involves a CEO who starts a program to increase profits, knowing it will harm the environment. If he doesn’t care about harming the environment, people tend to say he did not intentionally harm the environment — it was just a foreseen side effect.  
-Here, heating the barrel is a foreseen side effect with no desire for it to happen.  
-
-**Step 5: Determine the typical person’s answer.**  
-Since the sniper doesn’t aim to heat the barrel, doesn’t care if it happens, and it’s not a means to his goal, most people would say he did **not** intentionally heat the barrel.  
-
-**Step 6: Conclusion.**  
-The answer is: **No**.  
-
-**Final answer:** No
-Model CoT:
-Let’s break this down step-by-step.  
-
-**Step 1: Identify the main action and intention.**  
-The sniper’s primary goal is to kill the enemy commander. He pulls the trigger to achieve that goal.  
-
-**Step 2: Identify the side effect.**  
-Firing the gun causes the barrel to heat up. The sniper knows this will happen, but he does not care about it — it is not part of his goal.  
-
-**Step 3: Apply common-sense reasoning about intentionality.**  
-In everyday reasoning, people usually say an action is intentional only if the outcome was part of the agent’s goal or purpose, not merely a foreseen but undesired or irrelevant side effect.  
-
-**Step 4: Compare to similar classic cases (like the Knobe Effect scenarios).**  
-In experimental philosophy, a well-known case involves a CEO who starts a program to increase profits, knowing it will harm the environment. If he doesn’t care about harming the environment, people tend to say he did not intentionally harm the environment — it was just a foreseen side effect.  
-Here, heating the barrel is a foreseen side effect with no desire for it to happen.  
-
-**Step 5: Determine the typical person’s answer.**  
-Since the sniper doesn’t aim to heat the barrel, doesn’t care if it happens, and it’s not a means to his goal, most people would say he did **not** intentionally heat the barrel.  
-
-**Step 6: Conclusion.**  
-The answer is: **No**.  
-
-**Final answer:** No
-
-==================== Budget Used 1189/2500 (Score: 80.0%) ====================
-PROMPT: Outline the process sequentially.
-
-[✅ SUCCESS CASE]
-Q: I have a donkey, a chicken, a pig, and a snail. How many animals do I have?...
-A: 4
-Model CoT:
-Alright, let’s go step-by-step.  
-
-1. **List the animals mentioned**:  
-   - Donkey  
-   - Chicken  
-   - Pig  
-   - Snail  
-
-2. **Determine if each is considered an animal in common language**:  
-   - Donkey → mammal → animal ✅  
-   - Chicken → bird → animal ✅  
-   - Pig → mammal → animal ✅  
-   - Snail → mollusk → animal ✅  
-
-3. **Count them**:  
-   1. Donkey  
-   2. Chicken  
-   3. Pig  
-   4. Snail  
-
-4. **Total**:  
-   \( 4 \) animals.  
-
-**Answer**: 4
-
-[❌ FAILURE CASE]
-Q: Sort the following words alphabetically: List: catechism daddy...
-A: catechism daddy | Pred: Alright, let’s sort the words **catechism** and **daddy** alphabetically step-by-step.  
-
-**Step 1: Identify the words**  
-Word 1: catechism  
-Word 2: daddy  
-
-**Step 2: Compare first letters**  
-- catechism → first letter = **c**  
-- daddy → first letter = **d**  
-- In the alphabet, **c** comes before **d**.  
-
-**Step 3: Determine order based on first letter**  
-Since **c** < **d**, “catechism” comes before “daddy” in alphabetical order.  
-
-**Step 4: Final sorted list**  
-1. catechism  
-2. daddy  
-
-**Answer:** catechism, daddy
-Model CoT:
-Alright, let’s sort the words **catechism** and **daddy** alphabetically step-by-step.  
-
-**Step 1: Identify the words**  
-Word 1: catechism  
-Word 2: daddy  
-
-**Step 2: Compare first letters**  
-- catechism → first letter = **c**  
-- daddy → first letter = **d**  
-- In the alphabet, **c** comes before **d**.  
-
-**Step 3: Determine order based on first letter**  
-Since **c** < **d**, “catechism” comes before “daddy” in alphabetical order.  
-
-**Step 4: Final sorted list**  
-1. catechism  
-2. daddy  
-
-**Answer:** catechism, daddy
-
-==================== Budget Used 1238/2500 (Score: 70.0%) ====================
-PROMPT: List the steps sequentially.
-
-[✅ SUCCESS CASE]
-Q: The following paragraphs each describe a set of three objects arranged in a fixed order. The stateme...
-A: (a)
-Model CoT:
-Let’s go step-by-step.  
-
-**Step 1 – Identify the given facts.**  
-We have three golfers: Mel, Ada, Ana.  
-- Mel finished last.  
-- Ana finished second.  
-
-**Step 2 – Determine the order of finish.**  
-If Mel finished last (3rd place), and Ana finished second (2nd place), then the only remaining position is 1st place, which must be Ada.  
-So the order is:  
-1st: Ada  
-2nd: Ana  
-3rd: Mel  
-
-**Step 3 – Check each option against the facts.**  
-(A) Mel finished last → True (given directly).  
-(B) Ada finished last → False (Ada finished first).  
-(C) Ana finished last → False (Ana finished second).  
-
-**Step 4 – Choose the correct option.**  
-Only option (A) is true.  
+Checking the options:  
+(A) enormous spherical Indian drinking sock → follows order.  
+(B) drinking enormous spherical Indian sock → starts with purpose, breaks order.  
 
 **Answer:** (A)
 
 [❌ FAILURE CASE]
-Q: True and ( False ) or not False is...
-A: true | Pred: Alright, let’s break this down step-by-step.  
-
-We have:  
-**True and ( False ) or not False**
-
----
-
-**Step 1: Identify the logical operators and precedence**  
-Logical operator precedence (from highest to lowest):  
-1. `not`  
-2. `and`  
-3. `or`  
-
-So:  
-- `not False` is evaluated first.  
-- Then `True and (False)` is evaluated.  
-- Finally, the `or` is evaluated.
-
----
-
-**Step 2: Evaluate `not False`**  
-`not False` = `True`
-
-Now the expression becomes:  
-`True and (False) or True`
-
----
-
-**Step 3: Evaluate `True and (False)`**  
-`True and False` = `False`
-
-Now the expression becomes:  
-`False or True`
-
----
-
-**Step 4: Evaluate `False or True`**  
-`False or True` = `True`
-
----
-
-**Step 5: Final answer**  
-\[
-\boxed{\text{True}}
-\]
+Q: The following translations from German to English contain a particular error. That error will be one...
+A: (f) | Pred: B
 Model CoT:
-Alright, let’s break this down step-by-step.  
+Let’s compare the source and translation step by step.  
 
-We have:  
-**True and ( False ) or not False**
+**Source:**  
+*Der Große Preis von Südafrika 1962 fand am 29.*  
 
----
-
-**Step 1: Identify the logical operators and precedence**  
-Logical operator precedence (from highest to lowest):  
-1. `not`  
-2. `and`  
-3. `or`  
-
-So:  
-- `not False` is evaluated first.  
-- Then `True and (False)` is evaluated.  
-- Finally, the `or` is evaluated.
+**Translation:**  
+*The 1962 South African Grand Prix was held on 29 September 1962.*  
 
 ---
 
-**Step 2: Evaluate `not False`**  
-`not False` = `True`
+**Step 1 – Identify what’s in the source**  
+The German says “fand am 29.” — literally “was held on the 29th.”  
+It does **not** specify the month.  
 
-Now the expression becomes:  
-`True and (False) or True`
+**Step 2 – Identify what’s in the translation**  
+The translation says “29 September 1962.”  
+This adds the month “September” without basis in the source text.  
 
----
+**Step 3 – Match error type**  
+The error is not about changing a named entity (the event name is correct), not about modifiers/adjectives, not about negation/antonyms, not about dropping content (nothing is dropped; something is added), and not a trivial unrelated factual error.  
 
-**Step 3: Evaluate `True and (False)`**  
-`True and False` = `False`
-
-Now the expression becomes:  
-`False or True`
-
----
-
-**Step 4: Evaluate `False or True`**  
-`False or True` = `True`
+Adding “September” when the source only says “29” is adding a **specific date detail** (month) that wasn’t in the source. This falls under **Numerical Values** (dates) because the date information is changed/expanded incorrectly.  
 
 ---
 
-**Step 5: Final answer**  
-\[
-\boxed{\text{True}}
-\]
+**Step 4 – Conclusion**  
+The error is: **Numerical Values** (specifically, adding month information not present in source).  
 
-==================== Budget Used 1344/2500 (Score: 65.0%) ====================
-PROMPT: Outline the sequential steps involved.
+**Answer:** (B) Numerical Values
+
+
+==================== Iteration 2 (Score: 93.3%) ====================
+PROMPT: First, consider the logical structure carefully.
 
 [✅ SUCCESS CASE]
-Q: Today is Christmas Eve of 1937. What is the date today in MM/DD/YYYY?
+Q: Which sentence has the correct adjective order:
 Options:
-(A) 12/24/1937
-(B) 12...
+(A) big square ship
+(B) square big ship...
 A: (a)
 Model CoT:
-Alright, let’s go step-by-step.  
+Let’s go step-by-step.  
 
-**Step 1: Understand the question**  
-The statement says: *Today is Christmas Eve of 1937.*  
-Christmas Eve is December 24th.  
+**Step 1: Recall the standard order of adjectives in English.**  
+A common mnemonic is **OSASCOMP**:  
+- Opinion  
+- Size  
+- Age  
+- Shape  
+- Color  
+- Origin  
+- Material  
+- Purpose  
 
-**Step 2: Interpret the date**  
-Christmas Eve is always December 24.  
-So “Christmas Eve of 1937” means December 24, 1937.  
+**Step 2: Identify the types of adjectives in the options.**  
+- “big” → **Size**  
+- “square” → **Shape**  
 
-**Step 3: Match with options**  
-We check the options:  
-(A) 12/24/1937 → This matches exactly.  
-(B) 12/30/1937 → Not Christmas Eve.  
-(C) 12/27/1937 → Not Christmas Eve.  
-(D) 12/17/1937 → Not Christmas Eve.  
-(E) 12/31/1937 → That’s New Year’s Eve.  
-(F) 05/24/1938 → Wrong month and year.  
+**Step 3: Apply the order rule.**  
+Size comes before Shape in OSASCOMP.  
+So “big” (Size) should come before “square” (Shape).  
 
-**Step 4: Conclusion**  
-The only logical match is option (A).  
+**Step 4: Compare the options.**  
+(A) big square ship → Size before Shape ✅  
+(B) square big ship → Shape before Size ❌  
+
+**Step 5: Conclusion.**  
+The correct adjective order is in option **(A)**.  
+
+**Answer:** (A) big square ship
+
+[❌ FAILURE CASE]
+Q: Question: Christie lies. Amberly says Christie tells the truth. Bernita says Amberly tells the truth...
+A: no | Pred: Alright, let’s go step-by-step.
+
+---
+
+**Step 1: Define variables for truth-tellers/liars**
+
+Let’s assign:
+
+- \( C \) = Christie tells the truth  
+- \( A \) = Amberly tells the truth  
+- \( B \) = Bernita tells the truth  
+- \( K \) = Kristian tells the truth  
+- \( D \) = Delfina tells the truth  
+
+Each person either always tells the truth (their statement is true) or always lies (their statement is false).
+
+---
+
+**Step 2: Translate statements**
+
+1. **Christie lies** → This is a given fact, not Christie’s statement.  
+   So \( C = \text{False} \).
+
+2. **Amberly says: “Christie tells the truth.”**  
+   Amberly’s statement: \( C \) is true.  
+   But \( C \) is false, so Amberly’s statement is false.  
+   Therefore \( A = \text{False} \) (since she made a false statement).
+
+3. **Bernita says: “Amberly tells the truth.”**  
+   Bernita’s statement: \( A \) is true.  
+   But \( A \) is false, so Bernita’s statement is false.  
+   Therefore \( B = \text{False} \).
+
+4. **Kristian says: “Bernita lies.”**  
+   Kristian’s statement: \( B \) is false.  
+   But \( B \) is indeed false, so Kristian’s statement is true.  
+   Therefore \( K = \text{True} \).
+
+5. **Delfina says: “Kristian lies.”**  
+   Delfina’s statement: \( K \) is false.  
+   But \( K \) is true, so Delfina’s statement is false.  
+   Therefore \( D = \text{False} \).
+
+---
+
+**Step 3: Conclusion**
+
+Delfina does **not** tell the truth.
+
+---
+
+\[
+\boxed{\text{No}}
+\]
+Model CoT:
+Alright, let’s go step-by-step.
+
+---
+
+**Step 1: Define variables for truth-tellers/liars**
+
+Let’s assign:
+
+- \( C \) = Christie tells the truth  
+- \( A \) = Amberly tells the truth  
+- \( B \) = Bernita tells the truth  
+- \( K \) = Kristian tells the truth  
+- \( D \) = Delfina tells the truth  
+
+Each person either always tells the truth (their statement is true) or always lies (their statement is false).
+
+---
+
+**Step 2: Translate statements**
+
+1. **Christie lies** → This is a given fact, not Christie’s statement.  
+   So \( C = \text{False} \).
+
+2. **Amberly says: “Christie tells the truth.”**  
+   Amberly’s statement: \( C \) is true.  
+   But \( C \) is false, so Amberly’s statement is false.  
+   Therefore \( A = \text{False} \) (since she made a false statement).
+
+3. **Bernita says: “Amberly tells the truth.”**  
+   Bernita’s statement: \( A \) is true.  
+   But \( A \) is false, so Bernita’s statement is false.  
+   Therefore \( B = \text{False} \).
+
+4. **Kristian says: “Bernita lies.”**  
+   Kristian’s statement: \( B \) is false.  
+   But \( B \) is indeed false, so Kristian’s statement is true.  
+   Therefore \( K = \text{True} \).
+
+5. **Delfina says: “Kristian lies.”**  
+   Delfina’s statement: \( K \) is false.  
+   But \( K \) is true, so Delfina’s statement is false.  
+   Therefore \( D = \text{False} \).
+
+---
+
+**Step 3: Conclusion**
+
+Delfina does **not** tell the truth.
+
+---
+
+\[
+\boxed{\text{No}}
+\]
+
+
+==================== Iteration 3 (Score: 93.3%) ====================
+PROMPT: I'll work through each step carefully.
+
+[✅ SUCCESS CASE]
+Q: I have three fridges, a bed, and five stoves. How many objects do I have?...
+A: 9
+Model CoT:
+Let’s break this down:  
+
+1. Identify each type of object and count them separately:  
+   - Fridges: 3  
+   - Bed: 1  
+   - Stoves: 5  
+
+2. Add them together:  
+   \( 3 + 1 + 5 = 9 \)  
+
+3. Conclusion:  
+   Total objects = **9**.  
+
+**Answer:** 9
+
+[❌ FAILURE CASE]
+Q: Complete the rest of the sequence, making sure that the parentheses are closed properly. Input: { < ...
+A: } } | Pred: Alright, let’s go step-by-step.
+
+We start with:  
+
+**Input:**  
+`{ < ( ) > { < > } ( < > ) < ( ) > [ ] < < < < ( ( ) ) < ( ) > > > > > {`
+
+---
+
+### Step 1 — Understand the task
+We need to **complete the rest of the sequence** so that **all parentheses, brackets, and braces are properly closed** in order.  
+That means we must match each opening symbol `{`, `<`, `(`, `[` with its corresponding closing symbol `}`, `>`, `)`, `]` in the correct nesting order.
+
+---
+
+### Step 2 — Process the given sequence and track unmatched opens
+We read left to right, maintaining a stack of currently open symbols.
+
+1. `{` → stack: `{`
+2. `<` → stack: `{ <`
+3. `(` → stack: `{ < (`
+4. `)` → closes `(` → stack: `{ <`
+5. `>` → closes `<` → stack: `{`
+6. `{` → stack: `{ {`
+7. `<` → stack: `{ { <`
+8. `>` → closes `<` → stack: `{ {`
+9. `}` → closes inner `{` → stack: `{`
+10. `(` → stack: `{ (`
+11. `<` → stack: `{ ( <`
+12. `>` → closes `<` → stack: `{ (`
+13. `)` → closes `(` → stack: `{`
+14. `<` → stack: `{ <`
+15. `(` → stack: `{ < (`
+16. `)` → closes `(` → stack: `{ <`
+17. `>` → closes `<` → stack: `{`
+18. `[` → stack: `{ [`
+19. `]` → closes `[` → stack: `{`
+20. `<` → stack: `{ <`
+21. `<` → stack: `{ < <`
+22. `<` → stack: `{ < < <`
+23. `<` → stack: `{ < < < <`
+24. `(` → stack: `{ < < < < (`
+25. `(` → stack: `{ < < < < ( (`
+26. `)` → closes last `(` → stack: `{ < < < < (`
+27. `)` → closes remaining `(` → stack: `{ < < < <`
+28. `<` → stack: `{ < < < < <`
+29. `(` → stack: `{ < < < < < (`
+30. `)` → closes `(` → stack: `{ < < < < <`
+31. `>` → closes last `<` → stack: `{ < < < <`
+32. `>` → closes next `<` → stack: `{ < < <`
+33. `>` → closes next `<` → stack: `{ < <`
+34. `>` → closes next `<` → stack: `{ <`
+35. `>` → closes next `<` → stack: `{`
+36. `{` → stack: `{ {`
+
+---
+
+### Step 3 — Determine what needs to be closed
+At the end of the given input, the stack is: `{ {`  
+That means we have **two open braces** to close.
+
+The order to close them is **last opened first closed**, so:
+
+- First close the inner `{` with `}`
+- Then close the outer `{` with `}`
+
+---
+
+### Step 4 — Write the completion
+The given input ends with `{`, so we append `}}` to close both.
+
+**Final completed sequence:**  
+`{ < ( ) > { < > } ( < > ) < ( ) > [ ] < < < < ( ( ) ) < ( ) > > > > > {}}`
+
+---
+
+**Answer:** `}}`
+Model CoT:
+Alright, let’s go step-by-step.
+
+We start with:  
+
+**Input:**  
+`{ < ( ) > { < > } ( < > ) < ( ) > [ ] < < < < ( ( ) ) < ( ) > > > > > {`
+
+---
+
+### Step 1 — Understand the task
+We need to **complete the rest of the sequence** so that **all parentheses, brackets, and braces are properly closed** in order.  
+That means we must match each opening symbol `{`, `<`, `(`, `[` with its corresponding closing symbol `}`, `>`, `)`, `]` in the correct nesting order.
+
+---
+
+### Step 2 — Process the given sequence and track unmatched opens
+We read left to right, maintaining a stack of currently open symbols.
+
+1. `{` → stack: `{`
+2. `<` → stack: `{ <`
+3. `(` → stack: `{ < (`
+4. `)` → closes `(` → stack: `{ <`
+5. `>` → closes `<` → stack: `{`
+6. `{` → stack: `{ {`
+7. `<` → stack: `{ { <`
+8. `>` → closes `<` → stack: `{ {`
+9. `}` → closes inner `{` → stack: `{`
+10. `(` → stack: `{ (`
+11. `<` → stack: `{ ( <`
+12. `>` → closes `<` → stack: `{ (`
+13. `)` → closes `(` → stack: `{`
+14. `<` → stack: `{ <`
+15. `(` → stack: `{ < (`
+16. `)` → closes `(` → stack: `{ <`
+17. `>` → closes `<` → stack: `{`
+18. `[` → stack: `{ [`
+19. `]` → closes `[` → stack: `{`
+20. `<` → stack: `{ <`
+21. `<` → stack: `{ < <`
+22. `<` → stack: `{ < < <`
+23. `<` → stack: `{ < < < <`
+24. `(` → stack: `{ < < < < (`
+25. `(` → stack: `{ < < < < ( (`
+26. `)` → closes last `(` → stack: `{ < < < < (`
+27. `)` → closes remaining `(` → stack: `{ < < < <`
+28. `<` → stack: `{ < < < < <`
+29. `(` → stack: `{ < < < < < (`
+30. `)` → closes `(` → stack: `{ < < < < <`
+31. `>` → closes last `<` → stack: `{ < < < <`
+32. `>` → closes next `<` → stack: `{ < < <`
+33. `>` → closes next `<` → stack: `{ < <`
+34. `>` → closes next `<` → stack: `{ <`
+35. `>` → closes next `<` → stack: `{`
+36. `{` → stack: `{ {`
+
+---
+
+### Step 3 — Determine what needs to be closed
+At the end of the given input, the stack is: `{ {`  
+That means we have **two open braces** to close.
+
+The order to close them is **last opened first closed**, so:
+
+- First close the inner `{` with `}`
+- Then close the outer `{` with `}`
+
+---
+
+### Step 4 — Write the completion
+The given input ends with `{`, so we append `}}` to close both.
+
+**Final completed sequence:**  
+`{ < ( ) > { < > } ( < > ) < ( ) > [ ] < < < < ( ( ) ) < ( ) > > > > > {}}`
+
+---
+
+**Answer:** `}}`
+
+
+==================== Iteration 4 (Score: 93.3%) ====================
+PROMPT: We need to break this down logically.
+
+[✅ SUCCESS CASE]
+Q: I have four couches, a bed, a table, and a lamp. How many objects do I have?...
+A: 7
+Model CoT:
+Let’s go step-by-step.  
+
+1. **Identify each item mentioned:**  
+   - Four couches → 4 objects  
+   - A bed → 1 object  
+   - A table → 1 object  
+   - A lamp → 1 object  
+
+2. **Add them up:**  
+   \( 4 + 1 + 1 + 1 = 7 \)  
+
+3. **Conclusion:**  
+   You have **7 objects** in total.  
+
+**Answer:** 7
+
+[❌ FAILURE CASE]
+Q: Question: Kristian tells the truth. Dallas says Kristian tells the truth. Osvaldo says Dallas lies. ...
+A: no | Pred: F
+Model CoT:
+Let’s go step-by-step.
+
+---
+
+**Step 1: Assign variables for truth-telling status**  
+Let:  
+- \( K \) = Kristian tells the truth.  
+- \( D \) = Dallas tells the truth.  
+- \( O \) = Osvaldo tells the truth.  
+- \( M \) = Millie tells the truth.  
+- \( V \) = Vina tells the truth.  
+
+Each variable is either **True (T)** or **False (F)**.
+
+---
+
+**Step 2: Translate statements into logical constraints**  
+
+1. **Kristian tells the truth.**  
+   This is given as a fact:  
+   \( K = T \).
+
+2. **Dallas says: “Kristian tells the truth.”**  
+   If Dallas tells the truth (\( D = T \)), then Kristian tells the truth — which matches fact (K = T).  
+   If Dallas lies (\( D = F \)), then Kristian would have to be lying — but we know K = T, so that’s impossible.  
+   Therefore: \( D = T \).
+
+3. **Osvaldo says: “Dallas lies.”**  
+   Dallas tells the truth (D = T), so “Dallas lies” is false.  
+   If Osvaldo tells the truth (\( O = T \)), then “Dallas lies” would be true — contradiction.  
+   So Osvaldo must be lying: \( O = F \).
+
+4. **Millie says: “Osvaldo tells the truth.”**  
+   Osvaldo lies (O = F), so “Osvaldo tells the truth” is false.  
+   If Millie tells the truth (\( M = T \)), then her statement would be true — but it’s false. Contradiction.  
+   So Millie must be lying: \( M = F \).
+
+5. **Vina says: “Millie tells the truth.”**  
+   Millie lies (M = F), so “Millie tells the truth” is false.  
+   If Vina tells the truth (\( V = T \)), then her statement would be true — but it’s false. Contradiction.  
+   So Vina must be lying: \( V = F \).
+
+---
+
+**Step 3: Conclusion**  
+Vina does **not** tell the truth.
+
+---
+
+\[
+\boxed{\text{No}}
+\]
+
+
+==================== Iteration 5 (Score: 80.0%) ====================
+PROMPT: Solve the following math and logic problem.
+
+[✅ SUCCESS CASE]
+Q: On the desk, you see a bunch of items arranged in a row: a gold textbook, a purple puzzle, a teal ne...
+A: (a)
+Model CoT:
+Let’s break this down step-by-step.  
+
+**Step 1: Identify the items and their order**  
+The items are arranged in a row. The given order is:  
+
+1. gold textbook  
+2. purple puzzle  
+3. teal necklace  
+4. silver pencil  
+
+So from left to right:  
+gold textbook → purple puzzle → teal necklace → silver pencil  
+
+**Step 2: Understand the question**  
+We need: *How many non-gold items do you see to the right of the pencil?*  
+
+“To the right of the pencil” means items positioned after the silver pencil in the row.  
+
+**Step 3: Locate the pencil**  
+The pencil is the fourth (last) item in the list.  
+
+**Step 4: Check items to the right of the pencil**  
+Since the pencil is last, there are **no items** to its right.  
+
+**Step 5: Count non-gold items among those**  
+Items to the right of the pencil = 0.  
+Non-gold items among those = 0.  
+
+**Step 6: Match with options**  
+0 matches option (A) zero.  
 
 **Final answer:**  
 \[
@@ -1931,1141 +525,513 @@ The only logical match is option (A).
 \]
 
 [❌ FAILURE CASE]
-Q: If you follow these instructions, do you return to the starting point? Take 1 step. Take 5 steps. Tu...
-A: yes | Pred: Let’s break this down step-by-step.  
+Q: Sort the following words alphabetically: List: emission upon labour whim fairfax ride crepe prig acc...
+A: accomplice az choral circumcircle clatter crepe doff emission fairfax incantation labour lorry pleura prig ride tea upon viaduct wheelbase whim | Pred: Alright, let’s sort the given list of words **alphabetically** step-by-step.  
 
-**Step 1 – Take 1 step**  
-Starting point: position 0.  
-After 1 step forward → position +1 (assuming forward is the positive direction).  
+The list is:  
 
-**Step 2 – Take 5 steps**  
-From +1, take 5 steps forward → +1 + 5 = +6.  
+**emission, upon, labour, whim, fairfax, ride, crepe, prig, accomplice, az, doff, clatter, circumcircle, tea, wheelbase, pleura, incantation, choral, viaduct, lorry**
 
-**Step 3 – Turn around**  
-Turning around once reverses direction.  
-Forward was positive, now forward is negative.  
+---
 
-**Step 4 – Turn around**  
-Turning around again reverses direction again.  
-Now forward is positive again.  
+**Step 1: Write them in a column for easier sorting**  
 
-**Step 5 – Turn around**  
-Turning around once more reverses direction again.  
-Now forward is negative again.  
+1. emission  
+2. upon  
+3. labour  
+4. whim  
+5. fairfax  
+6. ride  
+7. crepe  
+8. prig  
+9. accomplice  
+10. az  
+11. doff  
+12. clatter  
+13. circumcircle  
+14. tea  
+15. wheelbase  
+16. pleura  
+17. incantation  
+18. choral  
+19. viaduct  
+20. lorry  
 
-So after three “Turn around” commands:  
-- Start facing positive.  
-- Turn 1: facing negative.  
-- Turn 2: facing positive.  
-- Turn 3: facing negative.  
+---
 
-**Step 6 – Take 6 steps**  
-We are at position +6, facing negative.  
-Take 6 steps in negative direction: +6 − 6 = 0.  
+**Step 2: Sort by first letter**  
 
-**Final position:** 0 (starting point).  
+First letters in alphabetical order:  
+a, c, c, c, d, e, f, i, l, l, p, p, r, t, u, v, w, w  
 
-**Answer:** Yes.
+---
+
+**Step 3: Group by first letter and sort within groups**  
+
+**a**: accomplice, az  
+**c**: choral, circumcircle, clatter, crepe  
+**d**: doff  
+**e**: emission  
+**f**: fairfax  
+**i**: incantation  
+**l**: labour, lorry  
+**p**: pleura, prig  
+**r**: ride  
+**t**: tea  
+**u**: upon  
+**v**: viaduct  
+**w**: whim, wheelbase  
+
+---
+
+**Step 4: Sort within multi-word groups**  
+
+- **c group**:  
+  choral  
+  circumcircle  
+  clatter  
+  crepe  
+  (alphabetical: choral → c-i-r-c-u-m-c-i-r-c-l-e → c-l-a-t-t-e-r → c-r-e-p-e)  
+  So: choral, circumcircle, clatter, crepe  
+
+- **l group**:  
+  labour, lorry → labour (labour), lorry  
+
+- **p group**:  
+  pleura, prig → pleura (p-l-e-u-r-a), prig (p-r-i-g) → pleura before prig  
+
+- **w group**:  
+  whim, wheelbase → wheelbase (w-h-e-e-l-b-a-s-e), whim (w-h-i-m) → wheelbase before whim  
+
+---
+
+**Step 5: Combine all in order**  
+
+1. accomplice  
+2. az  
+3. choral  
+4. circumcircle  
+5. clatter  
+6. crepe  
+7. doff  
+8. emission  
+9. fairfax  
+10. incantation  
+11. labour  
+12. lorry  
+13. pleura  
+14. prig  
+15. ride  
+16. tea  
+17. upon  
+18. viaduct  
+19. wheelbase  
+20. whim  
+
+---
+
+**Final sorted list:**  
+
+accomplice, az, choral, circumcircle, clatter, crepe, doff, emission, fairfax, incantation, labour, lorry, pleura, prig, ride, tea, upon, viaduct, wheelbase, whim
 Model CoT:
-Let’s break this down step-by-step.  
+Alright, let’s sort the given list of words **alphabetically** step-by-step.  
 
-**Step 1 – Take 1 step**  
-Starting point: position 0.  
-After 1 step forward → position +1 (assuming forward is the positive direction).  
+The list is:  
 
-**Step 2 – Take 5 steps**  
-From +1, take 5 steps forward → +1 + 5 = +6.  
+**emission, upon, labour, whim, fairfax, ride, crepe, prig, accomplice, az, doff, clatter, circumcircle, tea, wheelbase, pleura, incantation, choral, viaduct, lorry**
 
-**Step 3 – Turn around**  
-Turning around once reverses direction.  
-Forward was positive, now forward is negative.  
+---
 
-**Step 4 – Turn around**  
-Turning around again reverses direction again.  
-Now forward is positive again.  
+**Step 1: Write them in a column for easier sorting**  
 
-**Step 5 – Turn around**  
-Turning around once more reverses direction again.  
-Now forward is negative again.  
+1. emission  
+2. upon  
+3. labour  
+4. whim  
+5. fairfax  
+6. ride  
+7. crepe  
+8. prig  
+9. accomplice  
+10. az  
+11. doff  
+12. clatter  
+13. circumcircle  
+14. tea  
+15. wheelbase  
+16. pleura  
+17. incantation  
+18. choral  
+19. viaduct  
+20. lorry  
 
-So after three “Turn around” commands:  
-- Start facing positive.  
-- Turn 1: facing negative.  
-- Turn 2: facing positive.  
-- Turn 3: facing negative.  
+---
 
-**Step 6 – Take 6 steps**  
-We are at position +6, facing negative.  
-Take 6 steps in negative direction: +6 − 6 = 0.  
+**Step 2: Sort by first letter**  
 
-**Final position:** 0 (starting point).  
+First letters in alphabetical order:  
+a, c, c, c, d, e, f, i, l, l, p, p, r, t, u, v, w, w  
 
-**Answer:** Yes.
+---
 
-==================== Budget Used 1433/2500 (Score: 65.0%) ====================
-PROMPT: Detail the process step by step.
+**Step 3: Group by first letter and sort within groups**  
+
+**a**: accomplice, az  
+**c**: choral, circumcircle, clatter, crepe  
+**d**: doff  
+**e**: emission  
+**f**: fairfax  
+**i**: incantation  
+**l**: labour, lorry  
+**p**: pleura, prig  
+**r**: ride  
+**t**: tea  
+**u**: upon  
+**v**: viaduct  
+**w**: whim, wheelbase  
+
+---
+
+**Step 4: Sort within multi-word groups**  
+
+- **c group**:  
+  choral  
+  circumcircle  
+  clatter  
+  crepe  
+  (alphabetical: choral → c-i-r-c-u-m-c-i-r-c-l-e → c-l-a-t-t-e-r → c-r-e-p-e)  
+  So: choral, circumcircle, clatter, crepe  
+
+- **l group**:  
+  labour, lorry → labour (labour), lorry  
+
+- **p group**:  
+  pleura, prig → pleura (p-l-e-u-r-a), prig (p-r-i-g) → pleura before prig  
+
+- **w group**:  
+  whim, wheelbase → wheelbase (w-h-e-e-l-b-a-s-e), whim (w-h-i-m) → wheelbase before whim  
+
+---
+
+**Step 5: Combine all in order**  
+
+1. accomplice  
+2. az  
+3. choral  
+4. circumcircle  
+5. clatter  
+6. crepe  
+7. doff  
+8. emission  
+9. fairfax  
+10. incantation  
+11. labour  
+12. lorry  
+13. pleura  
+14. prig  
+15. ride  
+16. tea  
+17. upon  
+18. viaduct  
+19. wheelbase  
+20. whim  
+
+---
+
+**Final sorted list:**  
+
+accomplice, az, choral, circumcircle, clatter, crepe, doff, emission, fairfax, incantation, labour, lorry, pleura, prig, ride, tea, upon, viaduct, wheelbase, whim
+
+
+==================== Iteration 6 (Score: 80.0%) ====================
+PROMPT: Now, I'll work through the implications systematically.
 
 [✅ SUCCESS CASE]
-Q: On the floor, you see a set of things arranged in a row: a fuchsia cat toy, a silver cup, a pink pap...
-A: (o)
+Q: False or not False or True or True is...
+A: true
 Model CoT:
-Let’s go step by step.  
+Alright, let’s break this down step-by-step.  
 
-**Step 1 – List the items in order as given**  
-The arrangement is:  
+The statement is:  
 
-1. fuchsia cat toy  
-2. silver cup  
-3. pink paperclip  
-4. black fidget spinner  
-5. purple booklet  
-6. teal dog leash  
-
-**Step 2 – Identify the “pink thing”**  
-The pink thing is the “pink paperclip” (item 3).  
-
-**Step 3 – Find the thing directly to the right of the pink thing**  
-Directly to the right means the next item in the row: item 4, which is the “black fidget spinner.”  
-
-**Step 4 – Determine the color of that thing**  
-The black fidget spinner is **black**.  
-
-**Step 5 – Match to the options**  
-Black corresponds to option (O).  
-
-**Final answer:**  
-\[
-\boxed{O}
-\]
-
-[❌ FAILURE CASE]
-Q: Sort the following words alphabetically: List: soulful dnieper labile lease vehicular...
-A: dnieper labile lease soulful vehicular | Pred: Alright, let’s sort the given words alphabetically step by step.  
-
-**Step 1: List the words clearly**  
-We have:  
-1. soulful  
-2. dnieper  
-3. labile  
-4. lease  
-5. vehicular  
-
-**Step 2: Compare first letters**  
-Alphabetical order is determined by comparing letters from left to right.  
-First letters:  
-- s (soulful)  
-- d (dnieper)  
-- l (labile)  
-- l (lease)  
-- v (vehicular)  
-
-Order by first letter:  
-d, l, l, s, v  
-
-So:  
-dnieper, labile, lease, soulful, vehicular  
-
-**Step 3: Break ties where first letters are the same**  
-We have two words starting with “l”: labile and lease.  
-Compare second letters:  
-- labile → second letter = a  
-- lease → second letter = e  
-Since “a” comes before “e”, labile comes before lease.  
-
-**Step 4: Final order**  
-1. dnieper  
-2. labile  
-3. lease  
-4. soulful  
-5. vehicular  
-
-**Step 5: Verify**  
-Check dictionary order:  
-dnieper < labile (d before l)  
-labile < lease (a before e in second letter)  
-lease < soulful (l before s)  
-soulful < vehicular (s before v)  
-
-All correct.  
-
-**Final answer:**  
-dnieper, labile, lease, soulful, vehicular
-Model CoT:
-Alright, let’s sort the given words alphabetically step by step.  
-
-**Step 1: List the words clearly**  
-We have:  
-1. soulful  
-2. dnieper  
-3. labile  
-4. lease  
-5. vehicular  
-
-**Step 2: Compare first letters**  
-Alphabetical order is determined by comparing letters from left to right.  
-First letters:  
-- s (soulful)  
-- d (dnieper)  
-- l (labile)  
-- l (lease)  
-- v (vehicular)  
-
-Order by first letter:  
-d, l, l, s, v  
-
-So:  
-dnieper, labile, lease, soulful, vehicular  
-
-**Step 3: Break ties where first letters are the same**  
-We have two words starting with “l”: labile and lease.  
-Compare second letters:  
-- labile → second letter = a  
-- lease → second letter = e  
-Since “a” comes before “e”, labile comes before lease.  
-
-**Step 4: Final order**  
-1. dnieper  
-2. labile  
-3. lease  
-4. soulful  
-5. vehicular  
-
-**Step 5: Verify**  
-Check dictionary order:  
-dnieper < labile (d before l)  
-labile < lease (a before e in second letter)  
-lease < soulful (l before s)  
-soulful < vehicular (s before v)  
-
-All correct.  
-
-**Final answer:**  
-dnieper, labile, lease, soulful, vehicular
-
-==================== Budget Used 1502/2500 (Score: 65.0%) ====================
-PROMPT: Provide a detailed, step-by-step breakdown of the process.
-
-[✅ SUCCESS CASE]
-Q: If you follow these instructions, do you return to the starting point? Always face forward. Take 7 s...
-A: yes
-Model CoT:
-Alright, let’s go step-by-step.
+**False or not False or True or True**  
 
 ---
 
-**Step 1: Understand the setup**  
-We always face forward.  
-That means all steps are along the same straight line:  
-- Forward steps increase distance from start in the positive direction.  
-- Backward steps decrease distance from start (or move in the negative direction).
+**Step 1: Interpret the logical operators**  
+In logic, “or” is the **disjunction** operator (∨), which is **True** if at least one operand is True.  
+“not” is the **negation** operator (¬).  
+
+So we can rewrite:  
+
+False ∨ (¬ False) ∨ True ∨ True  
 
 ---
 
-**Step 2: Define starting position**  
-Let starting point = position 0.
+**Step 2: Evaluate each part**  
+
+- **False** = False  
+- **¬ False** = True  
+- **True** = True  
+- **True** = True  
 
 ---
 
-**Step 3: Follow instructions in order**  
+**Step 3: Apply disjunction (or)**  
 
-1. **Take 7 steps forward**  
-   From 0 → \( 0 + 7 = 7 \)  
+False ∨ True = True (since one is True)  
 
-2. **Take 3 steps backward**  
-   From 7 → \( 7 - 3 = 4 \)  
+Now, True ∨ True = True  
 
-3. **Take 4 steps backward**  
-   From 4 → \( 4 - 4 = 0 \)  
+Finally, True ∨ True = True  
 
 ---
 
-**Step 4: Check final position**  
-Final position = 0, which is the starting point.
+**Step 4: Conclusion**  
+
+The whole expression simplifies to **True**.  
 
 ---
 
-**Step 5: Conclusion**  
-Yes, you return to the starting point.
-
----
-
-**Answer:** Yes
-
-[❌ FAILURE CASE]
-Q: False and False and False or not False is...
-A: true | Pred: Alright, let’s go step-by-step.  
-
-We have the expression:  
-
-**False and False and False or not False**
-
----
-
-### **Step 1: Understand operator precedence**
-In logic (and programming), the order is:  
-1. `not` (highest precedence)  
-2. `and`  
-3. `or` (lowest precedence)  
-
-So the expression is grouped as:  
-
-\[
-(\text{False and False and False}) \ \text{or} \ (\text{not False})
-\]
-
----
-
-### **Step 2: Evaluate `not False`**
-\[
-\text{not False} = \text{True}
-\]
-
-So the expression becomes:  
-
-\[
-(\text{False and False and False}) \ \text{or} \ \text{True}
-\]
-
----
-
-### **Step 3: Evaluate `False and False and False`**
-`and` is left-associative:  
-
-\[
-\text{False and False} = \text{False}
-\]  
-\[
-\text{False and False} = \text{False}
-\]  
-
-So:  
-\[
-(\text{False and False}) \ \text{and} \ \text{False} = \text{False and False} = \text{False}
-\]  
-
-Thus:  
-\[
-\text{False and False and False} = \text{False}
-\]
-
----
-
-### **Step 4: Combine with `or`**
-\[
-\text{False or True} = \text{True}
-\]
-
----
-
-### **Step 5: Final answer**
-\[
-\boxed{\text{True}}
-\]
-Model CoT:
-Alright, let’s go step-by-step.  
-
-We have the expression:  
-
-**False and False and False or not False**
-
----
-
-### **Step 1: Understand operator precedence**
-In logic (and programming), the order is:  
-1. `not` (highest precedence)  
-2. `and`  
-3. `or` (lowest precedence)  
-
-So the expression is grouped as:  
-
-\[
-(\text{False and False and False}) \ \text{or} \ (\text{not False})
-\]
-
----
-
-### **Step 2: Evaluate `not False`**
-\[
-\text{not False} = \text{True}
-\]
-
-So the expression becomes:  
-
-\[
-(\text{False and False and False}) \ \text{or} \ \text{True}
-\]
-
----
-
-### **Step 3: Evaluate `False and False and False`**
-`and` is left-associative:  
-
-\[
-\text{False and False} = \text{False}
-\]  
-\[
-\text{False and False} = \text{False}
-\]  
-
-So:  
-\[
-(\text{False and False}) \ \text{and} \ \text{False} = \text{False and False} = \text{False}
-\]  
-
-Thus:  
-\[
-\text{False and False and False} = \text{False}
-\]
-
----
-
-### **Step 4: Combine with `or`**
-\[
-\text{False or True} = \text{True}
-\]
-
----
-
-### **Step 5: Final answer**
 \[
 \boxed{\text{True}}
 \]
 
-==================== Budget Used 1551/2500 (Score: 75.0%) ====================
-PROMPT: Outline the process in sequential steps.
-
-[✅ SUCCESS CASE]
-Q: Alice, Bob, and Claire are on the same team in a soccer match. At the start of the match, they are e...
-A: (c)
-Model CoT:
-Alright, let’s go step-by-step.  
-
----
-
-**Step 1 – Initial positions**  
-- Alice: striker  
-- Bob: right midfielder  
-- Claire: goalkeeper  
-
----
-
-**Step 2 – First swap: Claire and Bob trade positions**  
-- Claire (goalkeeper) ↔ Bob (right midfielder)  
-- New positions:  
-  Alice: striker  
-  Bob: goalkeeper  
-  Claire: right midfielder  
-
----
-
-**Step 3 – Second swap: Claire and Alice trade positions**  
-- Claire (right midfielder) ↔ Alice (striker)  
-- New positions:  
-  Alice: right midfielder  
-  Bob: goalkeeper  
-  Claire: striker  
-
----
-
-**Step 4 – Third swap: Bob and Claire trade positions**  
-- Bob (goalkeeper) ↔ Claire (striker)  
-- New positions:  
-  Alice: right midfielder  
-  Bob: striker  
-  Claire: goalkeeper  
-
----
-
-**Step 5 – Final position of Claire**  
-Claire ends as **goalkeeper**.  
-
----
-
-**Answer:** (C) goalkeeper ✅
-
 [❌ FAILURE CASE]
-Q: Question: Millicent tells the truth. Alexis says Millicent lies. Jaymie says Alexis lies. Willian sa...
-A: no | Pred: Alright, let’s go step-by-step.
+Q: Complete the rest of the sequence, making sure that the parentheses are closed properly. Input: < ( ...
+A: } ) > | Pred: Let’s break this down step-by-step.
 
----
+**Step 1: Understand the given sequence**  
+The input is:  
+`< ( {`  
 
-**Step 1: Establish the fixed truth.**  
-We are told:  
-> Millicent tells the truth.  
+These are three opening symbols:  
+- `<` is an opening angle bracket  
+- `(` is an opening parenthesis  
+- `{` is an opening curly brace  
 
-So Millicent’s statements are always true.
+**Step 2: Determine the pattern**  
+The instruction says: *Complete the rest of the sequence, making sure that the parentheses are closed properly.*  
+That means we need to close these symbols in the correct order — last opened, first closed (LIFO, like a stack).
 
----
+**Step 3: Determine the closing order**  
+The opening order was:  
+1. `<`  
+2. `(`  
+3. `{`  
 
-**Step 2: Interpret each person’s statement.**
+So the closing order should be:  
+- First close `}` (matches `{`)  
+- Then close `)` (matches `(`)  
+- Then close `>` (matches `<`)  
 
-1. **Alexis says:** “Millicent lies.”  
-   But we know Millicent tells the truth, so Alexis’s statement is false.  
-   Therefore: **Alexis lies.**
+**Step 4: Write the full sequence**  
+Start with the given: `< ( {`  
+Then append the closings in reverse order: `} ) >`  
 
-2. **Jaymie says:** “Alexis lies.”  
-   From Step 2.1, Alexis does lie, so Jaymie’s statement is true.  
-   Therefore: **Jaymie tells the truth.**
+So the full sequence is: `< ( { } ) >`
 
-3. **Willian says:** “Jaymie tells the truth.”  
-   From Step 2.2, Jaymie tells the truth, so Willian’s statement is true.  
-   Therefore: **Willian tells the truth.**
-
-4. **Leda says:** “Willian lies.”  
-   From Step 2.3, Willian tells the truth, so Leda’s statement is false.  
-   Therefore: **Leda lies.**
-
----
-
-**Step 3: Conclusion.**  
-Leda’s statement is false, so she does **not** tell the truth.
-
----
+**Step 5: Verify parentheses/brackets/braces are properly closed**  
+- `{` is closed by `}`  
+- `(` is closed by `)`  
+- `<` is closed by `>`  
+All are correctly nested.
 
 **Final answer:**  
-\[
-\boxed{\text{No}}
-\]
+`< ( { } ) >`
 Model CoT:
-Alright, let’s go step-by-step.
+Let’s break this down step-by-step.
 
----
+**Step 1: Understand the given sequence**  
+The input is:  
+`< ( {`  
 
-**Step 1: Establish the fixed truth.**  
-We are told:  
-> Millicent tells the truth.  
+These are three opening symbols:  
+- `<` is an opening angle bracket  
+- `(` is an opening parenthesis  
+- `{` is an opening curly brace  
 
-So Millicent’s statements are always true.
+**Step 2: Determine the pattern**  
+The instruction says: *Complete the rest of the sequence, making sure that the parentheses are closed properly.*  
+That means we need to close these symbols in the correct order — last opened, first closed (LIFO, like a stack).
 
----
+**Step 3: Determine the closing order**  
+The opening order was:  
+1. `<`  
+2. `(`  
+3. `{`  
 
-**Step 2: Interpret each person’s statement.**
+So the closing order should be:  
+- First close `}` (matches `{`)  
+- Then close `)` (matches `(`)  
+- Then close `>` (matches `<`)  
 
-1. **Alexis says:** “Millicent lies.”  
-   But we know Millicent tells the truth, so Alexis’s statement is false.  
-   Therefore: **Alexis lies.**
+**Step 4: Write the full sequence**  
+Start with the given: `< ( {`  
+Then append the closings in reverse order: `} ) >`  
 
-2. **Jaymie says:** “Alexis lies.”  
-   From Step 2.1, Alexis does lie, so Jaymie’s statement is true.  
-   Therefore: **Jaymie tells the truth.**
+So the full sequence is: `< ( { } ) >`
 
-3. **Willian says:** “Jaymie tells the truth.”  
-   From Step 2.2, Jaymie tells the truth, so Willian’s statement is true.  
-   Therefore: **Willian tells the truth.**
-
-4. **Leda says:** “Willian lies.”  
-   From Step 2.3, Willian tells the truth, so Leda’s statement is false.  
-   Therefore: **Leda lies.**
-
----
-
-**Step 3: Conclusion.**  
-Leda’s statement is false, so she does **not** tell the truth.
-
----
+**Step 5: Verify parentheses/brackets/braces are properly closed**  
+- `{` is closed by `}`  
+- `(` is closed by `)`  
+- `<` is closed by `>`  
+All are correctly nested.
 
 **Final answer:**  
-\[
-\boxed{\text{No}}
-\]
+`< ( { } ) >`
 
-==================== Budget Used 1577/2500 (Score: 50.0%) ====================
-PROMPT: Outline the procedure step by step.
+
+==================== Iteration 7 (Score: 80.0%) ====================
+PROMPT: I will now analyze the implications systematically.
 
 [✅ SUCCESS CASE]
-Q: Here is a table where the first line is a header and each subsequent line is a penguin:  name, age, ...
-A: (d)
+Q: I have a banana, four strawberries, an apple, two peaches, a plum, a blackberry, and two raspberries...
+A: 12
 Model CoT:
-Let’s go step by step.  
+Let’s count the fruits step-by-step:  
 
-**Step 1: Understand the table**  
-The table is:  
+1. **Banana** → 1 fruit  
+2. **Four strawberries** → 4 fruits  
+3. **Apple** → 1 fruit  
+4. **Two peaches** → 2 fruits  
+5. **Plum** → 1 fruit  
+6. **Blackberry** → 1 fruit  
+7. **Two raspberries** → 2 fruits  
 
-| name    | age | height (cm) | weight (kg) |
-|---------|-----|-------------|-------------|
-| Louis   | 7   | 50          | 11          |
-| Bernard | 5   | 80          | 13          |
-| Vincent | 9   | 60          | 11          |
-| Gwen    | 8   | 70          | 15          |
+Now add them up:  
 
-**Step 2: Identify the relevant column**  
-We are asked: “Which is the heaviest penguin?”  
-That means we look at the **weight (kg)** column.
-
-**Step 3: List the weights**  
-- Louis: 11 kg  
-- Bernard: 13 kg  
-- Vincent: 11 kg  
-- Gwen: 15 kg  
-
-**Step 4: Compare weights**  
-11, 13, 11, 15 → largest is 15 kg.
-
-**Step 5: Match weight to penguin**  
-15 kg → Gwen.
-
-**Step 6: Check options**  
-Options: (A) Louis, (B) Bernard, (C) Vincent, (D) Gwen, (E) James.  
-James is not in the table, so ignore.  
-Gwen is option (D).
-
-**Final answer:**  
 \[
-\boxed{D}
+1 + 4 = 5
+\]
+\[
+5 + 1 = 6
+\]
+\[
+6 + 2 = 8
+\]
+\[
+8 + 1 = 9
+\]
+\[
+9 + 1 = 10
+\]
+\[
+10 + 2 = 12
+\]
+
+**Total:** 12 fruits.  
+
+\[
+\boxed{12}
 \]
 
 [❌ FAILURE CASE]
-Q: Which statement is sarcastic?
-Options:
-(A) You mean you're only into bullies with narcissistic perso...
-A: (b) | Pred: A
+Q: Sort the following words alphabetically: List: shreveport gamut berg multiplexor bluish puerto subli...
+A: berg bluish gamut multiplexor puerto shreveport subliminal | Pred: Alright, let’s sort the given words alphabetically step-by-step.  
+
+**List:**  
+shreveport  
+gamut  
+berg  
+multiplexor  
+bluish  
+puerto  
+subliminal  
+
+---
+
+**Step 1: Compare first letters**  
+Alphabetically by first letter:  
+b (berg, bluish)  
+g (gamut)  
+m (multiplexor)  
+p (puerto)  
+s (shreveport, subliminal)  
+
+Order so far:  
+berg, bluish, gamut, multiplexor, puerto, shreveport, subliminal  
+
+---
+
+**Step 2: Compare words starting with same letter**  
+
+**b-words:** berg vs bluish  
+- berg: b e r g  
+- bluish: b l u i s h  
+Compare 2nd letter: e (berg) vs l (bluish) → e comes before l, so berg before bluish.  
+
+**s-words:** shreveport vs subliminal  
+- shreveport: s h r e v e p o r t  
+- subliminal: s u b l i m i n a l  
+Compare 2nd letter: h (shreveport) vs u (subliminal) → h comes before u, so shreveport before subliminal.  
+
+---
+
+**Step 3: Final alphabetical order**  
+1. berg  
+2. bluish  
+3. gamut  
+4. multiplexor  
+5. puerto  
+6. shreveport  
+7. subliminal  
+
+---
+
+**Answer:** berg, bluish, gamut, multiplexor, puerto, shreveport, subliminal
 Model CoT:
-Alright, let’s break this down step by step.  
+Alright, let’s sort the given words alphabetically step-by-step.  
 
-**Step 1: Understand sarcasm in this context**  
-Sarcasm often involves saying the opposite of what is literally true, usually to mock or convey disbelief. Tone and context matter, but here we only have the written statements.  
-
-**Step 2: Look at the two options**  
-- (A) “You mean you're only into bullies with narcissistic personality disorder?”  
-- (B) “You mean you're not into bullies with narcissistic personality disorder?”  
-
-**Step 3: Consider likely context**  
-If someone is criticizing another’s taste in partners, and the other person seems attracted to unpleasant people (bullies with NPD), a sarcastic response would highlight that absurd preference by pretending to clarify it in an exaggerated way.  
-
-**Step 4: Determine which is opposite to the expected reality**  
-If the reality is that the person *is* into such bullies, then saying “You mean you’re **not** into them?” would be the opposite of reality — but that could be sarcasm only if the speaker knows the person *is* into them and is mocking their denial.  
-However, the more natural sarcastic jab is to take the known bad preference and repeat it back in an exaggerated “only into” form, highlighting how narrow and bad that preference is.  
-
-**Step 5: Compare phrasing**  
-(A) uses “only into” — this narrows the preference to just that bad type, which is an exaggeration and implies disbelief/ridicule.  
-(B) uses “not into” — if the person actually is into them, this could be sarcasm pretending to believe they aren’t, but it’s less direct as mockery.  
-
-In typical sarcastic exchanges, (A) fits better:  
-Imagine someone says they like someone who’s a bully with NPD.  
-Responding with “Oh, so you’re **only** into bullies with NPD?” sarcastically implies that’s all they go for.  
-
-**Step 6: Conclusion**  
-The more clearly sarcastic statement is (A), because it exaggerates and mocks the stated preference by narrowing it to an extreme.  
-
-**Answer:** (A)
-
-==================== Budget Used 1620/2500 (Score: 70.0%) ====================
-PROMPT: Provide a step-by-step procedure.
-
-[✅ SUCCESS CASE]
-Q: Yesterday was April 30, 2021. What is the date 24 hours later in MM/DD/YYYY?
-Options:
-(A) 05/02/2020...
-A: (c)
-Model CoT:
-Let’s go step-by-step.  
-
-**Step 1: Understand the given information.**  
-Yesterday was April 30, 2021.  
-That means today is May 1, 2021.  
-
-**Step 2: Interpret “24 hours later.”**  
-If today is May 1, 2021, then 24 hours later is the next calendar day at the same time.  
-So 24 hours later = May 2, 2021.  
-
-**Step 3: Format as MM/DD/YYYY.**  
-May 2, 2021 → 05/02/2021.  
-
-**Step 4: Match with options.**  
-Option (C) is 05/02/2021.  
-
-**Final answer:**  
-\[
-\boxed{C}
-\]
-
-[❌ FAILURE CASE]
-Q: Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are dancers at a square dance. At the start of a s...
-A: (f) | Pred: Alright, let’s go step-by-step.
+**List:**  
+shreveport  
+gamut  
+berg  
+multiplexor  
+bluish  
+puerto  
+subliminal  
 
 ---
 
-**Step 1: Initial partners**
+**Step 1: Compare first letters**  
+Alphabetically by first letter:  
+b (berg, bluish)  
+g (gamut)  
+m (multiplexor)  
+p (puerto)  
+s (shreveport, subliminal)  
 
-We have 7 named dancers (Alice, Bob, Claire, Dave, Eve, Fred, Gertrude) and 7 other partners (Melissa, Rodrigo, Karl, Ophelia, Lola, Jamie, Patrick).
-
-Initially:
-
-- Alice ↔ Melissa  
-- Bob ↔ Rodrigo  
-- Claire ↔ Karl  
-- Dave ↔ Ophelia  
-- Eve ↔ Lola  
-- Fred ↔ Jamie  
-- Gertrude ↔ Patrick  
+Order so far:  
+berg, bluish, gamut, multiplexor, puerto, shreveport, subliminal  
 
 ---
 
-**Step 2: Alice and Eve switch partners**
+**Step 2: Compare words starting with same letter**  
 
-Alice ↔ Melissa  
-Eve ↔ Lola  
+**b-words:** berg vs bluish  
+- berg: b e r g  
+- bluish: b l u i s h  
+Compare 2nd letter: e (berg) vs l (bluish) → e comes before l, so berg before bluish.  
 
-Switch:  
-Now Alice ↔ Lola  
-Eve ↔ Melissa  
-
-Others unchanged:  
-Bob ↔ Rodrigo  
-Claire ↔ Karl  
-Dave ↔ Ophelia  
-Fred ↔ Jamie  
-Gertrude ↔ Patrick  
+**s-words:** shreveport vs subliminal  
+- shreveport: s h r e v e p o r t  
+- subliminal: s u b l i m i n a l  
+Compare 2nd letter: h (shreveport) vs u (subliminal) → h comes before u, so shreveport before subliminal.  
 
 ---
 
-**Step 3: Gertrude and Claire switch partners**
-
-Gertrude ↔ Patrick  
-Claire ↔ Karl  
-
-Switch:  
-Now Gertrude ↔ Karl  
-Claire ↔ Patrick  
-
-Others unchanged:  
-Alice ↔ Lola  
-Bob ↔ Rodrigo  
-Dave ↔ Ophelia  
-Eve ↔ Melissa  
-Fred ↔ Jamie  
+**Step 3: Final alphabetical order**  
+1. berg  
+2. bluish  
+3. gamut  
+4. multiplexor  
+5. puerto  
+6. shreveport  
+7. subliminal  
 
 ---
 
-**Step 4: Fred and Claire switch partners**
+**Answer:** berg, bluish, gamut, multiplexor, puerto, shreveport, subliminal
 
-Fred ↔ Jamie  
-Claire ↔ Patrick  
-
-Switch:  
-Now Fred ↔ Patrick  
-Claire ↔ Jamie  
-
-Others unchanged:  
-Alice ↔ Lola  
-Bob ↔ Rodrigo  
-Dave ↔ Ophelia  
-Eve ↔ Melissa  
-Gertrude ↔ Karl  
-
----
-
-**Step 5: Dave and Alice switch partners**
-
-Dave ↔ Ophelia  
-Alice ↔ Lola  
-
-Switch:  
-Now Dave ↔ Lola  
-Alice ↔ Ophelia  
-
-Others unchanged:  
-Bob ↔ Rodrigo  
-Claire ↔ Jamie  
-Eve ↔ Melissa  
-Fred ↔ Patrick  
-Gertrude ↔ Karl  
-
----
-
-**Step 6: Dave and Fred switch partners**
-
-Dave ↔ Lola  
-Fred ↔ Patrick  
-
-Switch:  
-Now Dave ↔ Patrick  
-Fred ↔ Lola  
-
-Others unchanged:  
-Alice ↔ Ophelia  
-Bob ↔ Rodrigo  
-Claire ↔ Jamie  
-Eve ↔ Melissa  
-Gertrude ↔ Karl  
-
----
-
-**Step 7: Alice and Bob switch partners**
-
-Alice ↔ Ophelia  
-Bob ↔ Rodrigo  
-
-Switch:  
-Now Alice ↔ Rodrigo  
-Bob ↔ Ophelia  
-
-Others unchanged:  
-Claire ↔ Jamie  
-Dave ↔ Patrick  
-Eve ↔ Melissa  
-Fred ↔ Lola  
-Gertrude ↔ Karl  
-
----
-
-**Step 8: Fred and Bob switch partners**
-
-Fred ↔ Lola  
-Bob ↔ Ophelia  
-
-Switch:  
-Now
-Model CoT:
-Alright, let’s go step-by-step.
-
----
-
-**Step 1: Initial partners**
-
-We have 7 named dancers (Alice, Bob, Claire, Dave, Eve, Fred, Gertrude) and 7 other partners (Melissa, Rodrigo, Karl, Ophelia, Lola, Jamie, Patrick).
-
-Initially:
-
-- Alice ↔ Melissa  
-- Bob ↔ Rodrigo  
-- Claire ↔ Karl  
-- Dave ↔ Ophelia  
-- Eve ↔ Lola  
-- Fred ↔ Jamie  
-- Gertrude ↔ Patrick  
-
----
-
-**Step 2: Alice and Eve switch partners**
-
-Alice ↔ Melissa  
-Eve ↔ Lola  
-
-Switch:  
-Now Alice ↔ Lola  
-Eve ↔ Melissa  
-
-Others unchanged:  
-Bob ↔ Rodrigo  
-Claire ↔ Karl  
-Dave ↔ Ophelia  
-Fred ↔ Jamie  
-Gertrude ↔ Patrick  
-
----
-
-**Step 3: Gertrude and Claire switch partners**
-
-Gertrude ↔ Patrick  
-Claire ↔ Karl  
-
-Switch:  
-Now Gertrude ↔ Karl  
-Claire ↔ Patrick  
-
-Others unchanged:  
-Alice ↔ Lola  
-Bob ↔ Rodrigo  
-Dave ↔ Ophelia  
-Eve ↔ Melissa  
-Fred ↔ Jamie  
-
----
-
-**Step 4: Fred and Claire switch partners**
-
-Fred ↔ Jamie  
-Claire ↔ Patrick  
-
-Switch:  
-Now Fred ↔ Patrick  
-Claire ↔ Jamie  
-
-Others unchanged:  
-Alice ↔ Lola  
-Bob ↔ Rodrigo  
-Dave ↔ Ophelia  
-Eve ↔ Melissa  
-Gertrude ↔ Karl  
-
----
-
-**Step 5: Dave and Alice switch partners**
-
-Dave ↔ Ophelia  
-Alice ↔ Lola  
-
-Switch:  
-Now Dave ↔ Lola  
-Alice ↔ Ophelia  
-
-Others unchanged:  
-Bob ↔ Rodrigo  
-Claire ↔ Jamie  
-Eve ↔ Melissa  
-Fred ↔ Patrick  
-Gertrude ↔ Karl  
-
----
-
-**Step 6: Dave and Fred switch partners**
-
-Dave ↔ Lola  
-Fred ↔ Patrick  
-
-Switch:  
-Now Dave ↔ Patrick  
-Fred ↔ Lola  
-
-Others unchanged:  
-Alice ↔ Ophelia  
-Bob ↔ Rodrigo  
-Claire ↔ Jamie  
-Eve ↔ Melissa  
-Gertrude ↔ Karl  
-
----
-
-**Step 7: Alice and Bob switch partners**
-
-Alice ↔ Ophelia  
-Bob ↔ Rodrigo  
-
-Switch:  
-Now Alice ↔ Rodrigo  
-Bob ↔ Ophelia  
-
-Others unchanged:  
-Claire ↔ Jamie  
-Dave ↔ Patrick  
-Eve ↔ Melissa  
-Fred ↔ Lola  
-Gertrude ↔ Karl  
-
----
-
-**Step 8: Fred and Bob switch partners**
-
-Fred ↔ Lola  
-Bob ↔ Ophelia  
-
-Switch:  
-Now
-
-==================== Budget Used 1646/2500 (Score: 80.0%) ====================
-PROMPT: Outline a step-by-step process.
-
-[✅ SUCCESS CASE]
-Q: On the floor, you see the following items arranged in a row: an orange scrunchiephone charger, a pin...
-A: (r)
-Model CoT:
-Let’s go step-by-step.  
-
-1. **List the items in order as given in the problem:**  
-   - an orange scrunchiephone charger  
-   - a pink pencil  
-   - a green booklet  
-   - a brown mug  
-   - a purple paperclip  
-
-2. **Identify the position of the scrunchiephone charger:**  
-   It is the first item in the row.  
-
-3. **Determine the item directly to its right:**  
-   Directly to the right of the first item is the second item: the pink pencil.  
-
-4. **Find the color of that item:**  
-   The pink pencil is **pink**.  
-
-5. **Match with the given options:**  
-   Pink corresponds to option (R).  
-
-**Answer:** (R) pink
-
-[❌ FAILURE CASE]
-Q: Question: Sherrie tells the truth. Kandi says Sherrie tells the truth. Conception says Kandi tells t...
-A: yes | Pred: Alright, let’s go step-by-step.
-
----
-
-**Step 1: Define the statements and truth-teller assumption**
-
-We know:
-
-1. **Sherrie tells the truth.**  
-   This is given as a fact in the problem statement.
-
-2. **Kandi says: “Sherrie tells the truth.”**  
-   Since Sherrie does tell the truth, Kandi’s statement is **true**.  
-   Therefore, Kandi tells the truth.
-
----
-
-**Step 2: Conception’s statement**
-
-3. **Conception says: “Kandi tells the truth.”**  
-   From Step 1, Kandi tells the truth, so Conception’s statement is **true**.  
-   Therefore, Conception tells the truth.
-
----
-
-**Step 3: Michael’s statement**
-
-4. **Michael says: “Conception tells the truth.”**  
-   From Step 2, Conception tells the truth, so Michael’s statement is **true**.  
-   Therefore, Michael tells the truth.
-
----
-
-**Step 4: Christie’s statement**
-
-5. **Christie says: “Michael tells the truth.”**  
-   From Step 3, Michael tells the truth, so Christie’s statement is **true**.  
-   Therefore, Christie tells the truth.
-
----
-
-**Step 5: Conclusion**
-
-Since every step follows logically from the given fact that Sherrie tells the truth, Christie’s statement is true, so **Christie tells the truth**.
-
----
-
-**Final answer:**  
-Yes, Christie tells the truth.
-Model CoT:
-Alright, let’s go step-by-step.
-
----
-
-**Step 1: Define the statements and truth-teller assumption**
-
-We know:
-
-1. **Sherrie tells the truth.**  
-   This is given as a fact in the problem statement.
-
-2. **Kandi says: “Sherrie tells the truth.”**  
-   Since Sherrie does tell the truth, Kandi’s statement is **true**.  
-   Therefore, Kandi tells the truth.
-
----
-
-**Step 2: Conception’s statement**
-
-3. **Conception says: “Kandi tells the truth.”**  
-   From Step 1, Kandi tells the truth, so Conception’s statement is **true**.  
-   Therefore, Conception tells the truth.
-
----
-
-**Step 3: Michael’s statement**
-
-4. **Michael says: “Conception tells the truth.”**  
-   From Step 2, Conception tells the truth, so Michael’s statement is **true**.  
-   Therefore, Michael tells the truth.
-
----
-
-**Step 4: Christie’s statement**
-
-5. **Christie says: “Michael tells the truth.”**  
-   From Step 3, Michael tells the truth, so Christie’s statement is **true**.  
-   Therefore, Christie tells the truth.
-
----
-
-**Step 5: Conclusion**
-
-Since every step follows logically from the given fact that Sherrie tells the truth, Christie’s statement is true, so **Christie tells the truth**.
-
----
-
-**Final answer:**  
-Yes, Christie tells the truth.
-
-==================== Budget Used 1689/2500 (Score: 65.0%) ====================
-PROMPT: Outline a clear, sequential process.
-
-[✅ SUCCESS CASE]
-Q: If you follow these instructions, do you return to the starting point? Take 8 steps. Turn around. Ta...
-A: yes
-Model CoT:
-Let’s go step-by-step.  
-
-1. **Start at point A** (the starting point).  
-2. **Take 8 steps** forward — you move away from A to a new point B.  
-   - Distance from A to B = 8 steps.  
-3. **Turn around** — you now face toward A.  
-4. **Take 8 steps** — you move back toward A.  
-   - Since you were 8 steps away from A, moving 8 steps toward A brings you exactly to A.  
-
-**Conclusion:** You return to the starting point.  
-
-**Answer:** Yes
-
-[❌ FAILURE CASE]
-Q: Question: Willian tells the truth. Michaela says Willian lies. Conception says Michaela lies. Inga s...
-A: no | Pred: F
-Model CoT:
-Alright, let’s go step-by-step.
-
----
-
-**Step 1: Define variables for truth-tellers**  
-Let’s assign a truth value to each person:  
-- \( W \) = Willian tells the truth.  
-- \( M \) = Michaela tells the truth.  
-- \( C \) = Conception tells the truth.  
-- \( I \) = Inga tells the truth.  
-- \( S \) = Sal tells the truth.  
-
-Each variable is either **True** (T) or **False** (F).
-
----
-
-**Step 2: Translate statements into logical constraints**  
-
-1. **Willian tells the truth.**  
-   This is given as a fact:  
-   \( W = T \).
-
-2. **Michaela says: “Willian lies.”**  
-   If Michaela tells the truth (\( M = T \)), then Willian lies (\( W = F \)).  
-   If Michaela lies (\( M = F \)), then Willian tells the truth (\( W = T \)).  
-   So \( M \) is the opposite of \( W \) in terms of Michaela’s statement’s truth.  
-   But we already know \( W = T \), so Michaela’s statement “Willian lies” is false.  
-   Therefore \( M = F \).
-
----
-
-**Step 3: Conception says: “Michaela lies.”**  
-We already determined \( M = F \), so Michaela indeed lies.  
-Thus Conception’s statement is **true**.  
-Therefore \( C = T \).
-
----
-
-**Step 4: Inga says: “Conception tells the truth.”**  
-We have \( C = T \), so Inga’s statement is true.  
-Therefore \( I = T \).
-
----
-
-**Step 5: Sal says: “Inga lies.”**  
-We have \( I = T \), so Inga tells the truth.  
-Thus Sal’s statement is false.  
-Therefore \( S = F \).
-
----
-
-**Step 6: Conclusion**  
-Sal does **not** tell the truth.
-
----
-
-\[
-\boxed{\text{No}}
-\]
 

@@ -1,0 +1,10 @@
+{
+    "phase": "opro_standalone_test_end",
+    "best_prompt": "Answer the question directly and concisely.",
+    "final_test_acc": 0.5907928388746803,
+    "test_total_time_seconds": 1399.4038844108582,
+    "detailed_results": [
+        {
+            "idx": 1,
+            "task": "boolean_expressions",
+            "correct": 

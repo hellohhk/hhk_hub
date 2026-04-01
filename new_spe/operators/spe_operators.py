@@ -44,16 +44,18 @@ class IntraLocusRewrite:
     def apply(self, parents: Sequence[StructuredGenome], *, kernel: DeepSeekKernel, rng: np.random.Generator,
               invariant_loci: Sequence[str]) -> Dict[str, str]:
         parent = parents[0]
+        # 🌟 升级版：强制引入高级推理范式与认知重构
         system_msg = (
-            "You are a meta-prompt optimizer.\n"
-            "Mutate ONLY the instruction text to improve reasoning quality and robustness under noise.\n"
+            "You are an elite AI Prompt Engineer.\n"
+            "Your task is to fundamentally REWRITE the instruction text to maximize the LLM's logical reasoning capability.\n"
+            "You must introduce advanced prompt paradigms (e.g., explicit step-by-step deduction triggers, cognitive reframing, or edge-case handling guidelines) to make the instruction extremely robust.\n"
             "You MUST return JSON: {\"new_instruct\": \"...\"}\n"
             "Do not include any other keys.\n"
         )
         user_msg = (
             f"Current instruct:\n{parent.loci.get('L_instruct', '')}\n\n"
             f"Fixed constraints:\n{parent.loci.get('L_const', '')}\n\n"
-            "Return a new instruction that is compatible with the constraints."
+            "Return a completely upgraded instruction that drastically improves logical rigor while remaining compatible with the fixed constraints."
         )
         result = kernel.chat(system_msg, user_msg, expect_json=True, stream=False,
                              temperature=kernel.config.temperature)
@@ -79,16 +81,17 @@ class IntraLocusRefine:
     def apply(self, parents: Sequence[StructuredGenome], *, kernel: DeepSeekKernel, rng: np.random.Generator,
               invariant_loci: Sequence[str]) -> Dict[str, str]:
         parent = parents[0]
+        # 🌟 升级版：提升修补精度与防御性，堵住逻辑漏洞
         system_msg = (
-            "You are a meta-prompt optimizer.\n"
-            "Refine ONLY the instruction text with minimal edits to increase clarity and reduce failure cases.\n"
+            "You are an expert Prompt Auditor.\n"
+            "Refine the instruction text with high-precision edits. Your goal is to eliminate ambiguity, close logical loopholes, and add defensive phrasing to prevent hallucination or common failure modes.\n"
             "You MUST return JSON: {\"new_instruct\": \"...\"}\n"
             "Do not include any other keys.\n"
         )
         user_msg = (
             f"Current instruct:\n{parent.loci.get('L_instruct', '')}\n\n"
             f"Fixed constraints:\n{parent.loci.get('L_const', '')}\n\n"
-            "Perform minimal edits. Keep style consistent."
+            "Perform surgical edits to optimize clarity and defensiveness. Keep the core intent identical."
         )
         result = kernel.chat(system_msg, user_msg, expect_json=True, stream=False,
                              temperature=max(0.1, kernel.config.temperature * 0.5))
@@ -132,9 +135,10 @@ class SemanticInterpolation:
     def apply(self, parents: Sequence[StructuredGenome], *, kernel: DeepSeekKernel, rng: np.random.Generator,
               invariant_loci: Sequence[str]) -> Dict[str, str]:
         a, b = parents[0], parents[1]
+        # 🌟 升级版：协同策略融合，提取底层认知框架而非简单拼接
         system_msg = (
-            "You are a meta-prompt optimizer.\n"
-            "Fuse two instructions into one that inherits strengths of both while staying concise.\n"
+            "You are a Master Prompt Synthesizer.\n"
+            "Do not just concatenate these two instructions. You must extract the underlying reasoning STRATEGIES and cognitive frameworks from both, and fuse them into a single, synergistic, and highly potent instruction.\n"
             "You MUST return JSON: {\"new_instruct\": \"...\"}\n"
             "Do not include any other keys.\n"
         )
@@ -206,6 +210,7 @@ class ErrorDrivenRefine:
             "You MUST output ONLY a valid JSON object."
         )
 
+        # 🌟 升级版：强化 CoT 与约束生成的任务指令
         user_msg = f"""The student AI uses the following structured prompt to solve a WIDE MIX of reasoning tasks (including Math, Logic, Reading Comprehension, etc.).
 [Current Prompt Modules]:
 - L_role: {parent.loci.get('L_role', '')}
@@ -219,17 +224,14 @@ It failed on this specific sample:
 [Ground Truth]: {correct_a}
 
 TASK:
-1. Diagnose the root cause of the failure.
-2. Decide WHICH SINGLE MODULE is best suited to fix this issue. 
-   - Choose `L_const` to add universal logic guardrails or strict formatting rules.
-   - Choose `L_instruct` if the core task explanation is flawed.
-   - Choose `L_role` to shift the persona.
-   - Choose `L_style` for purely output tone adjustments.
-   (You MUST choose from these available modules: {available_loci})
-3. Provide the COMPLETE updated text for the chosen module. 
+1. Diagnose the exact cognitive or logical root cause of the failure.
+2. Decide WHICH SINGLE MODULE must be updated. (Choose from: {available_loci})
+3. Provide the COMPLETE updated text for the chosen module.
 
-CRITICAL WARNING FOR L_CONST: If you choose to update `L_const`, you MUST extract a GENERAL REASONING PRINCIPLE or a UNIVERSAL FORMATTING RULE. DO NOT overfit to the domain of this one question. 
-Furthermore, DO NOT simply append the new rule. You must INTEGRATE the new rule with the existing constraints, REMOVE any redundancies or overlaps, and output a highly CONDENSED, logically clear, and deduplicated list of core principles (keep it to a maximum of 5-7 core rules).
+CRITICAL DIRECTIVES:
+- If choosing `L_instruct`: Rewrite it to explicitly guide the AI away from this specific logical trap.
+- If choosing `L_const`: You MUST formulate an explicit Chain-of-Thought (CoT) rule, a strict step-by-step verification protocol, or an absolute mathematical/formatting guardrail. DO NOT just output a vague suggestion.
+- For `L_const`, integrate the new rule with existing ones. Remove redundancies. Output a highly CONDENSED list of absolute laws (max 5-7 rules).
 
 OUTPUT EXACTLY THIS JSON FORMAT:
 {{

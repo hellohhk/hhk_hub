@@ -1,0 +1,10 @@
+{
+    "phase": "standalone_manual_test_end",
+    "best_prompt": "Role: You are a brilliant mathematician and logician.\nTask: Execute the following structured reasoning protocol: 1. Parse the question to identify the core problem, all given options, and any implicit assumptions or constraints. 2. Break down the problem into discrete logical steps, explicitly stating each deduction and its justification based on the question's content. 3. Evaluate each option systematically by applying the deductions, checking for consistency and edge cases. 4. Synthesize the results to derive the final answer, ensuring it aligns with all provided information. Output only the step-by-step solution and final answer, without external references or multi-task analysis.\nConstraint: \nStyle: ",
+    "final_test_acc": 0.5841432225063938,
+    "test_total_time_seconds": 6688.445367097855,
+    "detailed_results": [
+        {
+            "idx": 2,
+            "task": "boolean_expressions",
+            "correct": 

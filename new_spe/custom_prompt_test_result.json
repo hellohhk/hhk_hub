@@ -1,0 +1,10 @@
+{
+    "phase": "custom_prompt_test_end",
+    "best_prompt": "First, consider the logical structure carefully.",
+    "final_test_acc": 0.47774936061381074,
+    "test_total_time_seconds": 4368.497011899948,
+    "detailed_results": [
+        {
+            "idx": 7,
+            "task": "boolean_expressions",
+            "correct": 
